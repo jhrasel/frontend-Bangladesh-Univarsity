@@ -1,0 +1,24 @@
+.lftSide {
+    padding-left: 51px;
+}
+.lftSide button{
+    margin-top: 20px;
+    font-family: 'Noto_Sans';
+}
+.lftSide p{
+    padding: 10px 0px;
+    line-height: 26px;
+    font-family: 'Noto_Sans_normal';
+    max-width: 456px;
+    color: #545454;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+}
+.rightSideNotice{}
+.mainLatestNotice{
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 65px;
+    margin: 70px 0px;
+}

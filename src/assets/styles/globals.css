@@ -1,0 +1,219 @@
+body{
+  background: #F6F6F6 !important;
+  border-radius: 80px;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'noto_normal';
+  src: url('../fonts/noto-sans/NotoSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'noto_sans';
+  src: url('../fonts/noto-sans/NotoSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'Noto_Sans_normal';
+  src: url('../fonts/noto-sans/NotoSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'Noto_Sans_SemiBold';
+  src: url('../fonts/noto-sans/NotoSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'noto_medium';
+  src: url('../fonts/noto-sans/NotoSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'sora_bold';
+  src: url('../fonts/sora/Sora-Bold.ttf');
+}
+@font-face {
+  font-family: 'sora_medium';
+  src: url('../fonts/sora/Sora-Medium.ttf');
+}
+.main_header{
+  padding: 15px 0px !important;
+}
+.headingTitle{
+  font-family: 'sora_bold', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 64px;
+  color: #000000;
+}
+.mt_30{
+  margin: 70px 0px;
+}
+
+a.nav-link {
+  color: #AD1F1F;
+  font-family: 'noto_sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.me-auto.navbar-nav {
+  margin-right: 5px !important;
+}
+a.navbar-brand {
+  margin-right: 76px;
+}
+
+.readMore{
+  font-family: 'Sora_medium', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #AD1F1F;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  text-decoration: none;
+  position: relative;
+}
+/*.readMore::before{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  width: 2px;*/
+/*  height: 9px;*/
+/*  background: #9D0F0F;*/
+/*  margin-left: 88px;*/
+/*  transform: rotate(-50deg);*/
+/*  margin-top: 3px;*/
+/*}*/
+/*.readMore::after{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  width: 2px;*/
+/*  height: 9px;*/
+/*  background: #9D0F0F;*/
+/*  margin-left: 88px;*/
+/*  transform: rotate(50deg);*/
+/*  margin-top: 8px;*/
+/*}*/
+.arrow{
+  font-size: 25px !important;
+  margin-left: 8px;
+  margin-top: -1.5px;
+}
+.body_padding{
+  padding-left: 135px !important;
+  padding-right: 135px !important;
+}
+/*.me-auto.navbar-nav a {*/
+/*  text-transform: uppercase;*/
+/*}*/
+.loader{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  margin: 0 auto;
+}
+.carousel-caption {
+  right: 15%;
+  top: 16%;
+}
+.carousel-control-prev , .carousel-control-next{
+  display: none !important;
+}
+.accordion-item, .accordion-button:focus{
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.nav-tabs .nav-link {
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  color: #545454;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #AD1F1F !important;
+}
+.carousel-caption{
+  left: 7% !important;
+}
+button.accordion-button {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #000000 !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-body {
+  font-family: 'Noto_Sans_SemiBold';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #545454;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.nav-link{
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #545454;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-bottom: 3px solid #000000 !important;
+  font-weight: 600;
+  color: #000 !important;
+  font-family: 'sora_bold' !Important;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 140%;
+}
+input {
+  background: #FFFFFF;
+  border-radius: 40px !important;
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-collapse {
+    justify-content: end;
+  }
+}
+
+
+.item_middle {
+  display: flex;
+  justify-content: center;
+}
+
+.latestNew_Heading button.accordion-button{
+  color: #000;
+  font-family: Noto_Sans;
+  font-size: 18px;
+}
+
+
+.whyUs > button.nav-link.active{
+
+}
+button#why_us-tab-Self_Development,button#why_us-tab-Alumni, button#why_us-tab-Spirituality, button#why_us-tab-Benefits {
+  color: #545454;
+  font-family: 'sora_bold';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}

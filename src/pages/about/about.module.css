@@ -1,0 +1,13 @@
+.main_about{
+    margin-top: 120px;
+}
+.main_about span.subTitle{
+    font-family: 'Noto_Sans_normal';
+    font-weight: 300;
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #545454;
+}

@@ -1,0 +1,41 @@
+.mainFooter{
+    padding-top: 60px;
+    background: #000000;
+}
+.mainFooter h4{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.mainFooter ul{
+    padding: 0;
+    margin: 0;
+}
+.mainFooter li{
+    list-style: none;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 5px 0px;
+    color: #FFFFFF;
+}
+.footerBottom p{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #B3B3B3;
+}
+.footerBottom ul{
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+.footerBottom ul li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 35px;
+}

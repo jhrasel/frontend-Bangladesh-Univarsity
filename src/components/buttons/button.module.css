@@ -1,0 +1,12 @@
+.buttons{
+    border-radius: 48px;
+    border: none;
+    color: #2B0808;
+    padding: 9px 25px;
+    font-size: 14px;
+    margin-right: 5px;
+
+}
+.buttons:last-child{
+    margin-right: 0px !important;
+}

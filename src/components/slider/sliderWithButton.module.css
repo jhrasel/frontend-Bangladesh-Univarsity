@@ -1,0 +1,78 @@
+.sliderWithButton{
+    border-radius: 0px 0px 40px 40px;
+    background: #fff;
+    text-align: left;
+    padding: 30px 0px;
+    /*margin: 70px;*/
+    /*width: 1218px;*/
+    margin: 0 auto;
+    /*margin-top: 90px;*/
+}
+.innerSliderWithButton > p{
+    font-family: 'noto_sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 0 !important;
+}
+.innerSliderWithButton > span{
+    font-family: 'noto_sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #545454;
+}
+.tabs{
+    font-family: 'sora_bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: #000000;
+    background-color: transparent;
+}
+
+.mainAboutBanner{
+    background: #AD1F1F;
+    border-radius: 40px;
+    color: #FFFFFF;
+    margin: 70px 0px;
+    padding: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-top: 50px;
+}
+.mainAboutBanner h1{
+    color: #FFFFFF;
+}
+.mainAboutBanner img{
+    max-width: 1218px;
+    max-height: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+.mainAboutBannerText {
+    background: #FFFFFF;
+    border-radius: 0px 0px 40px 40px;
+    max-width: 1218px;
+    margin: 0 auto;
+    padding: 35px 60px;
+}
+.mainAboutBannerText p{
+    font-family: 'Noto_Sans_normal';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+
+    color: #333333;
+}
+
+.item_middle{
+    display: flex;
+    justify-content: center;
+}

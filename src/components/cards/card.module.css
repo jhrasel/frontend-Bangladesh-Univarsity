@@ -1,0 +1,87 @@
+
+
+.mainSmallCard{
+    background: #FFFFFF;
+    border-radius: 40px;
+    margin: 0px 10px;
+    position: relative;
+}
+.title{
+    font-family: 'noto_medium';
+    font-style: normal;
+    font-size: 23px;
+    color: #1A1A1A;
+    margin: 0;
+    margin-bottom: 12px;
+}
+.subtitle{
+    font-family: 'noto_normal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #4D4D4D;
+}
+.subtitleFont{
+    font-size: 16px;
+}
+.cardDetials{
+    margin-top: 0px;
+    padding: 14px 25px;
+    text-align: left;
+}
+.date{
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    border-radius: 20px;
+    width: 55px;
+    position: absolute;
+    top: 47%;
+    right: 13px;
+}
+.date p{
+    font-family: 'noto_medium';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #D92626;
+    padding: 0;
+    margin: 7px;
+}
+.cardText{
+    padding: 0px 64px;
+    text-align: justify;
+}
+.cardText h4{
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.cardText p{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #545454;
+}
+.leftImg{
+    min-width: 600px;
+    max-height: 600px;
+}
+.leftImg img{
+    width: 100%;
+    height: 100%;
+}
+.mainCardWithImg{
+    border-radius: 40px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 80px;
+}

@@ -1,0 +1,42 @@
+.mainLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+}
+input#formBasicEmail {
+    background: #FFFFFF !important;
+    border-radius: 40px !important;
+}
+input#formBasicPassword{
+    background: #FFFFFF !important;
+    border-radius: 40px !important;
+}
+.signInBtn h4{
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.signInBtn{
+    display: flex;
+    align-items: center;
+}
+.submitButton{
+    background: #D92626;
+    border-radius: 40px !important;
+    border: none;
+    width: 100%;
+}
+.formText{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4D4D4D;
+    text-align: left !important;
+    margin-top: 10px;
+    padding-left: 10px;
+}

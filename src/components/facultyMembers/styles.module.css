@@ -1,0 +1,79 @@
+.mainFacultyMember{
+    margin-top: 80px;
+}
+.mainFacultyMember img{
+    width: 100%;
+    max-height: 500px;
+    border-radius: 40px;
+}
+.members{
+    margin-bottom: 70px;
+}
+.memberTitles{
+    border-bottom: 6px solid #EEEEEE;
+    position: relative;
+}
+.memberTitles:after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 6px;
+    background: #000;
+}
+.memberTitles h2{
+
+}
+.memberCard p{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 0;
+    margin-bottom: 6px;
+}
+.memberCard h2{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+}
+.memberCard{
+    background: #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+.memberImg{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.memberImg img{
+    width: 100%;
+    height: 100%;
+}
+.cardFooter p{
+    margin: 0;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+
+}
+.cardFooter{
+    background: #AD1F1F;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 22px;
+}
