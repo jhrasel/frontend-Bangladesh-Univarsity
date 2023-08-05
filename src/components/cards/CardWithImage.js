@@ -1,8 +1,13 @@
 import styles from './card.module.css'
 import image from '../../assets/image/tabImg.png'
 import {Buttons} from "../../components/buttons/button";
+import {useRouter} from "next/router";
 export const CardWithImage = (props) => {
     const {isVisiableLftImg, isVisiableRightImg, button, title, description, photo} = props;
+    const router = useRouter();
+    const routerHandler = () => {
+        router.push('/contact')
+    }
   return(
       <div className={styles.mainCardWithImg}>
           {
@@ -21,7 +26,7 @@ export const CardWithImage = (props) => {
                 </p>
                 {
                     button && (
-                        <Buttons text={'Apple Here'} bgColor={'#AD1F1F'} color={'#fff'}/>
+                        <Buttons text={'Apple Here'} bgColor={'#AD1F1F'} color={'#fff'} click={routerHandler}/>
                     )
                 }
             </div>

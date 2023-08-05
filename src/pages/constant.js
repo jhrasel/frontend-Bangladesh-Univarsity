@@ -1,0 +1,2 @@
+export const title = 'Apply today, Admission going on'
+export const description = 'The Bangladesh University Alumni Association is excited to announce the arrival of KU Alumni Connect. This is a new community building platform for Student\'s alumni. It is the only place online where you can find, and connect with, all 90,000 Bu alumni. All alumni are automatically enrolled!'

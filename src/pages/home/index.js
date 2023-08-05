@@ -7,8 +7,10 @@ import {Events} from "../../components/homePage/events/events";
 import React from "react";
 import {WhyUs} from "../../components/homePage/whyUs/whyUs";
 import {CardWithImage} from "../../components/cards/CardWithImage";
+import {title, description} from '../constant'
 
 const Index = () => {
+
   return(
       <>
           <Slider />
@@ -17,11 +19,13 @@ const Index = () => {
           {/*<Messages />*/}
           <WhyUs />
           <Bulletine />
-          <Events/>
+          {/*<Events/>*/}
           <CardWithImage
               isVisiableRightImg={true}
               isVisiableLftImg={false}
               button={true}
+              title={title}
+              description={description}
           />
       </>
   )
