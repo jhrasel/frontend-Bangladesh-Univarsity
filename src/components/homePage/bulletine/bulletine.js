@@ -1,31 +1,41 @@
 import {useEffect, useState} from 'react'
 import {SmallCard} from "../../cards/smallCard";
 import ApiRequest from "../../../services/api-services";
+import {useQuery} from "react-query";
+import {useRouter} from "next/router";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+
 export const Bulletine = () => {
-    const [bulletine, setBulletine] = useState([])
+    const Router = useRouter()
+    const { isLoading, data:bulletin } = useQuery('bulletin', () => ApiRequest.get('news/all?page=1&perPage=3'))
 
-    const updateBulletineHandler = () => {
-        ApiRequest.get('news/all?page=1&perPage=3').then((data) => {
-            setBulletine(data?.data?.data)
-        }).catch(e => console.log(e))
+    const routerHandler = (_id) => {
+        Router.push({
+            pathname: `news/${_id}`
+        })
     }
-
-
-    useEffect(() => {
-        updateBulletineHandler();
-    }, [])
-
   return(
-      <div className={'mt_30'}>
-          <h1 className={'headingTitle'} style={{marginBottom: '40px', marginLeft: '25px'}}>Our update bulletin</h1>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-              {
-                  bulletine && bulletine.map((value, i) => (
-                      <SmallCard {...value} key={i} showDate={false}/>
-                  ))
-              }
-          </div>
-          <a href='@/pages#' className={'readMore'} style={{textAlign: 'center'}}> Read More <span className={'arrow'}>&#8250;</span></a>
-      </div>
+      <Container fluid>
+              <div className={'mt_30'}>
+                  <Row>
+
+                  <h1 className={'headingTitle'} style={{marginBottom: '40px', marginLeft: '25px'}}>Our update bulletin</h1>
+
+                      {
+                          bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
+                              <Col xs='12' md='12' lg="4">
+                                  <SmallCard {...value} key={i} showDate={false} clickHandler={routerHandler}/>
+                              </Col>
+                          ))
+                      }
+
+                  <a href='@/pages#' className={'readMore'} style={{textAlign: 'center'}}> Read More <span className={'arrow'}>&#8250;</span></a>
+                  </Row>
+
+              </div>
+      </Container>
+
   )
 }

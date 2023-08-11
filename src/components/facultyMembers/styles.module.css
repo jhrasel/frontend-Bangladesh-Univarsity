@@ -47,7 +47,7 @@
 }
 .memberImg{
     width: 300px;
-    height: 300px;
+    height: 260px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
@@ -76,4 +76,55 @@
     align-items: center;
     justify-content: space-around;
     margin-top: 22px;
+}
+
+
+
+/*-------------------------------SECTION FOR SINGLE ITEM------------------------------*/
+.mainBanner{
+    margin-top: 90px;
+}
+.innerMainBanner{
+    position: relative;
+    height: 500px;
+    border-radius: 42px;
+    overflow: hidden;
+}
+.avaterImg{
+    width: 330px;
+    height: 330px;
+    margin-right: 60px;
+}
+.avaterImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.details{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    top: 0%;
+}
+.positionCenter{
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+    height: 100%;
+}
+.positionCenter > p{
+    font-family: Noto_Sans_normal;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    color:#FFFFFF;
+    margin-right: 30px;
+}
+.positionCenter > p > img{
+    margin-right: 5px;
+}
+.bodyDetails{
+    margin-top: 60px;
 }

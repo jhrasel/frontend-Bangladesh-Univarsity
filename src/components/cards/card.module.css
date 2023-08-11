@@ -70,7 +70,7 @@
     color: #545454;
 }
 .leftImg{
-    min-width: 600px;
+    min-width: 818px;
     max-height: 600px;
 }
 .leftImg img{
@@ -84,4 +84,15 @@
     align-items: center;
     overflow: hidden;
     margin-bottom: 80px;
+}
+
+@media screen and (max-width: 991px) {
+    .mainSmallCard{
+        margin-bottom: 40px;
+    }
+    .headingTitle {
+        font-size: 35px;
+        line-height: 10px;
+        text-align: center;
+    }
 }

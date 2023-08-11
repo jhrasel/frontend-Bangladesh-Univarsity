@@ -5,25 +5,19 @@ import {Slider} from "../../components/slider/slider";
 import {AboutBanner, AboutSliderWithButton} from "../../components/aboutPage/aboutbanner";
 import styled from './about.module.css'
 import ApiRequest from "../../services/api-services";
+import {useQuery} from "react-query";
 const Index = () => {
     const [section, setSection] = useState([]);
     const [hero, setHero] = useState([]);
     const [history, setHistory] = useState([]);
 
-
-    const getAboutData = () => {
-        ApiRequest.get('page/about/full-page').then((data) => {
-            console.log('ser', data?.data)
+    useQuery(['about'], () => ApiRequest.get('page/about/full-page'),{
+        onSuccess:(data)=> {
             setHero(data?.data?.body?.hero_data)
             setHistory(data?.data?.body?.history_data)
             setSection(data?.data?.body?.section_data)
-        }).catch(e => console.log(e))
-    }
-
-
-    useEffect(() => {
-        getAboutData();
-    }, []);
+        }
+    })
 
   return(
       <div className={styled.main_about}>

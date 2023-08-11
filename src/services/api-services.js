@@ -21,8 +21,29 @@ const ApiRequest = {
             .catch((error) => {
                 return error?.response;
             })
-    }
+    },
+    post: (endpoint, payload) =>{
+        const url = `https://backend-bangladesh-university.onrender.com/${endpoint}`;
+        const headers = {
+            'Content-Type': 'application/json'
+        }
 
+
+        const options = {
+            method:'POST',
+            url: `${url}`,
+            headers,
+            payload
+        };
+
+        return axios(options)?.
+        then((response) => {
+            return response;
+        })
+            .catch((error) => {
+                return error?.response;
+            })
+    }
 
 }
 

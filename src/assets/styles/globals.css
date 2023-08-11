@@ -217,3 +217,24 @@ button#why_us-tab-Self_Development,button#why_us-tab-Alumni, button#why_us-tab-S
   font-weight: 600;
   line-height: 140%;
 }
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  padding: 15px !important;
+}
+
+
+@media screen and (max-width: 1500px){
+  .body_padding {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+@media screen and (max-width: 991px){
+  .readMore{
+    margin-top: 10px !important;
+  }
+}

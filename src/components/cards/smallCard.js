@@ -8,7 +8,7 @@ export const SmallCard = (props) => {
     return(
 
         <>
-            <div className={styles.mainSmallCard}>
+            <div className={styles.mainSmallCard} onClick={()=> props.clickHandler(props?._id)}>
                 <img
                     src={image.src}
                     alt="Picture of the date"
@@ -24,7 +24,7 @@ export const SmallCard = (props) => {
 
                 <div className={styles.cardDetials}>
                     <p className={styles.subtitle}>
-                        {props?.shortDesc}
+                        {props?.shortDesc.length > 50 ? props?.shortDesc.substring(0, 50) + '...' : props?.shortDesc}
                     </p>
                     <h4 className={styles.title}>{props?.title}</h4>
                     <p className={[styles.subtitle , styles.subtitleFont].join(' ')}>

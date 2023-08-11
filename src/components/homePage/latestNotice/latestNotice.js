@@ -5,23 +5,19 @@ import {Buttons} from "../../buttons/button";
 import Accordion from 'react-bootstrap/Accordion';
 import {useRouter } from 'next/router'
 import ApiRequest from "../../../services/api-services";
-import {useEffect, useState} from "react";
+import {useQuery} from "react-query";
 export const LatestNotice = () => {
     const router = useRouter();
-    const [latestNews, setLatestNews] = useState([]);
-
     const routerHandler = () => {
         router.push('/news')
     }
-
-    const getLatestNews = () => {
-        ApiRequest.get('news/all').then((data) => setLatestNews(data?.data?.data)).catch(e => console.log(e))
+    const singleNotice = (_id) => {
+        router.push({
+            pathname: `news/${_id}`
+        })
     }
 
-
-    useEffect(() => {
-        getLatestNews();
-    }, [])
+    const { isLoading, data:newsList } = useQuery('news_list', () => ApiRequest.get('news/all'));
 
   return (
       <div className={styles.mainLatestNotice}>
@@ -37,9 +33,12 @@ export const LatestNotice = () => {
               </Col>
               <Col>
                   {
-                      latestNews?.length && latestNews?.map((news, index) => {
+                      isLoading && <p>Loading...</p>
+                  }
+                  {
+                      newsList?.data?.data?.length && newsList?.data?.data?.map((news, index) => {
                           return (
-                              <div className={styles.rightSideNotice} key={index}>
+                              <div className={styles.rightSideNotice} key={index} >
                                   <Accordion defaultActiveKey={0}>
                                       <Accordion.Item eventKey={index}>
                                           <Accordion.Header className='latestNew_Heading'>{news.title} </Accordion.Header>
@@ -47,7 +46,7 @@ export const LatestNotice = () => {
                                               {
                                                   news.shortDesc.length > 220 ? news.shortDesc.substring(0, 220) + '...' : news.shortDesc
                                               }
-                                              <a href='@/pages#' className={'readMore'} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
+                                              <a onClick={()=>singleNotice(news?._id)} className={'readMore'} style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
                                           </Accordion.Body>
                                       </Accordion.Item>
                                   </Accordion>

@@ -76,3 +76,20 @@
     display: flex;
     justify-content: center;
 }
+/*.innerSliderWithButton{*/
+/*    width: 350px;*/
+/*}*/
+.whyUs{
+    margin: 0px 60px;
+}
+@media screen and (max-width: 991px){
+    /*.innerSliderWithButton{*/
+    /*    width: auto;*/
+    /*}*/
+    .innerSliderWithButton{
+        margin-bottom: 30px;
+    }
+    .whyUs {
+        margin: 0px 0px;
+    }
+}

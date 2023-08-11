@@ -10,9 +10,6 @@ export const AboutBanner = ({history}) =>{
 
     return (
         <>
-            {
-
-            }
             <div className={styles.mainAboutBanner}>
                 <h1 style={{textAlign: 'center'}}  className={'headingTitle'}>{history?.title}</h1>
                 <img
