@@ -25,7 +25,7 @@ export const Bulletine = () => {
 
                       {
                           bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
-                              <Col xs='12' md='12' lg="4">
+                              <Col xs='12' md='12' lg="4"xs='12' md='12' lg="4">
                                   <SmallCard {...value} key={i} showDate={false} clickHandler={routerHandler}/>
                               </Col>
                           ))

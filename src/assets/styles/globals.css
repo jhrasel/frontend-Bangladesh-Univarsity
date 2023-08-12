@@ -63,6 +63,7 @@ a.navbar-brand {
 }
 
 .readMore{
+  cursor: pointer;
   font-family: 'Sora_medium', serif;
   font-style: normal;
   font-weight: 600;
@@ -205,7 +206,9 @@ input {
   font-size: 18px;
 }
 
-
+.modal-dialog.modal-lg.modal-dialog-centered.modal-fullscreen {
+  padding: 90px;
+}
 .whyUs > button.nav-link.active{
 
 }
@@ -223,6 +226,14 @@ tbody, td, tfoot, th, thead, tr {
   border-style: solid;
   border-width: 0;
   padding: 15px !important;
+}
+
+.modal-header {
+  background: transparent !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
 }
 
 

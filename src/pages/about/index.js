@@ -6,6 +6,9 @@ import {AboutBanner, AboutSliderWithButton} from "../../components/aboutPage/abo
 import styled from './about.module.css'
 import ApiRequest from "../../services/api-services";
 import {useQuery} from "react-query";
+import slider from '../../assets/image/slider.png'
+
+
 const Index = () => {
     const [section, setSection] = useState([]);
     const [hero, setHero] = useState([]);
@@ -41,8 +44,11 @@ const Index = () => {
               })
           }
 
-          <Slider />
-          <SliderWithButton />
+         <div style={{marginTop: '30px'}}>
+            <img src={slider.src} alt={'img'} />
+             <SliderWithButton />
+
+         </div>
           <AboutBanner history={history[0]} />
           <AboutSliderWithButton />
 

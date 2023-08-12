@@ -28,6 +28,10 @@ export const menuItem = [
         path: '/notice'
     },
     {
+        name: 'Gallery',
+        path: '/gallery'
+    },
+    {
         name: 'Alumni',
         path: '/Alumni'
     },
