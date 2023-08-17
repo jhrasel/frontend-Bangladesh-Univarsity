@@ -13,8 +13,8 @@ export const Header = () => {
         // fixed="top"
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className='justify-content-between main_header'>
             <Container>
-                <Navbar.Brand href="#">
-                    <img src={BrandIcon.src} />
+                <Navbar.Brand href="/home">
+                    <img src={BrandIcon.src} alt={'home image'}/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

@@ -6,6 +6,9 @@ import Accordion from 'react-bootstrap/Accordion';
 import {useRouter } from 'next/router'
 import ApiRequest from "../../../services/api-services";
 import {useQuery} from "react-query";
+import {Preloader} from "../../loader";
+import React from "react";
+import {Spinner} from "react-bootstrap";
 export const LatestNotice = () => {
     const router = useRouter();
     const routerHandler = () => {
@@ -22,7 +25,7 @@ export const LatestNotice = () => {
   return (
       <div className={styles.mainLatestNotice}>
           <Row>
-              <Col style={{display: 'flex', alignItems: 'center'}}>
+              <Col xl={'6'} md={'12'} xs={'12'}  style={{display: 'flex', alignItems: 'center'}}>
                   <div className={styles.lftSide}>
                       <h1 className={'headingTitle'}>Latest <br /> Notice News</h1>
                       <p>
@@ -31,9 +34,9 @@ export const LatestNotice = () => {
                       <Buttons text={'View All'} bgColor={'#AD1F1F'} color={'#fff'} click={routerHandler} />
                   </div>
               </Col>
-              <Col>
+              <Col xl={'6'} md={'12'} xs={'12'}>
                   {
-                      isLoading && <p>Loading...</p>
+                      isLoading && <div className={styles.preloader}><Spinner animation="grow" /></div>
                   }
                   {
                       newsList?.data?.data?.length && newsList?.data?.data?.map((news, index) => {

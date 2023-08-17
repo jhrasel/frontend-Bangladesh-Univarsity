@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import {CardWithImage} from "../../../components/cards/CardWithImage";
 import ApiRequest from "../../../services/api-services";
+import {WhyPreloader} from "../whyUs/whyPreloader";
 
 export const WhyUs = () =>{
     const [key, setKey] = useState('Benefits');
@@ -10,21 +11,22 @@ export const WhyUs = () =>{
     const { isLoading, data:tabData } = useQuery('tab_list', () => ApiRequest.get('need_tab/all'))
 
     return (
-        <div className='whyUs'>
-            <h1 style={{fontSize: '55px', marginBottom: '20px'}} className={'headingTitle'}>Here’s what you need</h1>
+        <div className={styles.whyUs}>
+            <h1 className={'headingTitle'}>Here’s what you need</h1>
+            {
+                isLoading && <WhyPreloader />
+            }
             <Tabs
                 id="why_us"
                 activeKey={key}
                 onSelect={(k) => setKey(k)}
-                className="mt-5 mb-5"
+                className={styles.whyUs_tab}
             >
-                {
-                    isLoading && <p>Loading...</p>
-                }
+
                 {
                     tabData?.data?.body?.length && tabData?.data?.body?.map((item, index)=> {
                         return(
-                            <Tab key={index} eventKey={item?.tab} title={item?.tab} className={styles.tabs}>
+                            <Tab key={index} eventKey={item?.tab} title={item?.tab} className={styles.tabs} tabClassName={styles.tabz}>
                                 <CardWithImage
                                     isVisiableRightImg={false}
                                     isVisiableLftImg={true}

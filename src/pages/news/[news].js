@@ -7,6 +7,10 @@ import styles from "../../components/cards/card.module.css";
 import image from "../../assets/image/small_card/events.png";
 import bannerImg from "../../assets/image/news/2.png";
 import moment from "moment";
+import Col from "react-bootstrap/Col";
+import {BulletinePreloader} from "../../components/homePage/bulletine/bulletineLoader";
+import Row from "react-bootstrap/Row";
+import {Spinner} from "react-bootstrap";
 
 
 const singleItem = () => {
@@ -25,6 +29,12 @@ const singleItem = () => {
         slidesToScroll: 2
     };
 
+    const routerHandler = (_id) => {
+        router.push({
+            pathname: `news/${_id}`
+        })
+    }
+
 
     return(
         <div style={{marginTop: '110px'}}>
@@ -32,7 +42,16 @@ const singleItem = () => {
                 <h1>{singleData?.data?.data?.title}</h1>
                 <p>{moment(singleData?.data?.data?.updatedAt).format("MMM Do YY")} / {singleData?.data?.data?.newsCreator?.name} / news</p>
             </div>
-            <img width={'100%'} src={bannerImg?.src} alt={'image'}/>
+            {
+                isloading ? (
+                    <div className={styles.preloader}><Spinner animation="grow" /></div>
+                ) :(
+                    <div className={styles.banner}>
+                        <img width={'100%'} src={bannerImg?.src} alt={'image'}/>
+                    </div>
+                )
+            }
+
 
             <div className={'container'}>
                 <h1 style={{textAlign: 'justify'}}>{singleData?.data?.data?.description}</h1>
@@ -42,67 +61,48 @@ const singleItem = () => {
                 <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
                     Recent News
                 </h1>
-                <ReactSlider {...settings}>
-                    {
-                        newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
-                            return (
-                                <div key={index}>
-                                    <div className={styles.mainSmallCard}>
-                                        <img
-                                            src={image.src}
-                                            alt="Picture of the date"
-                                            width='100%'
-                                        />
+                {
+                    newsListisloading && (
+                        <Row>
+                            <Col  xs='12' md='12' lg="6">
+                                <BulletinePreloader />
+                            </Col>
+                            <Col  xs='12' md='12' lg="6">
+                                <BulletinePreloader />
+                            </Col>
+                        </Row>
+                    )
+                }
+                <div className={styles.slider}>
+                    <ReactSlider {...settings}>
+                        {
+                            newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
+                                return (
+                                    <div key={index} onClick={()=> routerHandler(value?._id)}>
+                                        <div className={styles.mainSmallCard}>
+                                            <img
+                                                src={image.src}
+                                                alt="Picture of the date"
+                                                width='100%'
+                                            />
 
-                                        <div className={styles.cardDetials}>
-                                            <p>{moment(value?.updatedAt).format("MMM Do YY")} / {value?.newsCreator?.name}</p>
+                                            <div className={styles.cardDetials}>
+                                                <p>{moment(value?.updatedAt).format("MMM Do YY")} / {value?.newsCreator?.name}</p>
 
-                                            <h4 className={styles.title}>{value?.title}</h4>
-                                            <p className={[styles.subtitle , styles.subtitleFont].join(' ')}>
-                                                {
-                                                    value.shortDesc.length > 120 ? value.shortDesc.substring(0, 120) + '...' : value.shortDesc
-                                                }
-                                            </p>
+                                                <h4 className={styles.title}>{value?.title}</h4>
+                                                <p className={[styles.subtitle , styles.subtitleFont].join(' ')}>
+                                                    {
+                                                        value.shortDesc.length > 120 ? value.shortDesc.substring(0, 120) + '...' : value.shortDesc
+                                                    }
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            )
-                        })
-                    }
-                </ReactSlider>
-            </div>
-            <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
-                <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
-                    Latest Event
-                </h1>
-                <ReactSlider {...settings}>
-                    {
-                        eventList?.data?.data.length && eventList?.data?.data.map((value, index) => {
-                            return (
-                                <div key={index}>
-                                    <div className={styles.mainSmallCard}>
-                                        <img
-                                            src={image.src}
-                                            alt="Picture of the date"
-                                            width='100%'
-                                        />
-
-                                        <div className={styles.cardDetials}>
-                                            <p>{moment(value?.updatedAt).format("MMM Do YY")} / {value?.eventCreator?.name}</p>
-
-                                            <h4 className={styles.title}>{value?.title}</h4>
-                                            <p className={[styles.subtitle , styles.subtitleFont].join(' ')}>
-                                                {
-                                                    value.shortDesc.length > 120 ? value.shortDesc.substring(0, 120) + '...' : value.shortDesc
-                                                }
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </ReactSlider>
+                                )
+                            })
+                        }
+                    </ReactSlider>
+                </div>
             </div>
         </div>
     )

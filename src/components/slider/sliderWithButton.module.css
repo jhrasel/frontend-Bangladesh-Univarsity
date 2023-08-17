@@ -71,7 +71,10 @@
 
     color: #333333;
 }
-
+.whyUs h1{
+    font-size: 55px;
+    margin-bottom: 20px
+}
 .item_middle{
     display: flex;
     justify-content: center;
@@ -82,6 +85,18 @@
 .whyUs{
     margin: 0px 60px;
 }
+.whyUs_tab{
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.tabz{
+    color: #545454 !important;
+    font-family: 'sora_bold' !important;
+    font-size: 18px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 140% !important;
+}
 @media screen and (max-width: 991px){
     /*.innerSliderWithButton{*/
     /*    width: auto;*/
@@ -91,5 +106,27 @@
     }
     .whyUs {
         margin: 0px 0px;
+    }
+    .whyUs h1{
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 60px;
+    }
+    .whyUs_tab{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .tabz{
+        font-size: 14px !important;
+        padding: 5px;
+    }
+    .innerSliderWithButton {
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    .innerSliderWithButton > p{
+        font-size: 15px;
+        line-height: initial;
     }
 }

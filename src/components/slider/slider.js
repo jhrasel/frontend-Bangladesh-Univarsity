@@ -6,6 +6,8 @@ import {Buttons} from "../../components/buttons/button";
 import ApiRequest from "../../services/api-services";
 import {useQuery} from "react-query";
 import {useRouter} from "next/router";
+import {Preloader} from "../loader";
+import {Spinner} from "react-bootstrap";
 
 export const Slider = () => {
     const router = useRouter()
@@ -27,7 +29,7 @@ export const Slider = () => {
     return (
         <div style={{marginTop: '88px'}}>
             {
-                isLoading && <p>Loading...</p>
+                isLoading && <div className={styles.preloader}><Spinner animation="grow" /></div>
             }
             <Carousel activeIndex={index} onSelect={handleSelect} >
                 {
@@ -42,7 +44,8 @@ export const Slider = () => {
                                 <Carousel.Caption>
                                     <div className={styles.sliderHeading}>
                                         <h1 className={'headingTitle'}>{item?.title}</h1>
-                                        <p>{item?.description.length > 220 ? item?.description.substring(0, 220) + '...' : item?.description}</p>
+                                        <p className={styles.desktop}>{item?.description.length > 220 ? item?.description.substring(0, 220) + '...' : item?.description}</p>
+                                        <p className={styles.mobile}>{item?.description.length > 90 ? item?.description.substring(0, 90) + '...' : item?.description}</p>
                                         <Buttons
                                             text={'Contact Us'}
                                             bgColor={'#AD1F1F'}

@@ -47,7 +47,6 @@ export const FacultyMembers = () => {
         })
     }
 
-    console.log('filterData', filterData)
   return(
       <>
           <div className={styles.mainFacultyMember}>

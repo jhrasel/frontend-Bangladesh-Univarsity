@@ -10,31 +10,31 @@ export const SliderWithButton = () => {
     return(
         <div className={styles.sliderWithButton}>
             <Row>
-                <Col className='item_middle'>
-                    <div className={styles.innerSliderWithButton}>
-                        <img src={apartmentImg.src} />
+                <Col xs='6' md='6' lg="3" className='item_middle' >
+                    <div className={styles.innerSliderWithButton} style={{border: '1px solid transparent'}}>
+                        <img src={apartmentImg.src} alt={'slider image'}/>
                         <p>University Life</p>
                         <span>Overall in here</span>
                     </div>
                 </Col>
-                <Col className='item_middle'>
-                    <div className={styles.innerSliderWithButton}>
-                        <img src={sportsImg.src} />
+                <Col xs='6' md='6' lg="3" className='item_middle'>
+                    <div className={styles.innerSliderWithButton}  style={{border: '1px solid transparent'}}>
+                        <img src={sportsImg.src} alt={'slider image'}/>
                         <p>Athletics</p>
                         <span>Sports Clubs</span>
                     </div>
                 </Col>
-                <Col className='item_middle'>
-                    <div className={styles.innerSliderWithButton}>
-                        <img src={schoolsImg.src} />
+                <Col xs='6' md='6' lg="3" className='item_middle' >
+                    <div className={styles.innerSliderWithButton} style={{border: '1px solid transparent'}}>
+                        <img src={schoolsImg.src} alt={'slider image'}/>
 
                         <p>Graduation</p>
                         <span>Getting Diploma</span>
                     </div>
                 </Col>
-                <Col className='item_middle'>
-                    <div className={styles.innerSliderWithButton}>
-                        <img src={groupImg.src} />
+                <Col xs='6' md='6' lg="3" className='item_middle' >
+                    <div className={styles.innerSliderWithButton} style={{border: '1px solid transparent'}}>
+                        <img src={groupImg.src} alt={'slider image'}/>
 
                         <p>Social</p>
                         <span>Overall in here</span>

@@ -45,7 +45,7 @@ const Index = () => {
           }
 
          <div style={{marginTop: '30px'}}>
-            <img src={slider.src} alt={'img'} />
+            <img src={slider.src} alt={'img'} style={{width: '100%'}} />
              <SliderWithButton />
 
          </div>

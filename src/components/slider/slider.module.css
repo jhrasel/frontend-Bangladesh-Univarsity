@@ -22,3 +22,34 @@
     color: #545454;
     padding: 12px 0px;
 }
+.preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+@media screen and (max-width: 991px) {
+    .sliderHeading h1{
+        font-size: 20px;
+        line-height: 0;
+    }
+    .sliderHeading p{
+        font-size: 12px;
+    }
+    .sliderHeading{
+        padding: 30px 12px;
+        width: 337px;
+        padding-bottom: 11px;
+    }
+    .mobile{
+        display: block;
+        margin-bottom: 0;
+    }
+    .desktop{
+        display: none;
+    }
+    .sliderHeading button{
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}

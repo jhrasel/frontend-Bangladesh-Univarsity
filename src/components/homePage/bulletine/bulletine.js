@@ -6,6 +6,7 @@ import {useRouter} from "next/router";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import {BulletinePreloader} from "../bulletine/bulletineLoader";
 
 export const Bulletine = () => {
     const Router = useRouter()
@@ -22,16 +23,30 @@ export const Bulletine = () => {
                   <Row>
 
                   <h1 className={'headingTitle'} style={{marginBottom: '40px', marginLeft: '25px'}}>Our update bulletin</h1>
-
+                      {
+                          isLoading && (
+                            <>
+                                <Col  xs='12' md='12' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='12' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='12' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                            </>
+                          )
+                      }
                       {
                           bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
-                              <Col xs='12' md='12' lg="4"xs='12' md='12' lg="4">
+                              <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}}>
                                   <SmallCard {...value} key={i} showDate={false} clickHandler={routerHandler}/>
                               </Col>
                           ))
                       }
 
-                  <a href='@/pages#' className={'readMore'} style={{textAlign: 'center'}}> Read More <span className={'arrow'}>&#8250;</span></a>
+                  {/*<a href='@/pages#' className={'readMore'} style={{textAlign: 'center'}}> Read More <span className={'arrow'}>&#8250;</span></a>*/}
                   </Row>
 
               </div>

@@ -22,3 +22,34 @@
     padding: 65px;
     margin: 70px 0px;
 }
+.preloader{
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 991px){
+    .lftSide {
+        padding-left: 0px;
+        margin-bottom: 25px;
+    }
+    .mainLatestNotice{
+        padding: 20px;
+        margin: 28px 0px;
+    }
+    .lftSide h1{
+        font-size: 25px;
+        margin-bottom: 0;
+        line-height: 30px;
+    }
+    .lftSide p{
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 0;
+    }
+    .accordion-body {
+        font-size: 15px !important;
+        text-align: justify !important;
+    }
+}
