@@ -52,7 +52,8 @@ export const RecentNews = () => {
 
     const routerHandler = (_id) => {
         Router.push({
-            pathname: `news/${_id}`
+            pathname:`news/${_id}`,
+            query: {_id },
         })
     }
     return(
@@ -104,7 +105,7 @@ export const RecentNews = () => {
                         {
                             newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
                                 return (
-                                    <div key={index} onClick={()=> routerHandler(value?._id)}>
+                                    <div key={index} onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
                                         <div className={styles.mainSmallCard}>
                                             <img
                                                 src={image.src}
@@ -154,7 +155,7 @@ export const RecentNews = () => {
                         {
                             newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
                                 return (
-                                    <div key={index}>
+                                    <div key={index} onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
                                         <div className={styles.mainSmallCard}>
                                             <img
                                                 src={image.src}

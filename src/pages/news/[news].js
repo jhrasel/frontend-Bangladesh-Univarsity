@@ -16,22 +16,48 @@ import {Spinner} from "react-bootstrap";
 const singleItem = () => {
     const router = useRouter()
     const {news} = router.query;
+    console.log('news',news)
     const {isloading, data:singleData} = useQuery([singleItem, news], () => ApiRequest.get(`news/find/${news}`));
     // const {data: noticeList, isLoading: noticeListisloading} = useQuery(['singleNotice'],()=> ApiRequest.get('news/all?page=1&perPage=10'))
     const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList'],()=> ApiRequest.get('news/all?page=1&perPage=10'))
-    const {data: eventList, isLoading: eventListisloading} = useQuery(['latestEventList'],()=> ApiRequest.get('event/all?page=1&perPage=10'))
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     const routerHandler = (_id) => {
         router.push({
-            pathname: `news/${_id}`
+            pathname:`${_id}`,
         })
     }
 
@@ -58,7 +84,7 @@ const singleItem = () => {
             </div>
 
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
-                <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
+                <h1 className={'headingTitle'}>
                     Recent News
                 </h1>
                 {

@@ -29,9 +29,9 @@ export const AboutBanner = ({history}) =>{
 }
 
 
-export const AboutSliderWithButton = () => {
+export const AboutSliderWithButton = ({item}) => {
     return(
-        <div className={styles.sliderWithButton}>
+        <div className={ item ? styles.aboutSliderButton : styles.sliderWithButton} >
             <Container fluid>
                 <Row>
                     <Col xs='12' md='12' lg="4">
@@ -47,7 +47,7 @@ export const AboutSliderWithButton = () => {
                         <div className={styles.innerSliderWithButton}>
                             <img src={assistantNav.src} alt={'img'} />
                             <p style={{margin: '10px 0px!important'}}>Apply Online</p>
-                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</span>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</span>
                             <a className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
 
                         </div>
@@ -57,7 +57,7 @@ export const AboutSliderWithButton = () => {
                             <img src={touch.src} alt={'img'} />
 
                             <p style={{margin: '10px 0px!important'}}>Get in Touch</p>
-                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</span>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</span>
                             <a className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
 
                         </div>

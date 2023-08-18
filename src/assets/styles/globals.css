@@ -262,7 +262,12 @@ tbody, td, tfoot, th, thead, tr {
   button.accordion-button.collapsed {
     padding: 5px 0px;
   }
-
+  .slick-prev {
+    left: -12px !important;
+  }
+  .slick-next{
+    right: -12px !important;
+  }
 }
 
 

@@ -11,3 +11,6 @@
     justify-content: center;
     color: #545454;
 }
+.aboutSliderButton > .sliderWithButton{
+    background: transparent !important;
+}

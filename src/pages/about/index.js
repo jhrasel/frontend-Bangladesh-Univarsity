@@ -58,10 +58,11 @@ const Index = () => {
          <div style={{marginTop: '30px'}}>
             <img src={slider.src} alt={'img'} style={{width: '100%'}} />
              <SliderWithButton />
-
          </div>
           <AboutBanner history={history[0]} />
-          <AboutSliderWithButton />
+          <div className={styled.aboutSliderButton}>
+              <AboutSliderWithButton item={true}/>
+          </div>
 
           {
               isLoading && <>

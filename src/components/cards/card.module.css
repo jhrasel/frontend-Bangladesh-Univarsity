@@ -127,4 +127,8 @@
     .mainCardWithImg{
         margin-bottom: 0;
     }
+    .banner{
+        margin-bottom: 10px;
+        height: auto;
+    }
 }

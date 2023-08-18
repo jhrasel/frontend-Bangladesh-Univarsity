@@ -11,6 +11,11 @@
     margin: 0 auto;
     margin-bottom: 90px;
 }
+.fromSingleNotice{
+    max-width: 1295px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
 .noticeItem{
     display: flex;
     margin-top: 40px;
@@ -63,4 +68,24 @@
 
 .noticeItem:last-child .noticeDetails{
     border-bottom: 1px solid transparent;
+}
+
+@media screen and (max-width: 991px) {
+    .noticeDetails h4{
+        font-size: 18px;
+    }
+    .noticeDetails p{
+        font-size: 16px;
+    }
+    .noticeDate{
+        min-width: 95px;
+        height: 82px;
+        padding: 8px;
+    }
+    .noticeDetails{
+        margin-left: 16px;
+    }
+    .mainNoticeBody h1{
+        margin-bottom: 15px !important;
+    }
 }

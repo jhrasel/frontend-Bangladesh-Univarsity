@@ -9,6 +9,14 @@
     /*margin-top: 90px;*/
     margin-bottom: 60px;
 }
+.aboutSliderButton {
+    margin-top: 90px;
+    background: transparent !important;
+    width: 1218px;
+    margin: 70px;
+    margin: 0 auto;
+    padding: 90px 0px;
+}
 .innerSliderWithButton > p{
     font-family: 'noto_sans';
     font-style: normal;
@@ -82,7 +90,7 @@
     justify-content: center;
 }
 .innerSliderWithButton{
-    width: 350px;
+    width: auto;
     text-align: left;
 }
 .whyUs{
@@ -146,7 +154,12 @@
         text-align: justify;
         border-radius: 5px;
     }
-    .sliderWithButton{
+    .sliderWithButton, .aboutSliderButton{
         margin-bottom: 0;
+    }
+    .aboutSliderButton{
+        width: auto;
+        padding: 0;
+        padding-top: 30px;
     }
 }
