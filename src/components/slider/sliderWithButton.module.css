@@ -7,6 +7,8 @@
     /*width: 1218px;*/
     margin: 0 auto;
     /*margin-top: 90px;*/
+    margin-bottom: 60px;
+    background: transparent;
 }
 .innerSliderWithButton > p{
     font-family: 'noto_sans';
@@ -61,6 +63,7 @@
     max-width: 1218px;
     margin: 0 auto;
     padding: 35px 60px;
+    text-align: justify;
 }
 .mainAboutBannerText p{
     font-family: 'Noto_Sans_normal';
@@ -79,9 +82,10 @@
     display: flex;
     justify-content: center;
 }
-/*.innerSliderWithButton{*/
-/*    width: 350px;*/
-/*}*/
+.innerSliderWithButton{
+    width: 350px;
+    text-align: left;
+}
 .whyUs{
     margin: 0px 60px;
 }
@@ -101,6 +105,14 @@
     /*.innerSliderWithButton{*/
     /*    width: auto;*/
     /*}*/
+    .mainAboutBanner h1{
+        margin-top: 25px;
+    }
+    .mainAboutBanner{
+        margin: 30px 0px;
+        overflow: hidden;
+        padding: 0;
+    }
     .innerSliderWithButton{
         margin-bottom: 30px;
     }
@@ -124,9 +136,18 @@
         border: 1px solid;
         border-radius: 10px;
         padding: 15px;
+        width: 100%;
     }
     .innerSliderWithButton > p{
         font-size: 15px;
         line-height: initial;
+    }
+    .mainAboutBannerText{
+        padding: 20px 20px;
+        text-align: justify;
+        border-radius: 5px;
+    }
+    .sliderWithButton{
+        margin-bottom: 0;
     }
 }

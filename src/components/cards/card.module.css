@@ -124,4 +124,7 @@
         font-size: 20px;
         margin-bottom: 10px;
     }
+    .mainCardWithImg{
+        margin-bottom: 0;
+    }
 }

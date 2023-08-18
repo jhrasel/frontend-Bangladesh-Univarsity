@@ -7,6 +7,8 @@ import styled from './about.module.css'
 import ApiRequest from "../../services/api-services";
 import {useQuery} from "react-query";
 import slider from '../../assets/image/slider.png'
+import {Placeholder} from "react-bootstrap";
+import {WhyPreloader} from "../../components/homePage/whyUs/whyPreloader";
 
 
 const Index = () => {
@@ -14,7 +16,7 @@ const Index = () => {
     const [hero, setHero] = useState([]);
     const [history, setHistory] = useState([]);
 
-    useQuery(['about'], () => ApiRequest.get('page/about/full-page'),{
+    const{isLoading} = useQuery(['about'], () => ApiRequest.get('page/about/full-page'),{
         onSuccess:(data)=> {
             setHero(data?.data?.body?.hero_data)
             setHistory(data?.data?.body?.history_data)
@@ -25,7 +27,16 @@ const Index = () => {
   return(
       <div className={styled.main_about}>
           {
-              hero?.length && hero?.map((section, index) => {
+              isLoading && (<>
+
+                  <Placeholder as="p" animation="glow">
+                      <Placeholder xs={12} />
+                      <Placeholder xs={12} />
+                  </Placeholder>
+              </>)
+          }
+          {
+               hero?.map((section, index) => {
                   return(
                       <div key={index}>
 
@@ -53,7 +64,15 @@ const Index = () => {
           <AboutSliderWithButton />
 
           {
-              section?.length && section?.map((section, index) => {
+              isLoading && <>
+                  <WhyPreloader />
+                  <WhyPreloader />
+                  <WhyPreloader />
+              </>
+          }
+
+          {
+              section?.map((section, index) => {
                   let RightVisibility;
                   let LeftVisibility;
                   if (index === 0){

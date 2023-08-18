@@ -237,6 +237,11 @@ tbody, td, tfoot, th, thead, tr {
   display: none;
 }
 
+.slider{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
 
 @media screen and (max-width: 1500px){
