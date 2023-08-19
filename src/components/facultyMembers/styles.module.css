@@ -133,3 +133,44 @@
     background: red;
     color: #FFFFFF;
 }
+
+.innerBgImg{
+    height: 100%;
+}
+@media screen and (max-width: 991px) {
+    .innerMainBanner{
+        height: 200px;
+    }
+    .positionCenter{
+        margin-left: 0;
+        display: initial;
+        text-align: center;
+    }
+    .avaterImg{
+        width: 50px;
+        height: 50px;
+        margin-right: 0px;
+        /*float: left;*/
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .innerBgImg{
+        height: 100%;
+    }
+    .positionCenter > p{
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1500px) {
+    .innerBgImg{
+        height: 100%;
+    }
+    .avaterImg{
+        width: 150px;
+        height: 150px;
+    }
+}

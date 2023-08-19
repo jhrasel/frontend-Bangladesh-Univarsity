@@ -24,7 +24,7 @@ const teacherDetails = () => {
     return(
         <div className={styles.mainBanner}>
             <div className={styles.innerMainBanner}>
-                <img src={bannerImg.src} alt={'bannerImg'} width={'100%'}/>
+                <img className={styles.innerBgImg} src={bannerImg.src} alt={'bannerImg'} width={'100%'}/>
                 <div className={styles.details}>
                     <div className={styles.positionCenter}>
                         <div className={styles.avaterImg}>
@@ -52,8 +52,10 @@ const teacherDetails = () => {
                         {
                             FacultyMemberData?.data?.data?.website && (
                                 <p>
-                                    <img src={websiteIcon.src} alt={'email'} />
-                                    {FacultyMemberData?.data?.data?.website}
+                                   <a href={FacultyMemberData?.data?.data?.website} target='_blank' style={{color: '#fff'}}>
+                                       <img src={websiteIcon.src} alt={'email'} /> &nbsp;
+                                       {FacultyMemberData?.data?.data?.website}
+                                   </a>
                                 </p>
                             )
                         }
