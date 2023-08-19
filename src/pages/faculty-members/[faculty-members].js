@@ -1,23 +1,21 @@
 import React, {useEffect} from "react";
-import {useRouter} from "next/router";
+import {useRouter as UseRouter} from "next/router";
 import bannerImg from '../../assets/image/teacherBanner.svg'
 import avatar from '../../assets/image/image.png'
 import phoneIcon from '../../assets/image/teacher/phoneIcon.svg'
 import emailIcon from '../../assets/image/teacher/emailIcon.svg'
 import websiteIcon from '../../assets/image/teacher/website.svg'
-import {useQuery} from "react-query";
+import {useQuery as UseQuery} from "react-query";
 import ApiRequest from "../../services/api-services";
 import styles from '../../components/facultyMembers/styles.module.css'
 import Table from "react-bootstrap/Table";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 const teacherDetails = () => {
-    const router = useRouter()
+    const router = UseRouter()
     const {FacultyMember} = router.query;
-    const {isloading, data:FacultyMemberData} = useQuery(['singleItem', FacultyMember], () => ApiRequest.get(`teacher/find/64d268b5b634efa2314b9080`));
+    const {isloading, data:FacultyMemberData} = UseQuery(['singleItem', FacultyMember], () => ApiRequest.get(`teacher/find/64d268b5b634efa2314b9080`));
     const url = 'https://backend-bangladesh-university.onrender.com'
-
-    console.log('FacultyMemberData', FacultyMemberData)
 
     if (isloading) return <p>loading...</p>
 

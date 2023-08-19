@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="45c96387-8c60-446f-8c21-473569a0a26c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/head.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/head.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/gallery/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gallery/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homePage/bulletine/bulletine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homePage/bulletine/bulletine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/homePage/whyUs/whyUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homePage/whyUs/whyUs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_documonent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_documonent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/faculty-members/[faculty-members].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/faculty-members/[faculty-members].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/news/[news].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/news/[news].js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LtmXfgOGsNZFgi2wtxlk6U6vzb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/notice" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Users\88017\OneDrive\Desktop\bu-project\bu-client\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\88017\OneDrive\Desktop\bu-project\bu-client\src\pages\notice" />
+      <recent name="C:\Users\88017\OneDrive\Desktop\bu-project\bu-client\src\assets\image" />
+      <recent name="C:\Users\88017\OneDrive\Desktop\bu-project\bu-client\src\pages\faculty-members" />
+      <recent name="$PROJECT_DIR$/src/assets/image/news" />
+      <recent name="$PROJECT_DIR$/src/assets/image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\88017\OneDrive\Desktop\bu-project\bu-client\src\pages\faculty-members" />
+      <recent name="$PROJECT_DIR$/src/components/homePage" />
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/pages/bulletine" />
+      <recent name="$PROJECT_DIR$/src/pages/events" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45c96387-8c60-446f-8c21-473569a0a26c" name="Changes" comment="" />
+      <created>1676698793670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676698793670</updated>
+      <workItem from="1676698795387" duration="10476000" />
+      <workItem from="1677250709715" duration="3136000" />
+      <workItem from="1677519081958" duration="8737000" />
+      <workItem from="1677604226767" duration="819000" />
+      <workItem from="1677605256850" duration="5258000" />
+      <workItem from="1678084691772" duration="1714000" />
+      <workItem from="1678287185796" duration="1093000" />
+      <workItem from="1678408410738" duration="18578000" />
+      <workItem from="1680106049477" duration="6253000" />
+      <workItem from="1689012538568" duration="1799000" />
+      <workItem from="1689092316138" duration="76000" />
+      <workItem from="1690474487987" duration="17177000" />
+      <workItem from="1691170931826" duration="25028000" />
+      <workItem from="1691688061948" duration="3511000" />
+      <workItem from="1691732984370" duration="20257000" />
+      <workItem from="1691815530465" duration="595000" />
+      <workItem from="1691820055397" duration="7108000" />
+      <workItem from="1691942839080" duration="11000" />
+      <workItem from="1691943747328" duration="814000" />
+      <workItem from="1692113130428" duration="7898000" />
+      <workItem from="1692203164837" duration="24326000" />
+      <workItem from="1692430121263" duration="2341000" />
+      <workItem from="1692432795742" duration="151000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

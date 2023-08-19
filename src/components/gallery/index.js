@@ -23,7 +23,6 @@ const GalleryContainer = () => {
 
     const url = 'https://backend-bangladesh-university.onrender.com'
     const {data, isLoading} = useQuery(['gallery-item'],()=> ApiRequest.get('gallery/all'))
-    console.log('data', data)
 
     return(
         <div className={styles.mainGallery}>
@@ -61,7 +60,7 @@ const GalleryContainer = () => {
                                 <ul>
 
                                     <li>
-                                        <a href={url+image} download target='_blank'>
+                                        <a href={url+image} download>
                                             <img src={downloadIcon.src} alt={'icon'} />
                                         </a>
                                     </li>

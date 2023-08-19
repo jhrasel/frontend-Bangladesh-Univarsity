@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
-import {useRouter} from "next/router";
-import {useQuery} from "react-query";
+import {useQuery as UseQuery} from "react-query";
 import ApiRequest from "../../services/api-services";
 import ReactSlider from "react-slick";
 import styles from "../../components/cards/card.module.css";
@@ -11,15 +10,16 @@ import Col from "react-bootstrap/Col";
 import {BulletinePreloader} from "../../components/homePage/bulletine/bulletineLoader";
 import Row from "react-bootstrap/Row";
 import {Spinner} from "react-bootstrap";
+import { useRouter as UseRouter} from 'next/router'
 
 
 const singleItem = () => {
-    const router = useRouter()
+    const router = UseRouter()
     const {news} = router.query;
-    console.log('news',news)
-    const {isloading, data:singleData} = useQuery([singleItem, news], () => ApiRequest.get(`news/find/${news}`));
+
+    const {isloading, data:singleData} = UseQuery([singleItem, news], () => ApiRequest.get(`news/find/${news}`));
     // const {data: noticeList, isLoading: noticeListisloading} = useQuery(['singleNotice'],()=> ApiRequest.get('news/all?page=1&perPage=10'))
-    const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList'],()=> ApiRequest.get('news/all?page=1&perPage=10'))
+    const {data: newsList, isLoading: newsListisloading} = UseQuery(['newsAllList'],()=> ApiRequest.get('news/all?page=1&perPage=10'))
 
     const settings = {
         dots: false,
