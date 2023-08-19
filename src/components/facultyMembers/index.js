@@ -43,7 +43,7 @@ export const FacultyMembers = () => {
 
     const routerHandler = (_id) => {
         Router.push({
-            pathname: `faculty-members/${_id}`
+            pathname: `faculty/${_id}`
         })
     }
 

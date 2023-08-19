@@ -128,3 +128,8 @@
 .bodyDetails{
     margin-top: 60px;
 }
+.list{
+    font-weight: bold;
+    background: red;
+    color: #FFFFFF;
+}

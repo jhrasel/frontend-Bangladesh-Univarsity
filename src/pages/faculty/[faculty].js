@@ -13,8 +13,9 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 const teacherDetails = () => {
     const router = UseRouter()
-    const {FacultyMember} = router.query;
-    const {isloading, data:FacultyMemberData} = UseQuery(['singleItem', FacultyMember], () => ApiRequest.get(`teacher/find/64d268b5b634efa2314b9080`));
+    const {faculty} = router.query;
+
+    const {isloading, data:FacultyMemberData} = UseQuery(['singleItem', faculty], () => ApiRequest.get(`teacher/find/${faculty}`));
     const url = 'https://backend-bangladesh-university.onrender.com'
 
     if (isloading) return <p>loading...</p>
@@ -30,25 +31,40 @@ const teacherDetails = () => {
                             <img src={url+FacultyMemberData?.data?.data?.photo} alt={'avater'} />
                         </div>
 
-                        <p>
-                            <img src={phoneIcon.src} alt={'phone'} />
-                            {FacultyMemberData?.data?.data?.phone}
-                        </p>
-                        <p>
-                            <img src={emailIcon.src} alt={'email'} />
-                            {FacultyMemberData?.data?.data?.email}
-                        </p>
-                        <p>
-                            <img src={websiteIcon.src} alt={'email'} />
-                            {FacultyMemberData?.data?.data?.website}
-                        </p>
+                        {
+                            FacultyMemberData?.data?.data?.phone && (
+                                <p>
+                                    <img src={phoneIcon.src} alt={'phone'} />
+                                    {FacultyMemberData?.data?.data?.phone}
+                                </p>
+                            )
+                        }
+
+                        {
+                            FacultyMemberData?.data?.data?.email && (
+                                <p>
+                                    <img src={emailIcon.src} alt={'email'} />
+                                    {FacultyMemberData?.data?.data?.email}
+                                </p>
+                            )
+                        }
+
+                        {
+                            FacultyMemberData?.data?.data?.website && (
+                                <p>
+                                    <img src={websiteIcon.src} alt={'email'} />
+                                    {FacultyMemberData?.data?.data?.website}
+                                </p>
+                            )
+                        }
+
                     </div>
                 </div>
             </div>
 
             <div className={styles.bodyDetails}>
                 <Row>
-                    <Col>
+                    <Col  xs='12' md='12' lg="4">
                         <Table style={{background: '#fff', borderRadius: '5px'}}>
                             <tbody>
                             <tr>
@@ -66,12 +82,20 @@ const teacherDetails = () => {
                             </tbody>
                         </Table>
                     </Col>
-                    <Col>
+                    <Col  xs='12' md='12' lg="8" >
                         <Table style={{background: 'red', borderRadius: '5px'}}>
                             <tbody>
+                            <tr style={{width: '20%'}}>
+                                <td><b>Academic Qualification:</b></td>
+                                <td>{FacultyMemberData?.data?.data?.academicQualification}</td>
+                            </tr>
                             <tr>
-                                <td>1</td>
-                                <td>Mark</td>
+                                <td><b>Training Experience:</b></td>
+                                <td>{FacultyMemberData?.data?.data?.trainingExperience}</td>
+                            </tr>
+                            <tr>
+                                <td><b>Teaching Area:</b></td>
+                                <td>{FacultyMemberData?.data?.data?.teachingArea}</td>
                             </tr>
                             </tbody>
                         </Table>

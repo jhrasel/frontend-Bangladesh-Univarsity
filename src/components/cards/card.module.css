@@ -103,6 +103,7 @@
 .slider{
     max-width: 1200px;
     margin: 0 auto;
+    cursor: pointer;
 }
 @media screen and (max-width: 991px) {
     .mainSmallCard{

@@ -13,7 +13,7 @@ export const menuItem = [
     },
     {
         name: 'Faculty Members',
-        path: '/faculty-members'
+        path: '/faculty'
     },
     {
         name: 'Curriculum',
