@@ -6,7 +6,7 @@ export const CardWithImage = (props) => {
     const {isVisiableLftImg, isVisiableRightImg, button, title, description, photo} = props;
     const router = useRouter();
     const routerHandler = () => {
-        router.push('/contact')
+        router.push('/contact-us')
     }
   return(
       <div className={styles.mainCardWithImg}>

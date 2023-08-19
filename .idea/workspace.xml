@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45c96387-8c60-446f-8c21-473569a0a26c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contactUs/contactus.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUs/contactus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contactUs/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contactUs/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/facultyMembers/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/facultyMembers/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/homePage/whyUs/whyUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/homePage/whyUs/whyUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/slider/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slider/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact-us/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/faculty/[faculty].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/faculty/[faculty].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api-services.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api-services.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardWithImage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +106,7 @@
       <workItem from="1692430121263" duration="2341000" />
       <workItem from="1692432795742" duration="971000" />
       <workItem from="1692445924563" duration="4932000" />
-      <workItem from="1692451228919" duration="3607000" />
+      <workItem from="1692451228919" duration="4539000" />
     </task>
     <servers />
   </component>
