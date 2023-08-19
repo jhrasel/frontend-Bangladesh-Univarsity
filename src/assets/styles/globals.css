@@ -241,7 +241,12 @@ tbody, td, tfoot, th, thead, tr {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.gmap_canvas{
+  border: 1px solid #ccc;
+  height: 402px !important;
+  padding: 8px;
+  border-radius: 7px;
+}
 
 
 @media screen and (max-width: 1500px){

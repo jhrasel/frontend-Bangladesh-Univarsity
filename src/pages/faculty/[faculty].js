@@ -11,6 +11,7 @@ import styles from '../../components/facultyMembers/styles.module.css'
 import Table from "react-bootstrap/Table";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import {Loader} from '../../components/loader'
 const teacherDetails = () => {
     const router = UseRouter()
     const {faculty} = router.query;
@@ -18,7 +19,6 @@ const teacherDetails = () => {
     const {isloading, data:FacultyMemberData} = UseQuery(['singleItem', faculty], () => ApiRequest.get(`teacher/find/${faculty}`));
     const url = 'https://backend-bangladesh-university.onrender.com'
 
-    if (isloading) return <p>loading...</p>
 
 
     return(
@@ -27,9 +27,13 @@ const teacherDetails = () => {
                 <img className={styles.innerBgImg} src={bannerImg.src} alt={'bannerImg'} width={'100%'}/>
                 <div className={styles.details}>
                     <div className={styles.positionCenter}>
-                        <div className={styles.avaterImg}>
-                            <img src={url+FacultyMemberData?.data?.data?.photo} alt={'avater'} />
-                        </div>
+                        {
+                            isloading ? <Loader/> : (
+                                <div className={styles.avaterImg}>
+                                    <img src={url+FacultyMemberData?.data?.data?.photo} alt={'avater'} />
+                                </div>
+                            )
+                        }
 
                         {
                             FacultyMemberData?.data?.data?.phone && (
@@ -52,7 +56,7 @@ const teacherDetails = () => {
                         {
                             FacultyMemberData?.data?.data?.website && (
                                 <p>
-                                   <a href={FacultyMemberData?.data?.data?.website} target='_blank' style={{color: '#fff'}}>
+                                   <a href={FacultyMemberData?.data?.data?.website}  rel="opener" style={{color: '#fff'}}>
                                        <img src={websiteIcon.src} alt={'email'} /> &nbsp;
                                        {FacultyMemberData?.data?.data?.website}
                                    </a>

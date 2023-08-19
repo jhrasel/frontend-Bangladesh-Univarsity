@@ -18,7 +18,7 @@ export const Slider = () => {
     };
 
     const gotoContact = () => {
-        router.push('/contact')
+        router.push('/contact-us')
     }
 
     const gotoNotice = () => {

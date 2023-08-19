@@ -31,9 +31,9 @@ const ApiRequest = {
 
         const options = {
             method:'POST',
-            url: `${url}`,
             headers,
-            payload
+            url: `${url}`,
+            data:payload
         };
 
         return axios(options)?.

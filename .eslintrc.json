@@ -1,6 +1,6 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "@next/next/no-document-import-in-page": "on"
+    "@next/next/no-document-import-in-page": "off"
   }
 }

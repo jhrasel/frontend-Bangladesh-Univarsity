@@ -75,7 +75,7 @@ export const SliderWithButton = () => {
                             <img src={assistantNav.src} alt={'img'} />
                             <p style={{margin: '10px 0px!important'}}>Apply Online</p>
                             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</span>
-                            <a className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>sdf</span></a>
+                            <a className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
 
                         </div>
                     </Col>
@@ -85,7 +85,7 @@ export const SliderWithButton = () => {
 
                             <p style={{margin: '10px 0px!important'}}>Get in Touch</p>
                             <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</span>
-                            <a className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>sdf</span></a>
+                            <a className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
 
                         </div>
                     </Col>

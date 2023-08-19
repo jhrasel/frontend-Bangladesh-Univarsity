@@ -11,3 +11,53 @@
     border-radius: 12px;
     overflow: hidden;
 }
+.mainForm{
+    border: 1px solid #ccc;
+    padding: 28px;
+    border-radius: 11px;
+    margin-bottom: 45px;
+}
+.footer{
+    margin-bottom: 50px;
+}
+.footer ul{
+    padding: 0;
+    margin: 0;
+}
+.footer ul li p{
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-family: Noto_Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 27px */
+}
+.footer ul li{
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 35px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .mainForm{
+        margin-top: 0px !important;
+    }
+}
+@media screen and (max-width: 991px){
+    .footer ul li p{
+        font-size: 11px;
+    }
+    .footer ul li{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .mainContact h1{
+        margin-bottom: 10px !important;
+    }
+    .mainForm{
+        margin-top: 25px;
+    }
+}
+
