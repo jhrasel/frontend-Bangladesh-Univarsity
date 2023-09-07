@@ -1,14 +1,13 @@
-import {SliderWithButton} from "../../components/slider/sliderWithButton";
-import React, {useEffect, useMemo, useState} from "react";
-import {CardWithImage} from "../../components/cards/CardWithImage";
-import {Slider} from "../../components/slider/slider";
-import {AboutBanner, AboutSliderWithButton} from "../../components/aboutPage/aboutbanner";
-import styled from './about.module.css'
+import React, { useState } from "react";
+import { Placeholder } from "react-bootstrap";
+import { useQuery } from "react-query";
+import slider from '../../assets/image/slider.png';
+import { AboutBanner, AboutSliderWithButton } from "../../components/aboutPage/aboutbanner";
+import { CardWithImage } from "../../components/cards/CardWithImage";
+import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";
+import { SliderWithButton } from "../../components/slider/sliderWithButton";
 import ApiRequest from "../../services/api-services";
-import {useQuery} from "react-query";
-import slider from '../../assets/image/slider.png'
-import {Placeholder} from "react-bootstrap";
-import {WhyPreloader} from "../../components/homePage/whyUs/whyPreloader";
+import styled from './about.module.css';
 
 
 const Index = () => {
@@ -84,7 +83,7 @@ const Index = () => {
                       RightVisibility = true
                   }
                   return (
-                      <>
+                      <div key={index}>
                           <br />
                           <CardWithImage
                               isVisiableRightImg={RightVisibility}
@@ -93,7 +92,7 @@ const Index = () => {
                               title={section?.title}
                               description={section?.description}
                           />
-                      </>
+                      </div>
                   )
               })
           }
