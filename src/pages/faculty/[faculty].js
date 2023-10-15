@@ -1,17 +1,16 @@
-import React, {useEffect} from "react";
-import {useRouter as UseRouter} from "next/router";
-import bannerImg from '../../assets/image/teacherBanner.svg'
-import avatar from '../../assets/image/image.png'
-import phoneIcon from '../../assets/image/teacher/phoneIcon.svg'
-import emailIcon from '../../assets/image/teacher/emailIcon.svg'
-import websiteIcon from '../../assets/image/teacher/website.svg'
-import {useQuery as UseQuery} from "react-query";
-import ApiRequest from "../../services/api-services";
-import styles from '../../components/facultyMembers/styles.module.css'
-import Table from "react-bootstrap/Table";
+import { useRouter as UseRouter } from "next/router";
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import {Loader} from '../../components/loader'
+import Table from "react-bootstrap/Table";
+import { useQuery as UseQuery } from "react-query";
+import emailIcon from '../../assets/image/teacher/emailIcon.svg';
+import phoneIcon from '../../assets/image/teacher/phoneIcon.svg';
+import websiteIcon from '../../assets/image/teacher/website.svg';
+import bannerImg from '../../assets/image/teacherBanner.svg';
+import styles from '../../components/facultyMembers/styles.module.css';
+import { Loader } from '../../components/loader';
+import ApiRequest from "../../services/api-services";
 const teacherDetails = () => {
     const router = UseRouter()
     const {faculty} = router.query;
@@ -30,7 +29,7 @@ const teacherDetails = () => {
                         {
                             isloading ? <Loader/> : (
                                 <div className={styles.avaterImg}>
-                                    <img src={url+FacultyMemberData?.data?.data?.photo} alt={'avater'} />
+                                    <img src={FacultyMemberData?.data?.data?.photo} alt={'avater'} />
                                 </div>
                             )
                         }

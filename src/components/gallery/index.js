@@ -1,16 +1,14 @@
-import styles from './gallery.module.css'
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import { useState } from "react";
 import Col from "react-bootstrap/Col";
-import zoomInIcon from "../../assets/image/zoomin.svg";
-import {useQuery} from "react-query";
-import ApiRequest from "../../services/api-services";
-import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/Container";
 import Modal from 'react-bootstrap/Modal';
-import {useState} from "react";
-import closeIcon from '../../assets/image/modal/close.svg'
-import downloadIcon from '../../assets/image/modal/download.svg'
-import copyIcon from '../../assets/image/modal/copy.svg'
+import Row from "react-bootstrap/Row";
+import { useQuery } from "react-query";
+import closeIcon from '../../assets/image/modal/close.svg';
+import downloadIcon from '../../assets/image/modal/download.svg';
+import zoomInIcon from "../../assets/image/zoomin.svg";
+import ApiRequest from "../../services/api-services";
+import styles from './gallery.module.css';
 
 const GalleryContainer = () => {
     const [show, setShow] = useState(false);
@@ -33,7 +31,7 @@ const GalleryContainer = () => {
                             return (
                                 <Col key={i} xs='12' md='12' lg="4" style={{marginBottom: '25px'}}>
                                     <div className={styles.galleryImg} onClick={()=>handleShow(image?.image)}>
-                                        <img alt={'image'} src={url+image?.image}/>
+                                        <img alt={'image'} src={image?.image}/>
 
                                         <div className={styles.overlay}>
                                             <img src={zoomInIcon.src} alt={'img'} />
@@ -60,7 +58,7 @@ const GalleryContainer = () => {
                                 <ul>
 
                                     <li>
-                                        <a href={url+image} download>
+                                        <a href={image} download>
                                             <img src={downloadIcon.src} alt={'icon'} />
                                         </a>
                                     </li>
@@ -76,7 +74,7 @@ const GalleryContainer = () => {
                         <Modal.Body>
                             {
                                 image && (
-                                    <img alt={'image'} src={url+image} style={{width: '100%', height: '100%'}}/>
+                                    <img alt={'image'} src={image} style={{width: '100%', height: '100%'}}/>
                                 )
                             }
 

@@ -1,12 +1,11 @@
-import {useEffect, useState} from 'react'
-import {SmallCard} from "../../cards/smallCard";
-import ApiRequest from "../../../services/api-services";
-import {useQuery} from "react-query";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import {BulletinePreloader} from "../bulletine/bulletineLoader";
+import Row from "react-bootstrap/Row";
+import { useQuery } from "react-query";
+import ApiRequest from "../../../services/api-services";
+import { SmallCard } from "../../cards/smallCard";
+import { BulletinePreloader } from "../bulletine/bulletineLoader";
 
 export const Bulletine = () => {
     const Router = useRouter()
@@ -17,6 +16,8 @@ export const Bulletine = () => {
             pathname: `news/${_id}`
         })
     }
+
+    
   return(
       <Container fluid>
               <div className={'mt_30'}>

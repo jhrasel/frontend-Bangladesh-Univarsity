@@ -1,16 +1,16 @@
-import image from '../../../assets/image/small_card/events.png'
-import React from "react";
-import ReactSlider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import styles from "../../../components/cards/card.module.css";
-import {useQuery} from "react-query";
-import ApiRequest from "../../../services/api-services";
 import moment from "moment";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import React from "react";
 import Col from "react-bootstrap/Col";
-import {BulletinePreloader} from "../../../components/homePage/bulletine/bulletineLoader";
 import Row from "react-bootstrap/Row";
+import { useQuery } from "react-query";
+import ReactSlider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import image from '../../../assets/image/small_card/events.png';
+import styles from "../../../components/cards/card.module.css";
+import { BulletinePreloader } from "../../../components/homePage/bulletine/bulletineLoader";
+import ApiRequest from "../../../services/api-services";
 export const RecentNews = () => {
     const Router = useRouter()
     const settings = {
@@ -108,9 +108,10 @@ export const RecentNews = () => {
                                     <div key={index} onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
                                         <div className={styles.mainSmallCard}>
                                             <img
-                                                src={image.src}
+                                                src={value.photo ?? image.src}
                                                 alt="Picture of the date"
                                                 width='100%'
+                                                style={{height: '380px'}}
                                             />
 
                                             <div className={styles.cardDetials}>
@@ -158,9 +159,10 @@ export const RecentNews = () => {
                                     <div key={index} onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
                                         <div className={styles.mainSmallCard}>
                                             <img
-                                                src={image.src}
+                                                src={value?.photo ?? image.src}
                                                 alt="Picture of the date"
                                                 width='100%'
+                                                style={{height: '380px'}}
                                             />
 
                                             <div className={styles.cardDetials}>

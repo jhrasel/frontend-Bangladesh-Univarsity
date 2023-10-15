@@ -1,16 +1,14 @@
-import React, {useEffect} from "react";
-import {useQuery as UseQuery} from "react-query";
-import ApiRequest from "../../services/api-services";
+import moment from "moment";
+import { useRouter as UseRouter } from 'next/router';
+import React from "react";
+import { Spinner } from "react-bootstrap";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import { useQuery as UseQuery } from "react-query";
 import ReactSlider from "react-slick";
 import styles from "../../components/cards/card.module.css";
-import image from "../../assets/image/small_card/events.png";
-import bannerImg from "../../assets/image/news/2.png";
-import moment from "moment";
-import Col from "react-bootstrap/Col";
-import {BulletinePreloader} from "../../components/homePage/bulletine/bulletineLoader";
-import Row from "react-bootstrap/Row";
-import {Spinner} from "react-bootstrap";
-import { useRouter as UseRouter} from 'next/router'
+import { BulletinePreloader } from "../../components/homePage/bulletine/bulletineLoader";
+import ApiRequest from "../../services/api-services";
 
 
 const singleItem = () => {
@@ -73,7 +71,7 @@ const singleItem = () => {
                     <div className={styles.preloader}><Spinner animation="grow" /></div>
                 ) :(
                     <div className={styles.banner}>
-                        <img width={'100%'} src={bannerImg?.src} alt={'image'}/>
+                        <img width={'100%'} src={singleData?.data?.data?.photo} alt={'image'} style={{width: '100%', height: '100%', borderRadius: '10px'}}/>
                     </div>
                 )
             }
@@ -84,7 +82,7 @@ const singleItem = () => {
             </div>
 
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
-                <h1 className={'headingTitle'}>
+                <h1 className={'headingTitle'} style={{marginBottom: '20px'}}>
                     Recent News
                 </h1>
                 {
@@ -107,9 +105,10 @@ const singleItem = () => {
                                     <div key={index} onClick={()=> routerHandler(value?._id)}>
                                         <div className={styles.mainSmallCard}>
                                             <img
-                                                src={image.src}
+                                                src={value?.photo}
                                                 alt="Picture of the date"
                                                 width='100%'
+                                                style={{height: '380px'}}
                                             />
 
                                             <div className={styles.cardDetials}>

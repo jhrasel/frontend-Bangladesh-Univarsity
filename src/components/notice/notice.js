@@ -1,12 +1,12 @@
-import styles from './styles.module.css'
-import bannerImg from "../../assets/image/slider.png";
-import React, {useEffect, useMemo, useState} from "react";
-import ApiRequest from "../../services/api-services";
 import moment from "moment";
-import {Loader} from "../../components/loader";
-import {useQuery} from "react-query";
-import {useRouter} from "next/router";
-import {LatestSingleNotice} from "./LatestNotice";
+import { useRouter } from "next/router";
+import React, { useMemo, useState } from "react";
+import { useQuery } from "react-query";
+import bannerImg from "../../assets/image/slider.jpg";
+import { Loader } from "../../components/loader";
+import ApiRequest from "../../services/api-services";
+import { LatestSingleNotice } from "./LatestNotice";
+import styles from './styles.module.css';
 export const Notice = ({singleNotice}) => {
     const Router = useRouter();
     const [id, setId] = useState(2);
@@ -34,7 +34,7 @@ export const Notice = ({singleNotice}) => {
 
     return(
       <div className={styles.mainNotice}>
-          <img src={bannerImg.src} alt={'bannerImg'}/>
+            <img src={bannerImg.src} alt={'bannerImg'} style={{marginTop: '20px'}}/>
           <LatestSingleNotice latestNotice={latestNotice} style={false} singleRoute={false}/>
           <div className={styles.mainNoticeBody}>
               <h1 className={'headingTitle'} style={{margin: '40px 0px'}}>

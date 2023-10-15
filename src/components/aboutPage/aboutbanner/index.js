@@ -1,12 +1,12 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import styles from '../../slider/sliderWithButton.module.css'
-import adjust from '../../../assets/image/adjust.png'
-import assistantNav from '../../../assets/image/assistant_navigation.png'
-import touch from '../../../assets/image/touch_app.png'
-import slider from "../../../assets/image/slider.png";
 import Container from "react-bootstrap/Container";
+import Row from 'react-bootstrap/Row';
+import adjust from '../../../assets/image/adjust.png';
+import assistantNav from '../../../assets/image/assistant_navigation.png';
+import slider from "../../../assets/image/slider.jpg";
+import touch from '../../../assets/image/touch_app.png';
+import styles from '../../slider/sliderWithButton.module.css';
 export const AboutBanner = ({history}) =>{
 
     return (
@@ -17,6 +17,7 @@ export const AboutBanner = ({history}) =>{
                     className="d-block w-100"
                     src={slider.src}
                     alt="First slide"
+                    style={{borderRadius: '5px'}}
                 />
             </div>
             <div className={styles.mainAboutBannerText}>

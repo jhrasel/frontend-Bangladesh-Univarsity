@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Placeholder } from "react-bootstrap";
 import { useQuery } from "react-query";
-import slider from '../../assets/image/slider.png';
+import slider from '../../assets/image/slider.jpg';
 import { AboutBanner, AboutSliderWithButton } from "../../components/aboutPage/aboutbanner";
 import { CardWithImage } from "../../components/cards/CardWithImage";
 import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";

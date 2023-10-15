@@ -1,13 +1,12 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import { useRouter } from "next/router";
+import React, { useMemo, useState } from 'react';
+import { Spinner } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
-import slider from '../../assets/image/slider.png'
-import styles from './slider.module.css'
-import {Buttons} from "../../components/buttons/button";
+import { useQuery } from "react-query";
+import slider from '../../assets/image/slider.jpg';
+import { Buttons } from "../../components/buttons/button";
 import ApiRequest from "../../services/api-services";
-import {useQuery} from "react-query";
-import {useRouter} from "next/router";
-import {Preloader} from "../loader";
-import {Spinner} from "react-bootstrap";
+import styles from './slider.module.css';
 
 export const Slider = () => {
     const router = useRouter()
@@ -24,7 +23,23 @@ export const Slider = () => {
     const gotoNotice = () => {
         router.push('/notice')
     }
-    const { isLoading, data:galleryItem } = useQuery('gallery_item', () => ApiRequest.get('gallery/all'))
+
+        const { isLoading, data:galleryItem } = useQuery('gallery_item', () => ApiRequest.get('banner/all'))
+    console.log('galleryItem', galleryItem)
+
+    const gallery = useMemo(() => { 
+        const arr = [];
+        galleryItem?.data?.data?.map((singleItem) => { 
+            singleItem?.images?.map((image) => { 
+                const obj = {
+                    ...singleItem,
+                    image
+                }
+                arr.push(obj)
+            })
+        })
+        return arr;
+    }, [galleryItem])
 
     return (
         <div style={{marginTop: '88px'}}>
@@ -33,14 +48,11 @@ export const Slider = () => {
             }
             <Carousel activeIndex={index} onSelect={handleSelect} >
                 {
-                    galleryItem?.data?.body?.length && galleryItem?.data?.body?.map((item, index) => {
+                    gallery.length && gallery.map((item, index) => {
+                       console.log(item)
                         return(
                             <Carousel.Item key={index}>
-                                <img
-                                    className="d-block w-100"
-                                    src={slider.src}
-                                    alt="First slide"
-                                />
+                                <img className={styles.Image_Slider} src={item?.image?.path ?? slider.src} alt="slider" />
                                 <Carousel.Caption>
                                     <div className={styles.sliderHeading}>
                                         <h1 className={'headingTitle'}>{item?.title}</h1>
@@ -64,3 +76,4 @@ export const Slider = () => {
 
     );
 }
+

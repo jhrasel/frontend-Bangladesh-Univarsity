@@ -1,9 +1,9 @@
-import styles from './styles.module.css'
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import bannerImg from "../../assets/image/slider.png";
 import Accordion from 'react-bootstrap/Accordion';
-import {CourseDetails} from "./courseDetails";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import bannerImg from "../../assets/image/slider.jpg";
+import { CourseDetails } from "./courseDetails";
+import styles from './styles.module.css';
 
 export const CurriculumPage = () => {
   return (

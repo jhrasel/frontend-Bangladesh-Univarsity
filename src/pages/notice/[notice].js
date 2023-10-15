@@ -1,13 +1,13 @@
+import { useRouter } from "next/router";
 import React from "react";
-import {useRouter} from "next/router";
-import {useQuery} from "react-query";
-import ApiRequest from "../../services/api-services";
+import { useQuery } from "react-query";
+import bannerImg from "../../assets/image/slider.jpg";
 import styles from "../../components/cards/card.module.css";
-import image from "../../assets/image/small_card/events.png";
-import bannerImg from "../../assets/image/news/2.png";
+import ApiRequest from "../../services/api-services";
+
 import moment from "moment";
-import {Spinner} from "react-bootstrap";
-import {LatestSingleNotice} from "../../components/notice/LatestNotice";
+import { Spinner } from "react-bootstrap";
+import { LatestSingleNotice } from "../../components/notice/LatestNotice";
 
 
 const NoticeItem = () => {
@@ -31,7 +31,7 @@ const NoticeItem = () => {
                     <div className={styles.preloader}><Spinner animation="grow" /></div>
                 ) :(
                     <div className={styles.banner}>
-                        <img width={'100%'} src={bannerImg?.src} alt={'image'}/>
+                            <img width={'100%'} src={bannerImg?.src} alt={'image'} style={{borderRadius: '10px', margin: '10px 0', height: '600px'}} />
                     </div>
                 )
             }

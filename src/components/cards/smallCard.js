@@ -1,7 +1,6 @@
-import styles from './card.module.css'
 import moment from "moment";
 import React from "react";
-import image from '../../assets/image/small_card/small_card.png'
+import styles from './card.module.css';
 
 export const SmallCard = (props) => {
     console.log('props', props)
@@ -10,9 +9,10 @@ export const SmallCard = (props) => {
         <>
             <div className={styles.mainSmallCard} onClick={()=> props.clickHandler(props?._id)}>
                 <img
-                    src={image.src}
+                    src={props.photo}
                     alt="Picture of the date"
                     width='100%'
+                    style={{height: '380px'}}
                 />
                 {/*{*/}
                 {/*    date && (*/}

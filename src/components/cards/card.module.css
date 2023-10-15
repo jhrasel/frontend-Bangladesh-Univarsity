@@ -1,135 +1,134 @@
-
-
-.mainSmallCard{
-    background: #FFFFFF;
-    border-radius: 40px;
-    margin: 0px 10px;
-    position: relative;
+.mainSmallCard {
+  background: #ffffff;
+  border-radius: 40px;
+  margin: 0px 10px;
+  position: relative;
+  overflow: hidden;
 }
-.title{
-    font-family: 'noto_medium';
-    font-style: normal;
-    font-size: 23px;
-    color: #1A1A1A;
-    margin: 0;
-    margin-bottom: 12px;
+.title {
+  font-family: "noto_medium";
+  font-style: normal;
+  font-size: 23px;
+  color: #1a1a1a;
+  margin: 0;
+  margin-bottom: 12px;
 }
-.subtitle{
-    font-family: 'noto_normal';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 150%;
-    color: #4D4D4D;
+.subtitle {
+  font-family: "noto_normal";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #4d4d4d;
 }
-.subtitleFont{
-    font-size: 16px;
+.subtitleFont {
+  font-size: 16px;
 }
-.cardDetials{
-    margin-top: 0px;
-    padding: 14px 25px;
-    text-align: left;
+.cardDetials {
+  margin-top: 0px;
+  padding: 14px 25px;
+  text-align: left;
 }
-.date{
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
-    border-radius: 20px;
-    width: 55px;
-    position: absolute;
-    top: 47%;
-    right: 13px;
+.date {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 20px;
+  width: 55px;
+  position: absolute;
+  top: 47%;
+  right: 13px;
 }
-.date p{
-    font-family: 'noto_medium';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 1px;
-    color: #D92626;
-    padding: 0;
-    margin: 7px;
+.date p {
+  font-family: "noto_medium";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #d92626;
+  padding: 0;
+  margin: 7px;
 }
-.cardText{
-    padding: 0px 64px;
-    text-align: justify;
+.cardText {
+  padding: 0px 64px;
+  text-align: justify;
 }
-.cardText h4{
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    color: #000000;
-    margin-bottom: 30px;
+.cardText h4 {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  color: #000000;
+  margin-bottom: 30px;
 }
-.cardText p{
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: #545454;
+.cardText p {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #545454;
 }
-.leftImg{
-    min-width: 818px;
-    max-height: 600px;
+.leftImg {
+  min-width: 818px;
+  max-height: 600px;
 }
-.leftImg img{
-    width: 100%;
-    height: 100%;
+.leftImg img {
+  width: 100%;
+  height: 100%;
 }
-.mainCardWithImg{
-    border-radius: 40px;
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 80px;
+.mainCardWithImg {
+  border-radius: 40px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 80px;
 }
-.banner{
-    height: 550px;
-    border-right: 20px;
-    margin-bottom: 50px;
+.banner {
+  height: 550px;
+  border-right: 20px;
+  margin-bottom: 50px;
 }
-.preloader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50vh;
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
 }
-.banner img{
-    width: 100%;
-    height: 100%;
+.banner img {
+  width: 100%;
+  height: 100%;
 }
-.slider{
-    max-width: 1200px;
-    margin: 0 auto;
-    cursor: pointer;
+.slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 @media screen and (max-width: 991px) {
-    .mainSmallCard{
-        margin-bottom: 20px;
-    }
-    .headingTitle {
-        font-size: 35px;
-        line-height: 10px;
-        text-align: center;
-    }
-    .leftImg{
-        display: none;
-    }
-    .cardText{
-        padding: 20px 25px;
-    }
-    .cardText h4{
-        margin-top: 15px;
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    .mainCardWithImg{
-        margin-bottom: 0;
-    }
-    .banner{
-        margin-bottom: 10px;
-        height: auto;
-    }
+  .mainSmallCard {
+    margin-bottom: 20px;
+  }
+  .headingTitle {
+    font-size: 35px;
+    line-height: 10px;
+    text-align: center;
+  }
+  .leftImg {
+    display: none;
+  }
+  .cardText {
+    padding: 20px 25px;
+  }
+  .cardText h4 {
+    margin-top: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .mainCardWithImg {
+    margin-bottom: 0;
+  }
+  .banner {
+    margin-bottom: 10px;
+    height: auto;
+  }
 }

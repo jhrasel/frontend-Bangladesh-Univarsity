@@ -1,16 +1,14 @@
-import styles from './styles.module.css'
-import bannerImg from '../../assets/image/slider.png'
-import memberImg from '../../assets/image/image.png'
-import Row from "react-bootstrap/Row";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 import Col from "react-bootstrap/Col";
-import {useQuery} from "react-query";
+import Row from "react-bootstrap/Row";
+import { useQuery } from "react-query";
+import bannerImg from '../../assets/image/slider.jpg';
 import ApiRequest from "../../services/api-services";
-import {useEffect, useMemo} from "react";
-import {useRouter} from "next/router";
+import styles from './styles.module.css';
 export const FacultyMembers = () => {
     const Router = useRouter()
     const {data, isLoading} = useQuery(['teacherList'], ()=>ApiRequest.get('teacher/all-for-landing-page'))
-    const url = 'https://backend-bangladesh-university.onrender.com'
 
     const filterData = useMemo(()=> {
         let teacher = {};
@@ -50,7 +48,7 @@ export const FacultyMembers = () => {
   return(
       <>
           <div className={styles.mainFacultyMember}>
-                <img src={bannerImg.src} alt={'bannerImg'}/>
+              <img src={bannerImg.src} alt={'bannerImg'} style={{marginTop:'20px'}} />
               <h1 className={'headingTitle'} style={{margin: '40px 0px'}}>
                   Dignified Teachers of Computer <br /> Science & Engineering.
               </h1>
@@ -67,7 +65,7 @@ export const FacultyMembers = () => {
                                     <div className={styles.memberCard}>
                                         <div className={styles.memberImg}>
                                             {/*<img src={memberImg.src} alt={'memberImg'} />*/}
-                                            <img src={url+role?.photo} />
+                                            <img src={role?.photo} />
                                         </div>
                                         <h4>{role?.name}</h4>
                                         <p>{role?.editableRole}</p>
@@ -92,11 +90,12 @@ export const FacultyMembers = () => {
                   <Row>
                       {
                           filterData?.professor?.map((role, i) => {
+                              console.log(role)
                               return (
                                     <Col md={4} key={i}>
                                         <div className={styles.memberCard}>
                                             <div className={styles.memberImg}>
-                                                <img src={memberImg.src} alt={'memberImg'} />
+                                                <img src={role?.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
                                             <p>{role?.editableRole}</p>
@@ -125,7 +124,7 @@ export const FacultyMembers = () => {
                                     <Col md={4} key={i}>
                                         <div className={styles.memberCard}>
                                             <div className={styles.memberImg}>
-                                                <img src={memberImg.src} alt={'memberImg'} />
+                                                <img src={role.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
                                             <p>{role?.editableRole}</p>

@@ -1,13 +1,10 @@
-import styles from "./styles.module.css";
-import bannerImg from "../../assets/image/slider.png";
-import Form from 'react-bootstrap/Form';
+import { useState } from "react";
 import Button from 'react-bootstrap/Button';
-import {useState} from "react";
-import ApiRequest from "../../services/api-services";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form';
 import Toast from 'react-bootstrap/Toast';
-import {ToastContainer} from "react-bootstrap";
+import bannerImg from "../../assets/image/slider.jpg";
+import ApiRequest from "../../services/api-services";
+import styles from "./styles.module.css";
 
 export const ContactUs = () => {
     const [contactValue, setContactValue] = useState({})
