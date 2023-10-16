@@ -24,7 +24,8 @@ export const WhyUs = () =>{
             >
 
                 {
-                    tabData?.data?.body?.length && tabData?.data?.body?.map((item, index)=> {
+                    tabData?.data?.body?.length && tabData?.data?.body?.map((item, index) => {
+                        console.log('sdf', item)
                         return(
                             <Tab key={index} eventKey={item?.tab} title={item?.tab} className={styles.tabs} tabClassName={styles.tabz}>
                                 <CardWithImage

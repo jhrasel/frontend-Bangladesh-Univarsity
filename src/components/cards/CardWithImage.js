@@ -1,7 +1,7 @@
-import styles from './card.module.css'
-import image from '../../assets/image/tabImg.png'
-import {Buttons} from "../../components/buttons/button";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import image from '../../assets/image/tabImg.png';
+import { Buttons } from "../../components/buttons/button";
+import styles from './card.module.css';
 export const CardWithImage = (props) => {
     const {isVisiableLftImg, isVisiableRightImg, button, title, description, photo} = props;
     const router = useRouter();
@@ -13,7 +13,7 @@ export const CardWithImage = (props) => {
           {
               isVisiableLftImg && (
                   <div className={styles.leftImg}>
-                      <img src={image.src} alt='cardImg'/>
+                      <img src={props.photo} alt='cardImg'/>
                   </div>
               )
           }

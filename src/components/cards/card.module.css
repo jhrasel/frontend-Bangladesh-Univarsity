@@ -71,6 +71,7 @@
 .leftImg {
   min-width: 818px;
   max-height: 600px;
+  height: 600px;
 }
 .leftImg img {
   width: 100%;
