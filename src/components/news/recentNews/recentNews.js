@@ -1,6 +1,7 @@
 import moment from "moment";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
@@ -10,8 +11,13 @@ import "slick-carousel/slick/slick.css";
 import image from '../../../assets/image/small_card/events.png';
 import styles from "../../../components/cards/card.module.css";
 import { BulletinePreloader } from "../../../components/homePage/bulletine/bulletineLoader";
+
+
+
+
 import ApiRequest from "../../../services/api-services";
 export const RecentNews = () => {
+    const [page, setPage] = useState(1)
     const Router = useRouter()
     const settings = {
         dots: false,
@@ -47,8 +53,7 @@ export const RecentNews = () => {
         ]
     };
 
-    const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList'],()=> ApiRequest.get('news/all?page=1&perPage=10'))
-    // const {data: eventList, isLoading: eventListisloading} = useQuery(['latestEventList'],()=> ApiRequest.get('event/all?page=1&perPage=10'))
+    const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList', page],()=> ApiRequest.get(`news/all?page=${page}&perPage=10`))
 
     const routerHandler = (_id) => {
         Router.push({
@@ -56,6 +61,14 @@ export const RecentNews = () => {
             query: {_id },
         })
     }
+
+    
+
+    const loadHandler = () => {
+        const page = newsList?.data?.currentPage;
+        setPage(page + 1)
+    }
+
     return(
         <>
             {/*<div className={style.newImg}>*/}
@@ -100,18 +113,21 @@ export const RecentNews = () => {
                     }
 
                 </>
-                <div className={'slider'}>
-                    <ReactSlider {...settings}>
-                        {
+                <div className={'sliderss'}>
+                    <Row>
+                        
+                    
+                    {
                             newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
                                 return (
-                                    <div key={index} onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
-                                        <div className={styles.mainSmallCard}>
+                                    <Col key={index} xs='12' md='12' lg="4" style={{padding: '10px'}}>
+                            <div  onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
+                                        <div className={styles.mainSmallCard} style={{margin: '0'}}>
                                             <img
                                                 src={value.photo ?? image.src}
                                                 alt="Picture of the date"
                                                 width='100%'
-                                                style={{height: '380px'}}
+                                                style={{height: '280px'}}
                                             />
 
                                             <div className={styles.cardDetials}>
@@ -126,10 +142,14 @@ export const RecentNews = () => {
                                             </div>
                                         </div>
                                     </div>
+                        </Col>
                                 )
                             })
                         }
-                    </ReactSlider>
+
+                    </Row>
+                    <Button variant="danger" onClick={loadHandler}>Load More +</Button>
+
                 </div>
             </div>
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>

@@ -26,7 +26,7 @@ export const CardWithImage = (props) => {
                 </p>
                 {
                     button && (
-                        <Buttons text={'Apple Here'} bgColor={'#AD1F1F'} color={'#fff'} click={routerHandler}/>
+                        <Buttons text={'Apply Here'} bgColor={'#AD1F1F'} color={'#fff'} click={routerHandler}/>
                     )
                 }
             </div>

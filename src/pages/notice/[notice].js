@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRouter } from "next/router";
 import React from "react";
 import { useQuery } from "react-query";

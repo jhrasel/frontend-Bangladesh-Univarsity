@@ -1,177 +1,174 @@
-.mainFacultyMember{
-    margin-top: 80px;
+.mainFacultyMember {
+  margin-top: 80px;
 }
-.mainFacultyMember img{
-    width: 100%;
-    max-height: 500px;
-    border-radius: 40px;
+.mainFacultyMember img {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 40px;
 }
-.members{
-    margin-bottom: 70px;
+.members {
+  margin-bottom: 70px;
 }
-.memberTitles{
-    border-bottom: 6px solid #EEEEEE;
-    position: relative;
+.memberTitles {
+  border-bottom: 6px solid #eeeeee;
+  position: relative;
 }
-.memberTitles:after{
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 6px;
-    background: #000;
+.memberTitles:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 6px;
+  background: #000;
 }
-.memberTitles h2{
-
+.memberTitles h2 {
 }
-.memberCard p{
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    color: #000000;
-    margin-bottom: 0;
-    margin-bottom: 6px;
+.memberCard p {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 0;
+  margin-bottom: 6px;
 }
-.memberCard h2{
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    color: #000000;
+.memberCard h2 {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000000;
 }
-.memberCard{
-    background: #FFFFFF;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 30px;
+.memberCard {
+  background: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 12px;
 }
-.memberImg{
-    width: 300px;
-    height: 260px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+.memberImg {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
-.memberImg img{
-    width: 100%;
-    height: 100%;
+.memberImg img {
+  width: 100%;
+  height: 100%;
 }
-.cardFooter p{
-    margin: 0;
-    padding: 15px;
-    color: #fff;
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: #FFFFFF;
-
+.cardFooter p {
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
 }
-.cardFooter{
-    background: #AD1F1F;
-    border-radius: 0px 0px 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 22px;
+.cardFooter {
+  background: #ad1f1f;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 22px;
 }
-
-
 
 /*-------------------------------SECTION FOR SINGLE ITEM------------------------------*/
-.mainBanner{
-    margin-top: 90px;
+.mainBanner {
+  margin-top: 90px;
 }
-.innerMainBanner{
-    position: relative;
-    height: 500px;
-    border-radius: 42px;
-    overflow: hidden;
+.innerMainBanner {
+  position: relative;
+  height: 500px;
+  border-radius: 42px;
+  overflow: hidden;
 }
-.avaterImg{
-    width: 330px;
-    height: 330px;
-    margin-right: 60px;
+.avaterImg {
+  width: 330px;
+  height: 330px;
+  margin-right: 60px;
 }
-.avaterImg img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
+.avaterImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
-.details{
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
-    left: 0%;
-    top: 0%;
+.details {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  top: 0%;
 }
-.positionCenter{
-    display: flex;
-    align-items: center;
-    margin-left: 90px;
-    height: 100%;
+.positionCenter {
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  height: 100%;
 }
-.positionCenter > p{
-    font-family: Noto_Sans_normal;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    color:#FFFFFF;
-    margin-right: 30px;
+.positionCenter > p {
+  font-family: Noto_Sans_normal;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  margin-right: 30px;
 }
-.positionCenter > p > img{
-    margin-right: 5px;
+.positionCenter > p > img {
+  margin-right: 5px;
 }
-.bodyDetails{
-    margin-top: 60px;
-    margin-bottom: 60px;
+.bodyDetails {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
-.list{
-    font-weight: bold;
-    background: red;
-    color: #FFFFFF;
+.list {
+  font-weight: bold;
+  background: red;
+  color: #ffffff;
 }
 
-.innerBgImg{
-    height: 100%;
+.innerBgImg {
+  height: 100%;
 }
 @media screen and (max-width: 991px) {
-    .innerMainBanner{
-        height: 200px;
-    }
-    .positionCenter{
-        margin-left: 0;
-        display: initial;
-        text-align: center;
-    }
-    .avaterImg{
-        width: 50px;
-        height: 50px;
-        margin-right: 0px;
-        /*float: left;*/
-        margin: 0 auto;
-        margin-bottom: 10px;
-        margin-top: 15px;
-    }
-    .innerBgImg{
-        height: 100%;
-    }
-    .positionCenter > p{
-        font-size: 15px;
-        font-weight: 400;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
+  .innerMainBanner {
+    height: 200px;
+  }
+  .positionCenter {
+    margin-left: 0;
+    display: initial;
+    text-align: center;
+  }
+  .avaterImg {
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+    /*float: left;*/
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  .innerBgImg {
+    height: 100%;
+  }
+  .positionCenter > p {
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1500px) {
-    .innerBgImg{
-        height: 100%;
-    }
-    .avaterImg{
-        width: 150px;
-        height: 150px;
-    }
+  .innerBgImg {
+    height: 100%;
+  }
+  .avaterImg {
+    width: 150px;
+    height: 150px;
+  }
 }

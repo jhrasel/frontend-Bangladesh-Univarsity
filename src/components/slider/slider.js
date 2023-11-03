@@ -56,7 +56,7 @@ export const Slider = () => {
                                 <Carousel.Caption>
                                     <div className={styles.sliderHeading}>
                                         <h1 className={'headingTitle'}>{item?.title}</h1>
-                                        <p className={styles.desktop}>{item?.description.length > 220 ? item?.description.substring(0, 220) + '...' : item?.description}</p>
+                                        {/* <p className={styles.desktop}>{item?.description.length > 220 ? item?.description.substring(0, 220) + '...' : item?.description}</p> */}
                                         <p className={styles.mobile}>{item?.description.length > 90 ? item?.description.substring(0, 90) + '...' : item?.description}</p>
                                         <Buttons
                                             text={'Contact Us'}

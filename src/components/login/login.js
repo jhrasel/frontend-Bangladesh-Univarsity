@@ -1,14 +1,15 @@
-import React, {useState} from "react";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import styles from './styles.module.css'
-import ApiRequest from "../../services/api-services";
 import axios from "axios";
+import { useRouter } from 'next/router';
+import React, { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import styles from './styles.module.css';
 export const Login = () => {
     const [studentToggle, setStudentToggle] = useState(false);
     const [formVisiable, setFormVisiable] = useState(false);
+    const router = useRouter()
     const signInTeacherForm = () => {
-        setFormVisiable(true)
+        router.push('https://653cd52a210f0d6b23dfc403--mellow-choux-10e2e6.netlify.app/')
     }
     const signInStudentForm = () => {
         setFormVisiable(true)
@@ -44,7 +45,7 @@ export const Login = () => {
                       <h4 className={'headingTitle'} style={{textAlign: 'left', fontSize: '22px'}} onClick={signInTeacherForm}>
                           Sign in to Teacher
                       </h4>
-                      <h4 className={'headingTitle'} style={{textAlign: 'left', fontSize: '22px'}} onClick={signInStudentForm}>
+                      <h4 className={'headingTitle'} style={{textAlign: 'left', fontSize: '22px'}} onClick={signInTeacherForm}>
                           Sign in to Student
                       </h4>
                   </div>
