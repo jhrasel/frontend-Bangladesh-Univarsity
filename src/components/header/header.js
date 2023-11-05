@@ -1,41 +1,46 @@
+import { useRouter } from "next/router";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {menuItem} from './constant'
-import BrandIcon from '../../assets/image/brandIcon.png'
-import {Buttons} from "../../components/buttons/button";
-import {useRouter} from "next/router";
+import BrandIcon from '../../assets/image/brandIcon.png';
+import { Buttons } from "../../components/buttons/button";
+import { menuItem } from './constant';
+
+import Image from "next/image";
+import Row from 'react-bootstrap/Row';
 
 export const Header = () => {
     const {asPath} = useRouter();
 
     return (
-        // fixed="top"
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className='justify-content-between main_header'>
-            <Container>
-                <Navbar.Brand href="/home">
-                    <img src={BrandIcon.src} alt={'home image'}/>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    {
-                        menuItem.map((value, index) => {
-                            return <Nav className="me-auto" key={index}>
-                                <Nav.Link
-                                    href={value?.path}
-                                    style={{color: asPath === value?.path ? '#9D0F0F': '#000'}}>
-                                    {value?.name}
+      <Row>
+         <div className='container'>
+                <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className=' main_header'>
+                    <Container>
+                        <Navbar.Brand href="/home"><Image src={BrandIcon.src} alt={'home image'} width={212} height={32} /></Navbar.Brand>
+                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        <Navbar.Collapse id="responsive-navbar-nav">
+                            {
+                                menuItem.map((value, index) => {
+                                    return <Nav className="me-auto" key={index}>
+                                        <Nav.Link
+                                            href={value?.path}
+                                            style={asPath === value?.path ? {color:'#EB2A2E',fontWeight: 500,  borderBottom: '2px solid #EB2A2E'}: {color: '#2B4476'}}>
+                                            {value?.name}
+                                        </Nav.Link>
+                                    </Nav>
+                                })
+                            }
+                            <Nav>
+                                <Nav.Link href='/login'>
+                                    <Buttons text={'log in'} bgColor={'#F7D4D4'}/>{' '}
                                 </Nav.Link>
                             </Nav>
-                        })
-                    }
-                    <Nav className="me-auto">
-                        <Nav.Link href='/login'>
-                            <Buttons text={'log in'} bgColor={'#F7D4D4'}/>{' '}
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+            </div>
+      </Row>
+        
     );
 }

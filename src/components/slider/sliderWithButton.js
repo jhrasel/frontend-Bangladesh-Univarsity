@@ -1,46 +1,51 @@
-import Row from 'react-bootstrap/Row';
+import { Container } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
-import styles from './sliderWithButton.module.css'
-import apartmentImg from '../../assets/image/apartment.png'
-import schoolsImg from '../../assets/image/school.png'
-import sportsImg from '../../assets/image/sports_soccer.png'
-import groupImg from '../../assets/image/groups.png'
+import Row from 'react-bootstrap/Row';
+import life from '../../assets/image/life.png';
+import styles from './sliderWithButton.module.css';
+
+import athletics from '../../assets/image/athletics.png';
+import graduation from '../../assets/image/graduation.png';
+import social from '../../assets/image/social.png';
 
 export const SliderWithButton = () => {
     return(
-        <div className={styles.sliderWithButton}>
+        <Container className={styles.mainSlider_with_btn}>
+             <div className={styles.sliderWithButton}>
             <Row>
-                <Col xs='6' md='6' lg="3" className='item_middle' >
+                <Col xs='12' md='6' lg="3" className='item_middle'>
                     <div className={styles.innerSliderWithButton} style={{border: '1px solid transparent'}}>
-                        <img src={apartmentImg.src} alt={'slider image'}/>
+                        <img src={life.src} alt={'slider image'}/>
                         <p>University Life</p>
-                        <span>Overall in here</span>
+                        <span>Explore Your Campus Adventure.</span>
                     </div>
                 </Col>
-                <Col xs='6' md='6' lg="3" className='item_middle'>
-                    <div className={styles.innerSliderWithButton}  style={{border: '1px solid transparent'}}>
-                        <img src={sportsImg.src} alt={'slider image'}/>
-                        <p>Athletics</p>
-                        <span>Sports Clubs</span>
-                    </div>
-                </Col>
-                <Col xs='6' md='6' lg="3" className='item_middle' >
+    
+                <Col xs='12' md='6' lg="3" className='item_middle' >
                     <div className={styles.innerSliderWithButton} style={{border: '1px solid transparent'}}>
-                        <img src={schoolsImg.src} alt={'slider image'}/>
+                        <img src={graduation.src} alt={'slider image'}/>
 
                         <p>Graduation</p>
-                        <span>Getting Diploma</span>
+                        <span>Your Academic Milestone</span>
                     </div>
                 </Col>
-                <Col xs='6' md='6' lg="3" className='item_middle' >
+                <Col xs='12' md='6' lg="3" className='item_middle'>
+                    <div className={styles.innerSliderWithButton}  style={{border: '1px solid transparent'}}>
+                        <img src={athletics.src} alt={'slider image'}/>
+                        <p>Athletics</p>
+                        <span>Where Champions Are Forged</span>
+                    </div>
+                </Col>
+                <Col xs='12' md='6' lg="3" className='item_middle' >
                     <div className={styles.innerSliderWithButton} style={{border: '1px solid transparent'}}>
-                        <img src={groupImg.src} alt={'slider image'}/>
+                        <img src={social.src} alt={'slider image'}/>
 
                         <p>Social</p>
-                        <span>Overall in here</span>
+                        <span>Unite, Engage, Thrive</span>
                     </div>
                 </Col>
             </Row>
         </div>
+       </Container>
     )
 }

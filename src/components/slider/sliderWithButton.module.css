@@ -1,165 +1,190 @@
-.sliderWithButton{
-    border-radius: 0px 0px 40px 40px;
-    background: #fff;
-    text-align: left;
-    padding: 30px 0px;
-    /*margin: 70px;*/
-    /*width: 1218px;*/
-    margin: 0 auto;
-    /*margin-top: 90px;*/
-    margin-bottom: 60px;
+.sliderWithButton {
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 0 auto;
 }
 .aboutSliderButton {
-    margin-top: 90px;
-    background: transparent !important;
-    width: 1218px;
-    margin: 70px;
-    margin: 0 auto;
-    padding: 90px 0px;
+  margin-top: 90px;
+  background: transparent !important;
+  width: 1218px;
+  margin: 70px;
+  margin: 0 auto;
+  padding: 90px 0px;
+  background-color: #fff;
 }
-.innerSliderWithButton > p{
-    font-family: 'noto_sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 35px;
-    color: #000000;
-    margin-bottom: 0 !important;
+.inner,
+.middleSliderButton {
+  padding: 51px 30px;
+  height: 273px;
 }
-.innerSliderWithButton > span{
-    font-family: 'noto_sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    color: #545454;
+.innerSliderWithButton,
+.middleSliderButton {
+  text-align: center;
 }
-.tabs{
-    font-family: 'sora_bold';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 140%;
-    color: #000000;
-    background-color: transparent;
+.middleSliderButton > p,
+.middleSliderButton > span {
+  color: #fff !important;
 }
-
-.mainAboutBanner{
-    background: #AD1F1F;
-    border-radius: 40px;
-    color: #FFFFFF;
-    margin: 70px 0px;
-    padding: 30px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    padding-top: 50px;
+.innerSliderWithButton > p,
+.middleSliderButton > p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+  color: #000000;
+  margin-bottom: 0 !important;
 }
-.mainAboutBanner h1{
-    color: #FFFFFF;
+.innerSliderWithButton > span,
+.middleSliderButton > span {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #545454;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
-.mainAboutBanner img{
-    max-width: 1218px;
-    max-height: 300px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 35px;
+.tabs {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+  background-color: transparent;
+}
+.mainSlider_with_btn {
+  position: relative !important;
+  bottom: 82px !important;
+  width: 1200px;
+}
+.mainAboutBanner {
+  background: #ad1f1f;
+  border-radius: 40px;
+  color: #ffffff;
+  margin: 70px 0px;
+  padding: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  padding-top: 50px;
+}
+.mainAboutBanner h1 {
+  color: #ffffff;
+}
+.mainAboutBanner img {
+  max-width: 1218px;
+  max-height: 300px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 35px;
 }
 .mainAboutBannerText {
-    background: #FFFFFF;
-    border-radius: 0px 0px 40px 40px;
-    max-width: 1218px;
-    margin: 0 auto;
-    padding: 35px 60px;
-    text-align: justify;
+  background: #ffffff;
+  border-radius: 0px 0px 40px 40px;
+  max-width: 1218px;
+  margin: 0 auto;
+  padding: 35px 60px;
+  text-align: justify;
 }
-.mainAboutBannerText p{
-    font-family: 'Noto_Sans_normal';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 160%;
+.mainAboutBannerText p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
 
-    color: #333333;
+  color: #333333;
 }
-.whyUs h1{
-    font-size: 55px;
-    margin-bottom: 20px
+.whyUs h1 {
+  font-size: 55px;
+  margin-bottom: 20px;
 }
-.item_middle{
-    display: flex;
-    justify-content: center;
+.item_middle {
+  display: flex;
+  justify-content: center;
 }
-.innerSliderWithButton{
+.innerSliderWithButton,
+.middleSliderButton {
+  width: auto;
+  text-align: center;
+}
+.whyUs {
+  margin: 0px 60px;
+}
+.whyUs_tab {
+  margin-bottom: 30px;
+  margin-top: 3rem;
+}
+.tabz {
+  text-align: center !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  border-radius: initial;
+}
+@media screen and (max-width: 991px) {
+  /*.innerSliderWithButton{*/
+  /*    width: auto;*/
+  /*}*/
+  .mainAboutBanner h1 {
+    margin-top: 25px;
+  }
+  .mainAboutBanner {
+    margin: 30px 0px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .innerSliderWithButton,
+  .middleSliderButton {
+    margin-bottom: 30px;
+  }
+  .whyUs {
+    margin: 0px 0px;
+  }
+  .whyUs h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+  }
+  .whyUs_tab {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .tabz {
+    font-size: 14px !important;
+    padding: 5px;
+    border-radius: initial !important;
+  }
+  .innerSliderWithButton,
+  .middleSliderButton {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+  }
+  .innerSliderWithButton > p,
+  .middleSliderButton > p {
+    font-size: 15px;
+    line-height: initial;
+  }
+  .mainAboutBannerText {
+    padding: 20px 20px;
+    text-align: justify;
+    border-radius: 5px;
+  }
+  .sliderWithButton,
+  .aboutSliderButton {
+    margin-bottom: 0;
+  }
+  .aboutSliderButton {
     width: auto;
-    text-align: left;
-}
-.whyUs{
-    margin: 0px 60px;
-}
-.whyUs_tab{
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-}
-.tabz{
-    color: #545454 !important;
-    font-family: 'sora_bold' !important;
-    font-size: 18px !important;
-    font-style: normal !important;
-    font-weight: 600 !important;
-    line-height: 140% !important;
-}
-@media screen and (max-width: 991px){
-    /*.innerSliderWithButton{*/
-    /*    width: auto;*/
-    /*}*/
-    .mainAboutBanner h1{
-        margin-top: 25px;
-    }
-    .mainAboutBanner{
-        margin: 30px 0px;
-        overflow: hidden;
-        padding: 0;
-    }
-    .innerSliderWithButton{
-        margin-bottom: 30px;
-    }
-    .whyUs {
-        margin: 0px 0px;
-    }
-    .whyUs h1{
-        font-size: 30px;
-        margin-bottom: 30px;
-        margin-top: 60px;
-    }
-    .whyUs_tab{
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-    }
-    .tabz{
-        font-size: 14px !important;
-        padding: 5px;
-    }
-    .innerSliderWithButton {
-        border: 1px solid;
-        border-radius: 10px;
-        padding: 15px;
-        width: 100%;
-    }
-    .innerSliderWithButton > p{
-        font-size: 15px;
-        line-height: initial;
-    }
-    .mainAboutBannerText{
-        padding: 20px 20px;
-        text-align: justify;
-        border-radius: 5px;
-    }
-    .sliderWithButton, .aboutSliderButton{
-        margin-bottom: 0;
-    }
-    .aboutSliderButton{
-        width: auto;
-        padding: 0;
-        padding-top: 30px;
-    }
+    padding: 0;
+    padding-top: 30px;
+  }
 }

@@ -1,13 +1,13 @@
 .sliderHeading {
-  background: #ffffff;
   opacity: 0.96;
   border-radius: 24px;
   padding: 30px;
   width: 480px;
-  text-align: left;
+  text-align: center;
 }
 .sliderHeading h1 {
-  font-family: "sora_bold";
+  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 700;
   font-size: 44px;
@@ -15,7 +15,8 @@
   line-height: 58px;
 }
 .sliderHeading p {
-  font-family: "noto_medium";
+  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

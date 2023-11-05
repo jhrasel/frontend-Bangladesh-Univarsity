@@ -1,10 +1,9 @@
-.tabs{
-    font-family: 'sora_bold';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 140%;
-    color: #000000;
-    background-color: transparent;
+.tabs {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+  background-color: transparent;
 }
-

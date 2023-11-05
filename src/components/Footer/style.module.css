@@ -3,7 +3,8 @@
   background: #000000;
 }
 .mainFooter h4 {
-  font-family: "Noto Sans";
+  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -15,7 +16,8 @@
 }
 .mainFooter li {
   list-style: none;
-  font-family: "Noto Sans";
+  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -23,7 +25,8 @@
   color: #ffffff;
 }
 .footerBottom p {
-  font-family: "Noto Sans";
+  font-family: "Poppins", sans-serif;
+
   font-style: normal;
   font-weight: 600;
   font-size: 18px;

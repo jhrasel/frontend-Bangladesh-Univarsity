@@ -1,55 +1,92 @@
 .lftSide {
-    padding-left: 51px;
+  padding-left: 51px;
+  position: relative;
+  z-index: 2;
+  height: 485px;
+  display: flex;
+  align-items: center;
 }
-.lftSide button{
-    margin-top: 20px;
-    font-family: 'Noto_Sans';
+.lftSideOveryly {
+  text-align: left;
 }
-.lftSide p{
-    padding: 10px 0px;
-    line-height: 26px;
-    font-family: 'Noto_Sans_normal';
-    max-width: 456px;
-    color: #545454;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
+.lftSideOveryly h1 {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 45px */
+  letter-spacing: 0.36px;
 }
-.rightSideNotice{}
-.mainLatestNotice{
-    background: #FFFFFF;
-    border-radius: 40px;
-    padding: 65px;
-    margin: 70px 0px;
+.latest_details {
+  padding: 30px 35px 0px 50px;
 }
-.preloader{
-    height: 40vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.lftSideOveryly p {
+  color: #fff;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  font-family: "Poppins", sans-serif;
+  padding-top: 18px;
+  padding-right: 100px;
 }
-@media screen and (max-width: 991px){
-    .lftSide {
-        padding-left: 0px;
-        margin-bottom: 25px;
-    }
-    .mainLatestNotice{
-        padding: 20px;
-        margin: 28px 0px;
-    }
-    .lftSide h1{
-        font-size: 25px;
-        margin-bottom: 0;
-        line-height: 30px;
-    }
-    .lftSide p{
-        font-size: 15px;
-        text-align: justify;
-        margin-bottom: 0;
-    }
-    .accordion-body {
-        font-size: 15px !important;
-        text-align: justify !important;
-    }
+.lftSide button {
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+/* .lftSide p {
+  padding: 10px 0px;
+  line-height: 26px;
+  font-family: "Poppins", sans-serif;
+  max-width: 456px;
+  color: #545454;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+} */
+.latest_notice_overylay_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.mainLatestNotice {
+  /* background: #ffffff; */
+  border-radius: 40px;
+  /* padding: 65px;
+    margin: 70px 0px; */
+}
+.preloader {
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 991px) {
+  .lftSide {
+    padding-left: 0px;
+    margin-bottom: 25px;
+  }
+  .mainLatestNotice {
+    padding: 20px;
+    margin: 28px 0px;
+  }
+  .lftSide h1 {
+    font-size: 25px;
+    margin-bottom: 0;
+    line-height: 30px;
+  }
+  .lftSide p {
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+  .accordion-body {
+    font-size: 15px !important;
+    text-align: justify !important;
+  }
 }

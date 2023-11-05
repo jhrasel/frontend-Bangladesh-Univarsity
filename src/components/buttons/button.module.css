@@ -1,12 +1,16 @@
-.buttons{
-    border-radius: 48px;
-    border: none;
-    color: #2B0808;
-    padding: 9px 25px;
-    font-size: 14px;
-    margin-right: 5px;
+.buttons {
+  border: none;
+  color: #2b0808;
+  padding: 3px 25px;
+  margin-right: 5px;
+  color: #fff;
 
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
 }
-.buttons:last-child{
-    margin-right: 0px !important;
+.buttons:last-child {
+  margin-right: 0px !important;
 }

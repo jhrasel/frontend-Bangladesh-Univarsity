@@ -21,35 +21,35 @@ export const Bulletine = () => {
   return(
       <Container fluid>
               <div className={'mt_30'}>
-                  <Row>
+                <Container>
+                    <Row>
 
-                  <h1 className={'headingTitle'} style={{marginBottom: '40px', marginLeft: '25px'}}>Our update bulletin</h1>
-                      {
-                          isLoading && (
-                            <>
-                                <Col  xs='12' md='12' lg="4">
-                                    <BulletinePreloader />
+                    <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Our Top Stories</h1>
+                        {
+                            isLoading && (
+                                <>
+                                    <Col  xs='12' md='12' lg="4">
+                                        <BulletinePreloader />
+                                    </Col>
+                                    <Col  xs='12' md='12' lg="4">
+                                        <BulletinePreloader />
+                                    </Col>
+                                    <Col  xs='12' md='12' lg="4">
+                                        <BulletinePreloader />
+                                    </Col>
+                                </>
+                            )
+                        }
+                        {
+                            bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
+                                <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={i}>
+                                    <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
                                 </Col>
-                                <Col  xs='12' md='12' lg="4">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='12' lg="4">
-                                    <BulletinePreloader />
-                                </Col>
-                            </>
-                          )
-                      }
-                      {
-                          bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
-                              <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={i}>
-                                  <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
-                              </Col>
-                          ))
-                      }
+                            ))
+                        }
 
-                  {/*<a href='@/pages#' className={'readMore'} style={{textAlign: 'center'}}> Read More <span className={'arrow'}>&#8250;</span></a>*/}
-                  </Row>
-
+                    </Row>
+                    </Container>
               </div>
       </Container>
 

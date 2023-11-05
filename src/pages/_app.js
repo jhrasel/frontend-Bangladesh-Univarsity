@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <ThemeProvider>
                 <Header />
-                <Container fluid className='body_padding'>
+                <Container fluid style={{padding: '0px'}}>
                     <Component {...pageProps} />
                 </Container>
                 {

@@ -1,75 +1,119 @@
-body{
-  background: #F6F6F6 !important;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  background: #f7f7f7 !important;
   border-radius: 80px;
   margin: 0;
+  font-family: "Poppins", sans-serif;
   padding: 0;
-}
-@font-face {
-  font-family: 'noto_normal';
-  src: url('../fonts/noto-sans/NotoSans-Regular.ttf');
-}
-@font-face {
-  font-family: 'noto_sans';
-  src: url('../fonts/noto-sans/NotoSans-Bold.ttf');
-}
-@font-face {
-  font-family: 'Noto_Sans_normal';
-  src: url('../fonts/noto-sans/NotoSans-Regular.ttf');
-}
-@font-face {
-  font-family: 'Noto_Sans_SemiBold';
-  src: url('../fonts/noto-sans/NotoSans-SemiBold.ttf');
-}
-@font-face {
-  font-family: 'noto_medium';
-  src: url('../fonts/noto-sans/NotoSans-Medium.ttf');
-}
-@font-face {
-  font-family: 'sora_bold';
-  src: url('../fonts/sora/Sora-Bold.ttf');
-}
-@font-face {
-  font-family: 'sora_medium';
-  src: url('../fonts/sora/Sora-Medium.ttf');
-}
-.main_header{
-  padding: 15px 0px !important;
-}
-.headingTitle{
-  font-family: 'sora_bold', serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 64px;
-  color: #000000;
-}
-.mt_30{
-  margin: 70px 0px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
-a.nav-link {
-  color: #AD1F1F;
-  font-family: 'noto_sans';
+.main__ {
+  position: relative;
+  padding: 90px 0px;
+}
+.main__ .overlay_main__ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.galleryButton {
+  font-family: "Poppins", sans-serif !important;
+  margin: 0 auto !important;
+  width: 165px !important;
+  background: #eb2a2e !important;
+  color: var(--White, #fff) !important;
+  text-align: center !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  margin-top: 25px !important;
+}
+
+.main_header {
+  padding: 10px 0px !important;
+}
+.padding_0 {
+  padding: 0px !important;
+}
+.headingTitle {
+  line-height: 50px;
+  color: #fff;
+  width: 787px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.sectionHeading {
+  color: var(--Black, #323232);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 45px */
+  letter-spacing: 0.36px;
+  text-transform: capitalize;
+}
+.sectionSubtitle {
+  color: #787e86;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.mt_30 {
+  margin: 70px 0px;
+}
+.carousel-indicators {
+  bottom: 90px !important;
+}
+.carousel-indicators button.active {
+  background: #fff !important;
+  width: 0;
+  height: 10px;
+  border-radius: 50%;
+}
+.carousel-indicators button {
+  width: 0 !important;
+  height: 10px !important;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+a.nav-link {
+  color: #2b4476;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
 }
 .me-auto.navbar-nav {
-  margin-right: 5px !important;
+  margin-right: 12px !important;
 }
 a.navbar-brand {
   margin-right: 76px;
 }
 
-.readMore{
+.readMore {
   cursor: pointer;
-  font-family: 'Sora_medium', serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
-  color: #AD1F1F;
+  color: #ad1f1f;
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -96,56 +140,85 @@ a.navbar-brand {
 /*  transform: rotate(50deg);*/
 /*  margin-top: 8px;*/
 /*}*/
-.arrow{
+.arrow {
   font-size: 25px !important;
   margin-left: 8px;
   margin-top: -1.5px;
 }
-.body_padding{
+.body_padding {
   padding-left: 135px !important;
   padding-right: 135px !important;
 }
 /*.me-auto.navbar-nav a {*/
 /*  text-transform: uppercase;*/
 /*}*/
-.loader{
+.loader {
   width: 60px;
   height: 60px;
   display: flex;
   margin: 0 auto;
 }
-.carousel-caption {
+/* .carousel-caption {
   right: 15%;
   top: 16%;
+} */
+.carousel-caption {
+  height: 100%;
+  bottom: -40% !important;
 }
-.carousel-control-prev , .carousel-control-next{
+.sliderTag {
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 33px; /* 206.25% */
+}
+.carousel-control-prev,
+.carousel-control-next {
   display: none !important;
 }
-.accordion-item, .accordion-button:focus{
+.accordion-header {
+  background: #fcf8f8;
+  margin: 20px 0px;
+}
+.accordion-item {
+}
+.accordion-item,
+.accordion-button:focus {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-.nav-tabs .nav-link {
-  font-family: 'Sora';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 140%;
-  color: #545454;
-  background-color: transparent !important;
-  border-color: transparent !important;
+.slider_overylay {
+  position: relative;
 }
+.slider_lay {
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
 
-.slick-prev:before, .slick-next:before {
-  color: #AD1F1F !important;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 00;
+  right: 0;
+  bottom: 0;
 }
-.carousel-caption{
+.slick-prev:before,
+.slick-next:before {
+  color: #ad1f1f !important;
+}
+/* .carousel-caption {
   left: 7% !important;
-}
+} */
 button.accordion-button {
-  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -157,7 +230,6 @@ button.accordion-button {
 }
 
 .accordion-body {
-  font-family: 'Noto_Sans_SemiBold';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -165,61 +237,102 @@ button.accordion-button {
   color: #545454;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  background: #fcf8f8;
 }
 
-.nav-link{
-  font-family: 'Sora';
+.nav-link {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   color: #545454;
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-  border-bottom: 3px solid #000000 !important;
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 1px solid transparent !important;
   font-weight: 600;
-  color: #000 !important;
-  font-family: 'sora_bold' !Important;
+  color: #fff !important;
   font-size: 18px;
   font-style: normal;
   line-height: 140%;
-}
-input {
-  background: #FFFFFF;
-  border-radius: 40px !important;
+  background: var(--Primary-Red, #eb2a2e) !important;
+  border-radius: initial !important;
 }
 
-@media (min-width: 992px){
+.nav-tabs .nav-link {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 140%;
+  color: #545454;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+li.nav-item:last-child {
+  border-right: 1px solid #0000001a;
+}
+li.nav-item {
+  border: 1px solid #0000001a;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+button#Development,
+button#why_us-tab-Alumni,
+button#why_us-tab-Spirituality,
+button#why_us-tab-Benefits,
+button#why_us-tab-Self {
+  text-align: center !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  border-radius: initial;
+}
+.mainWhyus {
+  margin-top: 110px;
+}
+
+input {
+  background: #ffffff;
+  border-radius: 40px !important;
+}
+.item_middle {
+  text-align: center;
+}
+@media (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     justify-content: end;
   }
 }
-
 
 .item_middle {
   display: flex;
   justify-content: center;
 }
 
-.latestNew_Heading button.accordion-button{
-  color: #000;
-  font-family: Noto_Sans;
-  font-size: 18px;
+.latestNew_Heading button.accordion-button {
+  color: var(--Black, #323232);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 17.5px */
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
 }
 
 .modal-dialog.modal-lg.modal-dialog-centered.modal-fullscreen {
   padding: 90px;
 }
 
-button#why_us-tab-Self_Development,button#why_us-tab-Alumni, button#why_us-tab-Spirituality, button#why_us-tab-Benefits, button#why_us-tab-Self {
-  color: #545454;
-  font-family: 'sora_bold';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-}
-
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
@@ -233,34 +346,33 @@ tbody, td, tfoot, th, thead, tr {
   right: 0;
   border: none;
 }
-.mobile{
+.mobile {
   display: none;
 }
 
-.slider{
+.slider {
   max-width: 1200px;
   margin: 0 auto;
 }
-.gmap_canvas{
+.gmap_canvas {
   border: 1px solid #ccc;
   height: 402px !important;
   padding: 8px;
   border-radius: 7px;
 }
 
-
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 1500px) {
   .body_padding {
     padding-left: 15px !important;
     padding-right: 15px !important;
   }
 }
 
-@media screen and (max-width: 991px){
-  .readMore{
+@media screen and (max-width: 991px) {
+  .readMore {
     margin-top: 10px !important;
   }
-  .headingTitle{
+  .headingTitle {
     font-size: 30px;
     line-height: initial;
   }
@@ -270,15 +382,12 @@ tbody, td, tfoot, th, thead, tr {
   .slick-prev {
     left: -12px !important;
   }
-  .slick-next{
+  .slick-next {
     right: -12px !important;
   }
 }
 
-
-
-
-#card-link{
+#card-link {
   border: none;
   padding: 10px;
   padding-top: 0;
@@ -310,9 +419,6 @@ tbody, td, tfoot, th, thead, tr {
 .skeleton-footer {
   width: 30%;
 }
-
-
-
 
 /*============================= Bulletine preloader start ====================================*/
 
@@ -379,14 +485,10 @@ tbody, td, tfoot, th, thead, tr {
   }
 }
 
-
-
-
 /*====================================whyus preloader =================================*/
 
-
 .skeleton {
-  padding:15px;
+  padding: 15px;
   max-width: 100%;
   width: 100%;
   background: #fff;
@@ -395,80 +497,105 @@ tbody, td, tfoot, th, thead, tr {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 .skeleton .square {
   height: 180px;
   border-radius: 5px;
   background: rgba(130, 130, 130, 0.2);
-  background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
-  background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, rgba(130, 130, 130, 0.2)),
+    color-stop(18%, rgba(130, 130, 130, 0.3)),
+    color-stop(33%, rgba(130, 130, 130, 0.2))
+  );
+  background: linear-gradient(
+    to right,
+    rgba(130, 130, 130, 0.2) 8%,
+    rgba(130, 130, 130, 0.3) 18%,
+    rgba(130, 130, 130, 0.2) 33%
+  );
   background-size: 800px 100px;
   animation: wave-squares 2s infinite ease-out;
 }
 .skeleton .line {
   height: 12px;
-  margin-bottom:6px;
+  margin-bottom: 6px;
   border-radius: 2px;
   background: rgba(130, 130, 130, 0.2);
-  background: -webkit-gradient(linear, left top, right top, color-stop(8%, rgba(130, 130, 130, 0.2)), color-stop(18%, rgba(130, 130, 130, 0.3)), color-stop(33%, rgba(130, 130, 130, 0.2)));
-  background: linear-gradient(to right, rgba(130, 130, 130, 0.2) 8%, rgba(130, 130, 130, 0.3) 18%, rgba(130, 130, 130, 0.2) 33%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, rgba(130, 130, 130, 0.2)),
+    color-stop(18%, rgba(130, 130, 130, 0.3)),
+    color-stop(33%, rgba(130, 130, 130, 0.2))
+  );
+  background: linear-gradient(
+    to right,
+    rgba(130, 130, 130, 0.2) 8%,
+    rgba(130, 130, 130, 0.3) 18%,
+    rgba(130, 130, 130, 0.2) 33%
+  );
   background-size: 800px 100px;
   animation: wave-lines 2s infinite ease-out;
 }
-.skeleton-right{
-  flex:1;
-}
-.skeleton-left{
-  flex:2;
-  padding-right:15px;
-}
-.flex1{
+.skeleton-right {
   flex: 1;
 }
-.flex2{
+.skeleton-left {
+  flex: 2;
+  padding-right: 15px;
+}
+.flex1 {
+  flex: 1;
+}
+.flex2 {
   flex: 2;
 }
-.skeleton .line:last-child{
+.skeleton .line:last-child {
   margin-bottom: 0;
 }
-.h8{
+.h8 {
   height: 8px !important;
 }
-.h10{
+.h10 {
   height: 10px !important;
 }
-.h12{
+.h12 {
   height: 12px !important;
 }
-.h15{
+.h15 {
   height: 15px !important;
 }
-.h17{
+.h17 {
   height: 17px !important;
 }
-.h20{
+.h20 {
   height: 20px !important;
 }
-.h25{
+.h25 {
   height: 25px !important;
 }
-.w25{
-  width: 25% !important
+.w25 {
+  width: 25% !important;
 }
-.w40{
-  width:40% !important;
+.w40 {
+  width: 40% !important;
 }
-.w50{
-  width: 50% !important
+.w50 {
+  width: 50% !important;
 }
-.w75{
-  width: 75% !important
+.w75 {
+  width: 75% !important;
 }
-.m10{
+.m10 {
   margin-bottom: 10px !important;
 }
-.circle{
+.circle {
   border-radius: 50% !important;
   height: 80px !important;
   width: 80px;
