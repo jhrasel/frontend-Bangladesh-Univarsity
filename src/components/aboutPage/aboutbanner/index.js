@@ -12,13 +12,15 @@ export const AboutBanner = ({history}) =>{
     return (
         <>
             <div className={styles.mainAboutBanner}>
-                <h1 style={{textAlign: 'center'}}  className={'headingTitle'}>{history?.title}</h1>
                 <img
                     className="d-block w-100"
                     src={slider.src}
                     alt="First slide"
                     style={{borderRadius: '5px'}}
                 />
+                <div className={styles.overlay}>
+                    <h1 style={{textAlign: 'center'}}  className={styles.title}>{history?.title}</h1>
+                </div>
             </div>
             <div className={styles.mainAboutBannerText}>
                 <p>

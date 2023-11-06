@@ -66,29 +66,41 @@
   width: 1200px;
 }
 .mainAboutBanner {
-  background: #ad1f1f;
-  border-radius: 40px;
-  color: #ffffff;
-  margin: 70px 0px;
-  padding: 30px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  padding-top: 50px;
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 50.4px */
 }
 .mainAboutBanner h1 {
   color: #ffffff;
 }
 .mainAboutBanner img {
-  max-width: 1218px;
-  max-height: 300px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 35px;
 }
 .mainAboutBannerText {
   background: #ffffff;
-  border-radius: 0px 0px 40px 40px;
-  max-width: 1218px;
+  /* border-radius: 0px 0px 40px 40px; */
+  /* max-width: 1218px; */
   margin: 0 auto;
   padding: 35px 60px;
   text-align: justify;

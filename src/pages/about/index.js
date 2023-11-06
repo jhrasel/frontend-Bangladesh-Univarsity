@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Placeholder } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useQuery } from "react-query";
-import slider from '../../assets/image/slider.jpg';
-import { AboutBanner, AboutSliderWithButton } from "../../components/aboutPage/aboutbanner";
-import { CardWithImage } from "../../components/cards/CardWithImage";
+import slider from "../../assets/image/slider.jpg";
+import { AboutBanner } from "../../components/aboutPage/aboutbanner";
+import { Addmission } from '../../components/admission/index';
 import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";
-import { SliderWithButton } from "../../components/slider/sliderWithButton";
+import { PageBanner } from '../../components/pagebanner/index';
+import { Weaver } from '../../components/weaver/index';
 import ApiRequest from "../../services/api-services";
 import styled from './about.module.css';
-
 
 const Index = () => {
     const [section, setSection] = useState([]);
@@ -25,44 +25,16 @@ const Index = () => {
 
   return(
       <div className={styled.main_about}>
-          {
-              isLoading && (<>
+          <PageBanner title={'About Us'} photo={slider.src}/>
 
-                  <Placeholder as="p" animation="glow">
-                      <Placeholder xs={12} />
-                      <Placeholder xs={12} />
-                  </Placeholder>
-              </>)
-          }
-          {
-               hero?.map((section, index) => {
-                  return(
-                      <div key={index}>
-
-                          <h1 className={'headingTitle'} style={{marginBottom: '20px', marginLeft: '25px', textAlign: 'center'}}>
-                              {
-                                  section?.title
-                              }
-                          </h1>
-                          <span className={styled.subTitle}>
-                              {
-                                  section?.description
-                              }
-                          </span>
-                      </div>
-                  )
-              })
-          }
-
-         <div style={{marginTop: '30px'}}>
-            <img src={slider.src} alt={'img'} style={{width: '100%'}} />
-             <SliderWithButton />
-         </div>
-          <AboutBanner history={history[0]} />
-          <div className={styled.aboutSliderButton}>
-              <AboutSliderWithButton item={true}/>
+          <Container>
+              <AboutBanner history={history[0]} />
+          </Container>
+  
+          <div className={styled.warverMargin}>
+              <Weaver />  
           </div>
-
+          
           {
               isLoading && <>
                   <WhyPreloader />
@@ -70,8 +42,9 @@ const Index = () => {
                   <WhyPreloader />
               </>
           }
-
-          {
+        
+          <div className={styled.aboutDetails}>
+                       {
               section?.map((section, index) => {
                   let RightVisibility;
                   let LeftVisibility;
@@ -84,20 +57,70 @@ const Index = () => {
                   }
                   return (
                       <div key={index}>
-                          <br />
-                          <CardWithImage
+                          <AboutDetails
                               isVisiableRightImg={RightVisibility}
                               isVisiableLftImg={LeftVisibility}
                               button={false}
                               title={section?.title}
                               description={section?.description}
+                              photo={section?.image}
                           />
                       </div>
                   )
               })
           }
+          </div>
+
+          <Addmission />
       </div>
   )
 }
 
 export default Index;
+
+import { useRouter } from "next/router";
+export const AboutDetails = (props) => {
+    const { isVisiableLftImg, isVisiableRightImg, button, title, description, photo } = props;
+
+    const router = useRouter();
+    const routerHandler = () => {
+        router.push('/contact-us')
+    }
+    return (
+         <Container >
+            <div>
+                <Row>
+                    {
+                        isVisiableLftImg && (
+                            <Col md={6} style={{padding: 0}}>
+                                <div className={styled.about_img}>
+                                    <img src={photo} alt='cardImg' width={'100%'} height={'100%'}/>
+                                </div>
+                            </Col>
+                        )
+                    }
+
+                        <Col md={6} style={{padding: 0}}>
+                            <div className={styled.item_center}>
+                                <div className={ styled.about_details}>
+                                    <h4>{title}</h4>
+                                    <p>{description}</p>
+                                </div>
+                            </div>
+                        </Col>
+                
+                    {
+                        isVisiableRightImg && (
+                            <Col md={6} style={{padding: 0}}>
+                                <div className={styled.about_img}>
+                                    <img src={photo} alt='cardImg' width={'100%'} height={'100%'}/>
+                                </div>
+                            </Col>
+                        )
+                    }
+                </Row>
+           
+            </div>
+        </Container>
+    )
+}

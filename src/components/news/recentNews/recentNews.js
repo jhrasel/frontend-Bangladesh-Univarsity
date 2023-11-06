@@ -71,28 +71,7 @@ export const RecentNews = () => {
 
     return(
         <>
-            {/*<div className={style.newImg}>*/}
-            {/*    <ul>*/}
-            {/*        <li>*/}
-            {/*            <img src={imgOne.src} alt='img' />*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            <img src={imgTwo.src} alt='img' />*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            <img src={imgThree.src} alt='img' />*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            <img src={imgFour.src} alt='img' />*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            <img src={imgFive.src} alt='img' />*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            <img src={imgSix.src} alt='img' />*/}
-            {/*        </li>*/}
-            {/*    </ul>*/}
-            {/*</div>*/}
+            
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
                 <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
                     For getting the right support, <br />here’s a genius idea

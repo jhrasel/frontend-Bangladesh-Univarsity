@@ -1,0 +1,41 @@
+.mainPageBanner {
+  height: 350px;
+  overflow: hidden;
+}
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: #ff141466;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 350px;
+  justify-content: center;
+}
+.heading {
+  position: relative;
+  z-index: 2;
+}
+.overlay h4 {
+  color: var(--White, #fff);
+  text-align: center;
+
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130.5%; /* 62.64px */
+  text-transform: capitalize;
+}
+.heading img {
+  width: 100%;
+  height: 100%;
+}
