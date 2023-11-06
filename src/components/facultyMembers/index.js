@@ -1,10 +1,13 @@
 import { useRouter } from "next/router";
 import { useMemo } from "react";
+import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
-import bannerImg from '../../assets/image/slider.jpg';
+import { default as slider } from '../../assets/image/slider.jpg';
+import { PageBanner } from "../../components/pagebanner/index";
 import ApiRequest from "../../services/api-services";
+import { Addmission } from "../admission";
 import styles from './styles.module.css';
 export const FacultyMembers = () => {
     const Router = useRouter()
@@ -47,13 +50,13 @@ export const FacultyMembers = () => {
 
   return(
       <>
+          <PageBanner title={'Faculty Member'} photo={slider.src}/>
           <div className={styles.mainFacultyMember}>
-              <img src={bannerImg.src} alt={'bannerImg'} style={{marginTop:'20px'}} />
-              <h1 className={'headingTitle'} style={{margin: '40px 0px'}}>
-                  Dignified Teachers of Computer <br /> Science & Engineering.
-              </h1>
+              <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Dignified Teachers of Computer <br /> Science & Engineering.</h1>
 
-              <div className={styles.members}>
+
+              <Container>
+                  <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Chairman</h2>
                   </div>
@@ -61,19 +64,15 @@ export const FacultyMembers = () => {
                       {
                           filterData?.chairman?.map((role, i) => {
                               return (
-                                <Col md={4} key={i}>
+                                <Col xs={12} md={4} lg={4} key={i}>
                                     <div className={styles.memberCard}>
                                         <div className={styles.memberImg}>
-                                            {/*<img src={memberImg.src} alt={'memberImg'} />*/}
-                                            <img src={role?.photo} />
+                                            <img src={role?.photo} alt="member photo" />
                                         </div>
                                         <h4>{role?.name}</h4>
                                         <p>{role?.editableRole}</p>
-                                        <p>Faculty Id :{role?.teacherID}</p>
-                                        <div className={styles.cardFooter} style={{cursor: 'pointer'}} onClick={()=>routerHandler(role?._id)}>
-                                            <p>View Profile</p>
-                                            <p> <span className={'arrow'}>&#8250;</span> </p>
-                                        </div>
+                                        <span>Phone: +880165245741</span> <br/>
+                                        <span>Email: example@gmail.com</span>
                                     </div>
                                 </Col>
 
@@ -90,20 +89,16 @@ export const FacultyMembers = () => {
                   <Row>
                       {
                           filterData?.professor?.map((role, i) => {
-                              console.log(role)
                               return (
-                                    <Col md={4} key={i}>
+                                    <Col xs={12} md={4} lg={4} key={i}>
                                         <div className={styles.memberCard}>
                                             <div className={styles.memberImg}>
                                                 <img src={role?.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
                                             <p>{role?.editableRole}</p>
-                                            <p>Faculty Id :{role?.teacherID}</p>
-                                            <div className={styles.cardFooter} style={{cursor: 'pointer'}} onClick={()=>routerHandler(role?._id)}>
-                                                <p>View Profile</p>
-                                                <p> <span className={'arrow'}>&#8250;</span> </p>
-                                            </div>
+                                            <span>Phone: +880165245741</span> <br/>
+                                            <span>Email: example@gmail.com</span>
                                         </div>
                                     </Col>
                               )
@@ -121,18 +116,15 @@ export const FacultyMembers = () => {
                       {
                          filterData?.lecture?.map((role, i) => {
                               return (
-                                    <Col md={4} key={i}>
+                                  <Col xs={12} md={4} lg={4} key={i}>
                                         <div className={styles.memberCard}>
                                             <div className={styles.memberImg}>
                                                 <img src={role.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
                                             <p>{role?.editableRole}</p>
-                                            <p>Faculty Id :{role?.teacherID}</p>
-                                            <div className={styles.cardFooter} style={{cursor: 'pointer'}} onClick={()=>routerHandler(role?._id)}>
-                                                <p>View Profile</p>
-                                                <p> <span className={'arrow'}>&#8250;</span> </p>
-                                            </div>
+                                            <span>Phone: +880165245741</span> <br/>
+                                            <span>Email: example@gmail.com</span>
                                         </div>
                                     </Col>
 
@@ -141,7 +133,10 @@ export const FacultyMembers = () => {
                       }
                   </Row>
               </div>
+              </Container>
+               
           </div>
+          <Addmission />
       </>
   )
 }

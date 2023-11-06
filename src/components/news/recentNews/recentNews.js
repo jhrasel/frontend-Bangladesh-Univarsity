@@ -1,21 +1,16 @@
-import moment from "moment";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import Button from 'react-bootstrap/Button';
+import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
-import ReactSlider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import image from '../../../assets/image/small_card/events.png';
-import styles from "../../../components/cards/card.module.css";
-import { BulletinePreloader } from "../../../components/homePage/bulletine/bulletineLoader";
-
-
-
-
+import slider from "../../../assets/image/slider.jpg";
+import { Addmission } from '../../../components/admission/index';
 import ApiRequest from "../../../services/api-services";
+import { SmallCard } from "../../cards/smallCard";
+import { PageBanner } from "../../pagebanner";
 export const RecentNews = () => {
     const [page, setPage] = useState(1)
     const Router = useRouter()
@@ -71,67 +66,30 @@ export const RecentNews = () => {
 
     return(
         <>
-            
+            <PageBanner title={'News'} photo={slider.src}/>
+
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
-                <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
-                    For getting the right support, <br />here’s a genius idea
-                </h1>
-
-                <>
-                    {
-                        newsListisloading && (
-                            <Row>
-                                <Col  xs='12' md='12' lg="6">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='12' lg="6">
-                                    <BulletinePreloader />
-                                </Col>
-                            </Row>
-                        )
-                    }
-
-                </>
-                <div className={'sliderss'}>
+           
+                <Container className={'sliderss'}>
                     <Row>
-                        
-                    
+                        <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Most Viewed News</h1>
                     {
                             newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
                                 return (
-                                    <Col key={index} xs='12' md='12' lg="4" style={{padding: '10px'}}>
-                            <div  onClick={()=> routerHandler(value?._id)} style={{cursor: 'pointer'}}>
-                                        <div className={styles.mainSmallCard} style={{margin: '0'}}>
-                                            <img
-                                                src={value.photo ?? image.src}
-                                                alt="Picture of the date"
-                                                width='100%'
-                                                style={{height: '280px'}}
-                                            />
-
-                                            <div className={styles.cardDetials}>
-                                                <p>{moment(value?.updatedAt).format("MMM Do YY")} / {value?.newsCreator?.name}</p>
-
-                                                <h4 className={styles.title}>{value?.title}</h4>
-                                                <p className={[styles.subtitle , styles.subtitleFont].join(' ')}>
-                                                    {
-                                                        value.shortDesc.length > 120 ? value.shortDesc.substring(0, 120) + '...' : value.shortDesc
-                                                    }
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                        </Col>
+                                    <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={index}>
+                                        <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
+                                    </Col>
                                 )
                             })
                         }
 
                     </Row>
-                    <Button variant="danger" onClick={loadHandler}>Load More +</Button>
+                    {/* <Button variant="danger" onClick={loadHandler}>Load More +</Button> */}
 
-                </div>
+                </Container>
+                 <Addmission />
             </div>
-            <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
+            {/* <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
                 <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
                     Recent News
                 </h1>
@@ -181,7 +139,7 @@ export const RecentNews = () => {
                         }
                     </ReactSlider>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }

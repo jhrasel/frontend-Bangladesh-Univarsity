@@ -24,6 +24,7 @@
   height: 425px;
   position: absolute;
   top: -44px;
+  left: 0;
 }
 .item_center {
   display: flex;

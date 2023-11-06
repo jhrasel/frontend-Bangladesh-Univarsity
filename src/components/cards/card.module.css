@@ -1,8 +1,9 @@
 .mainSmallCard {
   background: #ffffff;
-  margin: 0px 10px;
+  /* margin: 0px 10px; */
   position: relative;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 .title {
   font-family: "Poppins", sans-serif;
