@@ -19,6 +19,7 @@
   height: 273px;
 }
 .innerSliderWithButton,
+.inner,
 .middleSliderButton {
   text-align: center;
 }
@@ -27,7 +28,8 @@
   color: #fff !important;
 }
 .innerSliderWithButton > p,
-.middleSliderButton > p {
+.middleSliderButton > p,
+.inner > p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -38,7 +40,8 @@
   margin-bottom: 0 !important;
 }
 .innerSliderWithButton > span,
-.middleSliderButton > span {
+.middleSliderButton > span,
+.inner > span {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;

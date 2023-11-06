@@ -34,7 +34,13 @@ body {
   line-height: normal !important;
   margin-top: 25px !important;
 }
-
+.gallery_big_img {
+  width: 100%;
+  height: 445px;
+}
+.gallery_small_img {
+  height: 215px;
+}
 .main_header {
   padding: 10px 0px !important;
 }

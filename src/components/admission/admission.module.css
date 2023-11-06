@@ -1,0 +1,65 @@
+.mt {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.bg {
+  background: #334756;
+  height: 381px;
+}
+.Bigimg {
+  height: 100%;
+  padding: 30px;
+  position: relative;
+}
+.first_quata_img {
+  position: absolute;
+}
+.quata_img {
+  position: absolute;
+  bottom: 35px;
+  right: 25px;
+}
+.Bigimg img {
+  width: 100%;
+  height: 425px;
+  position: absolute;
+  top: -44px;
+}
+.item_center {
+  display: flex;
+  align-items: center;
+}
+.details {
+}
+.details h2 {
+  color: var(--White, #fff);
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 45px */
+  letter-spacing: 0.36px;
+  text-transform: capitalize;
+}
+
+.details p {
+  color: var(--grey, #c2c2c2);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.5px; /* 146.875% */
+}
+.details > h4 {
+  color: var(--White, #fff);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  background: #eb2a2e;
+  line-height: normal;
+  width: 153px;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-align: center;
+}
