@@ -4,6 +4,17 @@
   border-radius: 40px;
   overflow: hidden;
 }
+.heading {
+  color: var(--Black, #323232);
+  font-family: "Poppins", sans-serif;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 30px */
+  letter-spacing: 0.24px;
+  text-transform: capitalize;
+}
 .banner img {
   width: 100%;
   height: 100%;
@@ -11,22 +22,29 @@
 .mainCurriculum {
   margin-top: 80px;
 }
+.heading_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .courseDetails {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px;
 }
 .courseDetails h4 {
   font-family: "Poppins", sans-serif;
-
+  color: #343434;
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  color: #000000;
-  padding: 20px 0px;
-  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
 }
 
 .header {
-  background: #ad1f1f;
-  border-radius: 20px;
+  background: #eb2a2e;
 }
 .header > button {
   font-family: "Poppins", sans-serif;
@@ -44,8 +62,7 @@
   color: #ffffff !important;
 }
 .body {
-  background: #f6f6f6;
-  padding: 0;
+  padding: 0px;
 }
 
 .courseDetails table thead {
@@ -61,11 +78,11 @@
 }
 .courseDetails table thead tr th {
   font-family: "Poppins", sans-serif;
-
+  color: var(--Black, #323232);
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: #343434;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
 }
 .courseDetails table tbody tr td {
   font-family: "Poppins", sans-serif;
@@ -76,19 +93,17 @@
   color: #6c757d;
 }
 .tableHead {
-  background: rgba(173, 31, 31, 0.1);
-  border-radius: 20px 20px 0px 0px;
+  background: #f7f7f7;
 }
 .tableFooter {
   background: rgba(173, 31, 31, 0.1);
-  border-radius: 0px 0px 20px 20px;
 }
 .tableFooter,
 .tableHead,
 .tablebody {
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 60px;
 }
 .tablebody p {
   width: 100%;
@@ -96,19 +111,26 @@
   padding: 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  color: #6c757d;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
 }
 .tableFooter p,
 .tableHead p {
   width: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
   font-family: "Poppins", sans-serif;
-
+  text-align: center;
+  color: var(--Black, #323232);
+  font-family: Poppins;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  color: #343434;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
 }
 .tablebody {
   background: #ffffff !important;
@@ -120,6 +142,18 @@
   border-radius: 20px;
 }
 .mt {
-  margin-top: 138px;
+  margin-top: 80px;
   margin-bottom: 40px;
+}
+
+.sideHead {
+  height: 70px;
+}
+.sideHead > p {
+  color: #fff;
+  color: var(--White, #fff);
+  font-size: 18px !important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 27px */
 }

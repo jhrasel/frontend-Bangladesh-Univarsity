@@ -1,9 +1,11 @@
-import Table from 'react-bootstrap/Table';
-import styles from './styles.module.css'
-export const CourseDetails = () => {
+import styles from './styles.module.css';
+export const CourseDetails = ({semester}) => {
   return(
       <div className={styles.courseDetails}>
-          <h4>First Semester</h4>
+          <div className={styles.heading_title}>
+              <h4>{semester}</h4>
+              <h4>Total Credit: 14</h4>
+          </div>
           <div className={styles.tableHead}>
               <p>Course Code</p>
               <p>Course Title</p>
@@ -24,11 +26,7 @@ export const CourseDetails = () => {
               <p>Analog Electronics (Lab)</p>
               <p>10</p>
           </div>
-          <div className={styles.tableFooter}>
-              <p></p>
-              <p>Total Credits</p>
-              <p>14</p>
-          </div>
+ 
       </div>
   );
 }
