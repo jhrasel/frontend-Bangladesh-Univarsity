@@ -1,8 +1,8 @@
-import styles from "./styles.module.css";
 import moment from "moment";
-import {Loader} from "../../components/loader";
+import { useRouter } from "next/router";
 import React from "react";
-import {useRouter} from "next/router";
+import { Loader } from "../../components/loader";
+import styles from "./styles.module.css";
 
 export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
     const Router = useRouter();
@@ -14,7 +14,7 @@ export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
 
     return (
         <div className={style ? styles.fromSingleNotice: styles.mainNoticeBody}>
-            <h1 className={'headingTitle'} style={{margin: '40px 0px'}}>
+            <h1 className={style.heading}>
                 Recent Notice
             </h1>
             {
@@ -28,7 +28,7 @@ export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
                             <p>
                                 {notice?.shortDesc}
                             </p>
-                            <a  className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start', cursor: 'pointer'}} onClick={()=> singleNoticeHandler(notice?._id)}>
+                            <a  className={'readMore'} style={{ paddingBottom: '0px', marginTop:'0', justifyContent: 'flex-start', cursor: 'pointer'}} onClick={()=> singleNoticeHandler(notice?._id)}>
                                 Read More <span className={'arrow'}>&#8250;</span>
                             </a>
                         </div>

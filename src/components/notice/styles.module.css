@@ -6,10 +6,23 @@
   max-height: 500px;
   border-radius: 40px;
 }
+.heading {
+  color: var(--Black, #323232);
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 45px */
+  letter-spacing: 0.36px;
+  text-transform: capitalize;
+  margin: 40px 0px;
+  margin-bottom: 20px;
+}
 .mainNoticeBody {
-  max-width: 900px;
+  /* max-width: 900px;
   margin: 0 auto;
-  margin-bottom: 90px;
+  margin-bottom: 90px; */
 }
 .fromSingleNotice {
   max-width: 1295px;
@@ -18,18 +31,21 @@
 }
 .noticeItem {
   display: flex;
-  margin-top: 40px;
+  margin-top: 17px;
+  background: #fff;
+  padding: 17px;
 }
 
 .noticeDate {
-  background: #ad1f1f;
+  background: #eb2a2e;
   border-radius: 10px;
-  min-width: 110px;
+  min-width: 100px;
+  width: 100px;
   height: 100px;
   padding: 10px;
 }
 .noticeDate p {
-  background: #ad1f1f;
+  background: #eb2a2e;
   border: 1px dashed #ffffff;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
@@ -47,26 +63,28 @@
 }
 
 .noticeDetails {
-  margin-left: 30px;
-  border-bottom: 1px solid #d7d7d7;
-  padding-bottom: 22px;
+  margin-left: 20px;
 }
 .noticeDetails h4 {
   font-family: "Poppins", sans-serif;
-
+  color: #000000;
+  color: #000;
+  text-align: left;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  color: #000000;
+  line-height: 140%; /* 25.2px */
 }
 .noticeDetails p {
   font-family: "Poppins", sans-serif;
-
-  font-style: normal;
-  font-weight: 400;
   font-size: 20px;
   color: #6c757d;
   text-align: justify;
+  color: #6c757d;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
 }
 
 .noticeItem:last-child .noticeDetails {

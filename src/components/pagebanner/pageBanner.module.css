@@ -1,5 +1,5 @@
 .mainPageBanner {
-  height: 350px;
+  height: 300px;
   overflow: hidden;
 }
 .banner {
@@ -14,11 +14,15 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  background: #ff141466;
+  /* background: linear-gradient(
+    0deg,
+    rgba(255, 20, 20, 0.4) 0%,
+    rgba(255, 20, 20, 0.4) 100%
+  ); */
   text-align: center;
   display: flex;
   align-items: center;
-  height: 350px;
+  /* height: 350px; */
   justify-content: center;
 }
 .heading {
