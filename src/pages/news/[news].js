@@ -77,7 +77,7 @@ const singleItem = () => {
                                     </svg> &nbsp;
                                     <p>
                                         <span onClick={() => { router.push('/') }}>Home</span>
-                                        &nbsp; / <span onClick={() => { router.push('news') }}>News</span>
+                                        &nbsp; / <span onClick={() => { router.push('/news') }}>News</span>
                                         {
                                             singleData?.data?.data?.title && ` / ${singleData?.data?.data?.title.length > 20 ? singleData?.data?.data?.title.slice(0, 20) + '...' : '' }`
                                         }

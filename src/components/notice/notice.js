@@ -64,7 +64,7 @@ export const Notice = ({singleNotice}) => {
                                     <p>
                                         {notice?.shortDesc}
                                     </p>
-                                    <a onClick={()=> singleNoticeHandler(notice?._id)} className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}>
+                                    <a href={`/notice/${notice?._id}`} onClick={()=> singleNoticeHandler(notice?._id)} className={'readMore'} style={{ paddingBottom: '10px', justifyContent: 'flex-start'}}>
                                         Read More <span className={'arrow'}>&#8250;</span>
                                     </a>
                                 </div>
