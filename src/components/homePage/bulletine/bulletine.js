@@ -7,14 +7,14 @@ import ApiRequest from "../../../services/api-services";
 import { SmallCard } from "../../cards/smallCard";
 import { BulletinePreloader } from "../bulletine/bulletineLoader";
 
-export const Bulletine = () => {
+export const Bulletine = ({title}) => {
     const Router = useRouter()
     const { isLoading, data:bulletin } = useQuery('bulletin', () => ApiRequest.get('news/all?page=1&perPage=3'))
 
     const routerHandler = (_id) => {
-        Router.push({
-            pathname: `news/${_id}`
-        })
+        // Router.push({
+        //     pathname: `news/${_id}`
+        // })
     }
 
     
@@ -24,7 +24,7 @@ export const Bulletine = () => {
                 <Container>
                     <Row>
 
-                    <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Our Top Stories</h1>
+                      <h1 className={'sectionHeading'} style={{ marginBottom: '40px', marginLeft: '25px' }}>{ title}</h1>
                         {
                             isLoading && (
                                 <>
@@ -43,7 +43,9 @@ export const Bulletine = () => {
                         {
                             bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
                                 <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={i}>
-                                    <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
+                                    <a href={`/news/${value?._id}`}>
+                                        <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
+                                    </a>
                                 </Col>
                             ))
                         }

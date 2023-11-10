@@ -28,7 +28,7 @@ export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
                             <p>
                                 {notice?.shortDesc}
                             </p>
-                            <a  className={'readMore'} style={{ paddingBottom: '0px', marginTop:'0', justifyContent: 'flex-start', cursor: 'pointer'}} onClick={()=> singleNoticeHandler(notice?._id)}>
+                            <a href={`/notice/${notice?._id}`} className={'readMore'} style={{ paddingBottom: '0px', marginTop:'0', justifyContent: 'flex-start', cursor: 'pointer'}} onClick={()=> singleNoticeHandler(notice?._id)}>
                                 Read More <span className={'arrow'}>&#8250;</span>
                             </a>
                         </div>

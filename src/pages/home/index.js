@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from "react";
 import { Container } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
@@ -13,8 +14,11 @@ import { SliderWithButton } from "../../components/slider/sliderWithButton";
 import { Weaver } from '../../components/weaver/index';
 import ApiRequest from "../../services/api-services";
 
-
 const Index = () => {
+    const router = useRouter();
+    const routerHandler = () => {
+        router.push('/gallery')
+    }
     const {data, isLoading} = useQuery(['gallery-item'],()=> ApiRequest.get('gallery/all'))
   return(
       <>
@@ -27,12 +31,12 @@ const Index = () => {
 
 
             <Weaver/>     
-          <Bulletine />
+          <Bulletine title={'Our top story'}/>
           {/*<Events/>*/}
 
           <Container>
                 <h1 className={'sectionHeading'}>Gallery</h1>
-              <p className='sectionSubtitle'>Dive into our gallery,  where photos tell <br />stories of our campus life, preserving cherished memories.</p>
+                <p className='sectionSubtitle'>Dive into our gallery,  where photos tell <br />stories of our campus life, preserving cherished memories.</p>
               <Row style={{marginTop: '30px'}}>
                   <Col xs='12' md='6' lg="6">
                       <div className="gallery_big_img">
@@ -64,7 +68,7 @@ const Index = () => {
                           </Col>
                       </Row>
                   </Col>
-                    <Button className="galleryButton" variant="danger">View All</Button>
+                    <Button className="galleryButton" variant="danger" onClick={routerHandler}>View All</Button>
 
               </Row>
 

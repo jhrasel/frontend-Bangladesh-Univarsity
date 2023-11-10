@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useQuery } from "react-query";
-import slider from "../../assets/image/slider.jpg";
+import slider from "../../assets/image/about.png";
 import { AboutBanner } from "../../components/aboutPage/aboutbanner";
 import { Addmission } from '../../components/admission/index';
 import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";
@@ -25,7 +25,7 @@ const Index = () => {
 
   return(
       <div className={styled.main_about}>
-          <PageBanner title={'About Us'} photo={slider.src}/>
+          <PageBanner title={''} photo={slider.src}/>
 
           <Container>
               <AboutBanner history={history[0]} />

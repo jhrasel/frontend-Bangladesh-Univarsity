@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import slider from "../../../assets/image/slider.jpg";
+import slider from "../../../assets/image/news.png";
 import { Addmission } from '../../../components/admission/index';
 import ApiRequest from "../../../services/api-services";
 import { SmallCard } from "../../cards/smallCard";
@@ -66,8 +66,9 @@ export const RecentNews = () => {
 
     return(
         <>
-            <PageBanner title={'News'} photo={slider.src}/>
-
+            <Container fluid style={{padding: 0}} className="mt_60">
+                <PageBanner title={''} photo={slider.src}/>
+            </Container>
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
            
                 <Container className={'sliderss'}>
@@ -77,7 +78,9 @@ export const RecentNews = () => {
                             newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
                                 return (
                                     <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={index}>
-                                        <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
+                                        <a href={`/news/${value?._id}`}>
+                                            <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
+                                        </a>
                                     </Col>
                                 )
                             })

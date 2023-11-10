@@ -1,20 +1,20 @@
-.newImg{
-    background: #FFFFFF;
-    border-radius: 40px;
-    margin-top: 80px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+.newImg {
+  background: #ffffff;
+  border-radius: 40px;
+  margin-top: 80px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
-.newImg ul{
-    padding: 0;
-    text-align: center;
+.newImg ul {
+  padding: 0;
+  text-align: center;
 }
-.newImg ul li{
-    display: inline-block;
-    list-style: none;
-    padding: 15px;
-    padding-bottom: 0px;
+.newImg ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 15px;
+  padding-bottom: 0px;
 }
-.newImg ul li img{
-    width: auto;
+.newImg ul li img {
+  width: auto;
 }

@@ -26,7 +26,7 @@ export const CurriculumPage = () => {
 
                                 <Accordion defaultActiveKey="0">
                                     <Accordion.Item eventKey="0" className={styles.accordianSection}>
-                                        <Accordion.Header className={styles.header}>First Year</Accordion.Header>
+                                        <Accordion.Header className={styles.header} id='accordion'>First Year</Accordion.Header>
                                         <Accordion.Body className={styles.body}>
                                             <CourseDetails semester={'First Semester'} />
                                             <CourseDetails semester={'Second Semester'}/>
@@ -34,7 +34,7 @@ export const CurriculumPage = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                     <Accordion.Item eventKey="1" className={styles.accordianSection}>
-                                        <Accordion.Header className={styles.header}>Second Year</Accordion.Header>
+                                        <Accordion.Header className={styles.header} id='accordion'>Second Year</Accordion.Header>
                                         <Accordion.Body className={styles.body}>
                                             <CourseDetails semester={'First Semester'} />
                                             <CourseDetails semester={'Second Semester'}/>
@@ -42,7 +42,7 @@ export const CurriculumPage = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                     <Accordion.Item eventKey="2" className={styles.accordianSection}>
-                                        <Accordion.Header className={styles.header}>Third Year</Accordion.Header>
+                                        <Accordion.Header className={styles.header} id='accordion'>Third Year</Accordion.Header>
                                         <Accordion.Body className={styles.body}>
                                             <CourseDetails semester={'First Semester'} />
                                             <CourseDetails semester={'Second Semester'}/>
@@ -50,7 +50,7 @@ export const CurriculumPage = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                      <Accordion.Item eventKey="3" className={styles.accordianSection}>
-                                        <Accordion.Header className={styles.header}>Fourth Year</Accordion.Header>
+                                        <Accordion.Header className={styles.header} id='accordion'>Fourth Year</Accordion.Header>
                                         <Accordion.Body className={styles.body}>
                                             <CourseDetails semester={'First Semester'} />
                                             <CourseDetails semester={'Second Semester'}/>
@@ -64,7 +64,7 @@ export const CurriculumPage = () => {
                                     <div className={styles.courseDetails} style={{padding: '0px'}}>
                                        
                                         <div className={[styles.tableHead, styles.sideHead].join(' ')} style={{background: '#eb2a2e'}}>
-                                            <p>Course Credit Distribution</p>
+                                            <p style={{textAlign: 'center'}}>Course Credit Distribution</p>
                                         </div>
                                         <div className={styles.tablebody}>
                                             <p>CSE 111</p>

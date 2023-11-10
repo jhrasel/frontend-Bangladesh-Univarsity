@@ -18,7 +18,7 @@ export const LatestNotice = () => {
     }
     const singleNotice = (_id) => {
         router.push({
-            pathname: `news/${_id}`
+            pathname: `notice/${_id}`
         })
     }
 
@@ -60,7 +60,7 @@ export const LatestNotice = () => {
                                                     {
                                                         news.shortDesc.length > 220 ? news.shortDesc.substring(0, 220) + '...' : news.shortDesc
                                                     }
-                                                    <a onClick={()=>singleNotice(news?._id)} className={'readMore'} style={{ paddingBottom: '10px', marginTop: '15px !important',  justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
+                                                    <a href={`/notice/${news?._id}`} onClick={()=>singleNotice(news?._id)} className={'readMore'} style={{ paddingBottom: '10px', marginTop: '15px !important',  justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
