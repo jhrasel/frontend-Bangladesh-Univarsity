@@ -19,7 +19,7 @@ export const Bulletine = ({title}) => {
 
     
   return(
-      <Container fluid>
+      <div>
               <div className={'mt_30'}>
                 <Container>
                     <Row>
@@ -53,7 +53,7 @@ export const Bulletine = ({title}) => {
                     </Row>
                     </Container>
               </div>
-      </Container>
+      </div>
 
   )
 }

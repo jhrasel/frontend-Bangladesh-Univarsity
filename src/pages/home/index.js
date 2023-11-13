@@ -34,7 +34,7 @@ const Index = () => {
           <Bulletine title={'Our top story'}/>
           {/*<Events/>*/}
 
-          <Container className='padding_0 mbl_10'>
+          <Container className=' mbl_10'>
                 <h1 className={'sectionHeading'}>Gallery</h1>
                 <p className='sectionSubtitle'>Dive into our gallery,  where photos tell <br />stories of our campus life, preserving cherished memories.</p>
               <Row className='inner_gallery'>
