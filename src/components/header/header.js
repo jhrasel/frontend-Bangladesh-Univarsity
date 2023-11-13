@@ -16,7 +16,7 @@ export const Header = () => {
       <Row>
          <div className='container'>
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className=' main_header'>
-                    <Container>
+                    <Container >
                         <Navbar.Brand href="/home"><Image src={BrandIcon.src} alt={'home image'} width={212} height={32} /></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
@@ -28,15 +28,21 @@ export const Header = () => {
                                             style={asPath === value?.path ? {color:'#EB2A2E',fontWeight: 500,  borderBottom: '2px solid #EB2A2E'}: {color: '#2B4476'}}>
                                             {value?.name}
                                         </Nav.Link>
+                                        
                                     </Nav>
                                 })
                             }
-                            <Nav>
-                                <Nav.Link href='/login'>
-                                    <Buttons text={'log in'} bgColor={'#F7D4D4'}/>{' '}
-                                </Nav.Link>
-                            </Nav>
+                        <Nav className="desktop-hide">
+                            <Nav.Link href='/login'>
+                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
+                            </Nav.Link>
+                        </Nav>
                         </Navbar.Collapse>
+                         <Nav className="mobile-hide">
+                            <Nav.Link href='/login'>
+                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
+                            </Nav.Link>
+                        </Nav>
                     </Container>
                 </Navbar>
             </div>

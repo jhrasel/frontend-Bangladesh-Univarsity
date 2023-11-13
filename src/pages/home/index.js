@@ -34,34 +34,35 @@ const Index = () => {
           <Bulletine title={'Our top story'}/>
           {/*<Events/>*/}
 
-          <Container>
+          <Container className='padding_0 mbl_10'>
                 <h1 className={'sectionHeading'}>Gallery</h1>
                 <p className='sectionSubtitle'>Dive into our gallery,  where photos tell <br />stories of our campus life, preserving cherished memories.</p>
-              <Row style={{marginTop: '30px'}}>
+              <Row className='inner_gallery'>
                   <Col xs='12' md='6' lg="6">
                       <div className="gallery_big_img">
-                          <img src={data?.data?.body[0].image} alt='main' width={'100%'} height={'450px'} />
+                          <img src={data?.data?.body[0].image} alt='main' width={'100%'} height={'100%'} />
                       </div>
                   </Col>
                   <Col xs='12' md='6' lg="6">
                       <Row style={{marginBottom: '20px'}}>
-                          <Col md='6'>
+                          <Col md='6' xs='6'>
                               <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>
                           </Col>
-                          <Col md='6'>
-                                <div className="gallery_small_img">
-                                    <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
-                              </div>                          </Col>
-                      </Row>
-                      <Row>
-                          <Col md='6'>
+                          <Col md='6' xs='6'>
                                 <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>
                           </Col>
-                          <Col md='6'>
+                      </Row>
+                      <Row>
+                          <Col md='6' xs='6'>
+                                <div className="gallery_small_img">
+                                    <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
+                              </div>
+                          </Col>
+                          <Col md='6' xs='6'>
                                 <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>

@@ -66,14 +66,54 @@
   align-items: center;
   justify-content: center;
 }
+
+.latest_details ul {
+  padding: 0;
+  padding-top: 49px;
+}
+.latest_details ul li {
+  padding: 15px 32px;
+  background: #fcf8f8;
+  list-style: none;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+
+.latest_details ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.latest_details ul li h4 {
+  margin-bottom: 0;
+  color: var(--Black, #323232);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 17.5px */
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+}
 @media screen and (max-width: 991px) {
+  .latest_details ul {
+    padding-top: 20px;
+  }
+  .latest_details {
+    padding: 0px 10px 0px 20px;
+  }
+  .lftSideOveryly {
+    text-align: center;
+  }
   .lftSide {
     padding-left: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+    padding: 50px 0px;
+    height: auto;
   }
   .mainLatestNotice {
-    padding: 20px;
-    margin: 28px 0px;
+    padding: 0px;
+    margin: 0px 0px;
   }
   .lftSide h1 {
     font-size: 25px;
@@ -84,6 +124,8 @@
     font-size: 15px;
     text-align: justify;
     margin-bottom: 0;
+    padding: 10px 30px;
+    padding-bottom: 0;
   }
   .accordion-body {
     font-size: 15px !important;

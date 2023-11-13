@@ -127,7 +127,12 @@
     display: none;
   }
   .cardText {
-    padding: 20px 25px;
+    /* padding: 20px 25px; */
+    padding: 0px;
+  }
+  .cardText p {
+    font-size: 16px;
+    padding-right: 0px;
   }
   .cardText h4 {
     margin-top: 15px;
@@ -136,6 +141,7 @@
   }
   .mainCardWithImg {
     margin-bottom: 0;
+    padding: 15px 20px;
   }
   .banner {
     margin-bottom: 10px;

@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import React from "react";
 import { Container, Spinner } from "react-bootstrap";
-import Accordion from 'react-bootstrap/Accordion';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useQuery } from "react-query";
@@ -27,7 +26,7 @@ export const LatestNotice = () => {
   return (
       <Container div className={styles.mainLatestNotice}>
           <Row style={{background: '#fff'}} >
-              <Col xl={'6'} md={'12'} xs={'12'}  >
+              <Col xl={'6'} md={'12'} xs={'12'}  className='padding_0'>
                   <div className={styles.lftSide}>
                       <div className={styles.lftSideOveryly}>
                             <h1>Latest  Notice News</h1>
@@ -48,8 +47,8 @@ export const LatestNotice = () => {
                     {
                         isLoading && <div className={styles.preloader}><Spinner animation="grow" /></div>
                     }
-                  <div className={styles.latest_details}>
-                        {
+                   <div className={styles.latest_details}>
+                        {/* {
                             newsList?.data?.data?.length && newsList?.data?.data?.map((news, index) => {
                                 return (
                                     <div className={styles.rightSideNotice} key={index} >
@@ -67,11 +66,25 @@ export const LatestNotice = () => {
                                     </div>
                                 )
                             })
-                        }
-                  </div>
-                
-          
+                        }  */}
+                      <ul>
+                           { newsList?.data?.data?.length && newsList?.data?.data?.map((news, index) => {
+                               return (
+                                   <li key={index}>
+                                       <a href={`/notice/${news?._id}`}>
+                                            <h4>{news.title}</h4>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.4204 12C15.4204 12.2151 15.3383 12.4301 15.1744 12.5941L10.0146 17.7538C9.68641 18.0821 9.15424 18.0821 8.82615 17.7538C8.49805 17.4257 8.49805 16.8937 8.82615 16.5654L13.3918 12L8.82631 7.43459C8.49821 7.10636 8.49821 6.57436 8.82631 6.24629C9.1544 5.9179 9.68657 5.9179 10.0148 6.24629L15.1746 11.4059C15.3385 11.57 15.4204 11.785 15.4204 12Z" fill="#323232"/>
+                                            </svg>
+                                       </a>
+                                    </li>
+                                )
+                            }) }
 
+                          
+                        </ul>
+                  </div> 
+                    
               </Col>
           </Row>
       </Container>

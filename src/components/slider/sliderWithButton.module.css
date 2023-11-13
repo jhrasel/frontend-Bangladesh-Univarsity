@@ -33,11 +33,14 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
-  top: 5px;
+  top: 2px;
   color: #000000;
   margin-bottom: 0 !important;
+}
+.innerSliderWithButton img {
+  margin-bottom: 6px;
 }
 .innerSliderWithButton > span,
 .middleSliderButton > span,
@@ -157,7 +160,8 @@
   }
   .innerSliderWithButton,
   .middleSliderButton {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin-bottom: 0px;
   }
   .whyUs {
     margin: 0px 0px;
@@ -178,9 +182,8 @@
   }
   .innerSliderWithButton,
   .middleSliderButton {
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 15px;
+    border-radius: 0px;
+    padding: 50px 30px;
     width: 100%;
   }
   .innerSliderWithButton > p,
@@ -201,5 +204,11 @@
     width: auto;
     padding: 0;
     padding-top: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mainSlider_with_btn {
+    width: auto;
+    margin: 0 30px;
   }
 }

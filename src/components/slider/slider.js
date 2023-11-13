@@ -44,7 +44,7 @@ export const Slider = () => {
 
     return (
        
-                    <div style={{marginTop: '80px'}}>
+                    <div className={styles.mt}>
             {
                 isLoading && <div className={styles.preloader}><Spinner animation="grow" /></div>
             }
@@ -75,7 +75,7 @@ export const Slider = () => {
                                         color={'#fff'}
                                         click={gotoContact}
                                     />
-                                    
+                                        
                                 </Carousel.Caption>
                                 {/* <Carousel.Caption>
                                     <div className={styles.sliderHeading}>

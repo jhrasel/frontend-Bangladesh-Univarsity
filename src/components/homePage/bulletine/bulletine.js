@@ -24,7 +24,7 @@ export const Bulletine = ({title}) => {
                 <Container>
                     <Row>
 
-                      <h1 className={'sectionHeading'} style={{ marginBottom: '40px', marginLeft: '25px' }}>{ title}</h1>
+                      <h1 className={'sectionHeading'}>{title}</h1>
                         {
                             isLoading && (
                                 <>
@@ -42,8 +42,8 @@ export const Bulletine = ({title}) => {
                         }
                         {
                             bulletin?.data?.data?.length && bulletin?.data?.data?.map((value, i) => (
-                                <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={i}>
-                                    <a href={`/news/${value?._id}`}>
+                                <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={i} className="bulletine">
+                                    <a href={`/news/${value?._id}`} >
                                         <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
                                     </a>
                                 </Col>
