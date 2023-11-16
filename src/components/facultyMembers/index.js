@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
-import { default as slider } from '../../assets/image/fac.png';
+import { default as slider } from '../../assets/image/faculties.jpeg';
 import { PageBanner } from "../../components/pagebanner/index";
 import ApiRequest from "../../services/api-services";
 import { Addmission } from "../admission";
@@ -51,7 +51,7 @@ export const FacultyMembers = () => {
   return(
       <>
             <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={''} photo={slider.src}/>
+                <PageBanner title={'Faculties'} photo={slider.src} position={'center'}/>
           </Container>
           <div className={styles.mainFacultyMember}>
               <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Dignified Teachers of Computer <br /> Science & Engineering.</h1>

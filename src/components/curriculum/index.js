@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import slider from '../../assets/image/carriculam.png';
+import slider from '../../assets/image/carriculam.jpeg';
 import { PageBanner } from '../../components/pagebanner/index';
 import { Addmission } from "../admission";
 import { CourseDetails } from "./courseDetails";
@@ -12,7 +12,7 @@ export const CurriculumPage = () => {
     return (
         <>
             <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={''} photo={slider.src}/>
+                <PageBanner title={'Curriculum'} photo={slider.src} position={'top'}/>
             </Container>
             <Container>
                       <div className={styles.mainCurriculum}>

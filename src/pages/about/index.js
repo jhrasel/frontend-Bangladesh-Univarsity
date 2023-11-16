@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useQuery } from "react-query";
-import slider from "../../assets/image/about.png";
+import slider from "../../assets/image/about.jpeg";
 import { AboutBanner } from "../../components/aboutPage/aboutbanner";
 import { Addmission } from '../../components/admission/index';
 import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";
@@ -23,58 +23,61 @@ const Index = () => {
         }
     })
 
-  return(
-      <div className={styled.main_about}>
-          <PageBanner title={''} photo={slider.src}/>
+    return (
+      <div className="mt_60">
+        <div className={styled.main_about}>
+            <PageBanner title={'About Us'} photo={slider.src} position={'top'}/>
 
-          <Container>
-              <div className={styled.padding}>
-                  <AboutBanner history={history[0]} />
-              </div>
-          </Container>
-  
-          <div className={styled.warverMargin}>
-              <Weaver />  
-          </div>
-          
-          {
-              isLoading && <>
-                  <WhyPreloader />
-                  <WhyPreloader />
-                  <WhyPreloader />
-              </>
-          }
-        
-          <div className={styled.aboutDetails}>
-                       {
-              section?.map((section, index) => {
-                  let RightVisibility;
-                  let LeftVisibility;
-                  if (index === 0){
-                      RightVisibility = true
-                  }else if (index === 1){
-                      LeftVisibility = true
-                  }else if (index === 2){
-                      RightVisibility = true
-                  }
-                  return (
-                      <div key={index}>
-                          <AboutDetails
-                              isVisiableRightImg={RightVisibility}
-                              isVisiableLftImg={LeftVisibility}
-                              button={false}
-                              title={section?.title}
-                              description={section?.description}
-                              photo={section?.image}
-                          />
-                      </div>
-                  )
-              })
-          }
-          </div>
+            <Container>
+                <div className={styled.padding}>
+                    <AboutBanner history={history[0]} />
+                </div>
+            </Container>
+    
+            <div className={styled.warverMargin}>
+                <Weaver />  
+            </div>
+            
+            {
+                isLoading && <>
+                    <WhyPreloader />
+                    <WhyPreloader />
+                    <WhyPreloader />
+                </>
+            }
+            
+            <div className={styled.aboutDetails}>
+                        {
+                section?.map((section, index) => {
+                    let RightVisibility;
+                    let LeftVisibility;
+                    if (index === 0){
+                        RightVisibility = true
+                    }else if (index === 1){
+                        LeftVisibility = true
+                    }else if (index === 2){
+                        RightVisibility = true
+                    }
+                    return (
+                        <div key={index}>
+                            <AboutDetails
+                                isVisiableRightImg={RightVisibility}
+                                isVisiableLftImg={LeftVisibility}
+                                button={false}
+                                title={section?.title}
+                                description={section?.description}
+                                photo={section?.image}
+                            />
+                        </div>
+                    )
+                })
+            }
+            </div>
 
-          <Addmission />
-      </div>
+            <Addmission />
+        </div>
+    </div>
+
   )
 }
 

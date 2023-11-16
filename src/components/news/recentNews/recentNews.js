@@ -67,7 +67,7 @@ export const RecentNews = () => {
     return(
         <>
             <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={''} photo={slider.src}/>
+                <PageBanner title={'News'} photo={slider.src} position={'center'} />
             </Container>
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
            

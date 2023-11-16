@@ -35,7 +35,7 @@ export const ContactUs = () => {
     return (
         <>
             <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={'Contact Us'} photo={slider.src}/>
+                <PageBanner title={'Contact Us'} photo={slider.src} position={'top'}/>
             </Container>
             <div className={styles.mainForms}>
                 <div className='container'>

@@ -40,7 +40,7 @@ export const Notice = ({singleNotice}) => {
     return (
         <>
             <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={''} photo={slider.src}/>
+                <PageBanner title={'Notice'} photo={slider.src} position={'top'}/>
             </Container>
 
             <Container>
