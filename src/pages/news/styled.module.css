@@ -96,3 +96,27 @@
   line-height: 160%; /* 28.8px */
   text-align: justify;
 }
+
+@media screen and (max-width: 767px) {
+  .padding {
+    padding: 0px 5px;
+  }
+  .topCard {
+    padding: 0px 5px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .banner {
+    height: 100%;
+  }
+  .heading {
+    height: 100%;
+    margin-bottom: 0;
+  }
+  .navigation h4 {
+    width: auto;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

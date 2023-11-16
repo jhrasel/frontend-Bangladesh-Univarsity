@@ -66,7 +66,7 @@ export const FacultyMembers = () => {
                       {
                           filterData?.chairman?.map((role, i) => {
                               return (
-                                <Col xs={12} md={4} lg={4} key={i}>
+                                <Col xs={12} md={4} lg={3} key={i}>
                                     <div className={styles.memberCard}>
                                         <div className={styles.memberImg}>
                                             <img src={role?.photo} alt="member photo" />
@@ -92,7 +92,7 @@ export const FacultyMembers = () => {
                       {
                           filterData?.professor?.map((role, i) => {
                               return (
-                                    <Col xs={12} md={4} lg={4} key={i}>
+                                    <Col xs={12} md={4} lg={3} key={i}>
                                         <div className={styles.memberCard}>
                                             <div className={styles.memberImg}>
                                                 <img src={role?.photo} alt={'memberImg'} />
@@ -118,7 +118,7 @@ export const FacultyMembers = () => {
                       {
                          filterData?.lecture?.map((role, i) => {
                               return (
-                                  <Col xs={12} md={4} lg={4} key={i}>
+                                  <Col xs={12} md={4} lg={3} key={i}>
                                         <div className={styles.memberCard}>
                                             <div className={styles.memberImg}>
                                                 <img src={role.photo} alt={'memberImg'} />

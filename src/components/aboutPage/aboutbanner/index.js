@@ -7,6 +7,8 @@ import assistantNav from '../../../assets/image/assistant_navigation.png';
 import slider from "../../../assets/image/slider.jpg";
 import touch from '../../../assets/image/touch_app.png';
 import styles from '../../slider/sliderWithButton.module.css';
+
+
 export const AboutBanner = ({history}) =>{
 
     return (

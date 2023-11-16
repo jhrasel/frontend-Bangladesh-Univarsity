@@ -37,10 +37,14 @@ const NoticeItem = () => {
                                         <path d="M2 5.99998L8 1.33331L14 5.99998V13.3333C14 13.6869 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6666 12.6667 14.6666H3.33333C2.97971 14.6666 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.6869 2 13.3333V5.99998Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M6 14.6667V8H10V14.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg> &nbsp;
-                                    <p>
-                                        <span onClick={() => { router.push('/') }}>Home</span>
+                                    <p className='hide'>
+                                        <span onClick={() => { router.push('/') }}>Home</span>&nbsp;
                                         / <span onClick={() => { router.push('/notice') }}>Notice</span>
                                         {noticeList?.data?.data?.title && ` / ${noticeList?.data?.data?.title.length > 30 ? noticeList?.data?.data?.title.slice(0, 30) + '...' : ''}`}
+                                    </p>
+                                    <p className='mbl_hide'>
+                                        <span onClick={() => { router.push('/') }}>Home</span>&nbsp;
+                                        / &nbsp;<span onClick={() => { router.push('/notice') }}>Notice</span>
                                     </p>
                                 </div>
                             </div>
@@ -52,35 +56,17 @@ const NoticeItem = () => {
             </Container>
             <Container>
                 <div className={styled.topCard}>
-                    <Card style={{padding: '20px'}}>
+                    <Card style={{padding: '20px', border: 'none'}} className='notice_card'>
                         <p className={styled.title}>{moment(noticeList?.data?.data?.updatedAt).format("MMM Do YY")} / notice</p>
                         <h4 className={styled.subtitle}>{noticeList?.data?.data?.description}</h4>
                     </Card>
                 </div>
+                 <div className={styled.padding}>
+                    <LatestSingleNotice latestNotice={latestNotice} style={true} singleRoute={true} />
+                </div>
             </Container>
-            {/* <div className={'container'}>
-                <h1>{noticeList?.data?.data?.title}</h1>
-                <p>{noticeList?.data?.data?.shortDesc}</p>
-                <p>{moment(noticeList?.data?.data?.updatedAt).format("MMM Do YY")} / notice</p>
-            </div> */}
-            {/* {
-                noticeListLoading ? (
-                    <div className={styles.preloader}><Spinner animation="grow" /></div>
-                ) :(
-                    <div className={styles.banner}>
-                            <img width={'100%'} src={bannerImg?.src} alt={'image'} style={{borderRadius: '10px', margin: '10px 0', height: '600px'}} />
-                    </div>
-                )
-            } */}
-
-
-            {/* <div className={'container'}>
-                <h1 style={{textAlign: 'justify'}}>{noticeList?.data?.data?.description}</h1>
-            </div> */}
-
-            <LatestSingleNotice latestNotice={latestNotice} style={true} singleRoute={true} />
+           
             <Addmission />
-
         </div>
     )
 }

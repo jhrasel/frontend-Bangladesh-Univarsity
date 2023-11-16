@@ -155,3 +155,28 @@
   font-weight: 600;
   line-height: 150%; /* 27px */
 }
+.hide {
+  display: none;
+}
+@media screen and (max-width: 787px) {
+  .mbl_hide {
+    display: none;
+  }
+  .hide {
+    display: block;
+  }
+  .mt {
+    margin-top: 25px;
+    margin-bottom: 0px;
+  }
+  .mainCurriculum {
+    margin-top: 0px;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (min-width: 788px) and (max-width: 991px) {
+  .mt {
+    margin-top: 110px;
+  }
+}

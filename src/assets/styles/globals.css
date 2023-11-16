@@ -397,7 +397,6 @@ tr {
 }
 .gmap_canvas {
   height: 448px !important;
-  border-radius: 7px;
 }
 .desktop-hide {
   display: none !important;
@@ -421,19 +420,57 @@ tr {
 /* .svg {
   width: 45px;
 } */
+.mbl_hide {
+  display: none;
+}
+.contact_map {
+  padding-left: 0px !important;
+}
+.sm_pic {
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 991px) {
+  .notice_card {
+    margin: 0px !important;
+  }
+  .sm_pic {
+    margin-bottom: 10px;
+  }
+  .ml-6 {
+    padding-left: 6px !important;
+  }
+  .mr-6 {
+    padding-right: 6px !important;
+  }
+  .gmap_canvas {
+    height: 348px !important;
+    border-radius: 0px;
+  }
+  .mt_30 {
+    margin: 60px 0px;
+    padding: 0px 15px;
+  }
+  .contact_map {
+    padding-right: 0px !important;
+  }
+  .hide {
+    display: none;
+  }
+  .mbl_hide {
+    display: block;
+  }
   .svg {
     width: 45px;
   }
   .mbl_10 {
-    padding: 0px 15px !important;
+    padding: 0px 25px !important;
   }
   .bulletine {
     margin-top: 15px !important;
   }
   .gallery_big_img {
     height: 210px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .gallery_small_img {
     height: 136px;
@@ -457,6 +494,7 @@ tr {
   .mainWhyus {
     margin-top: 60px;
     margin-bottom: 60px;
+    padding: 0px 25px !important;
   }
   .desktop-hide {
     display: block !important;
@@ -478,9 +516,9 @@ tr {
     line-height: initial;
     width: auto;
   }
-  button.accordion-button.collapsed {
+  /* button.accordion-button.collapsed {
     padding: 5px 0px;
-  }
+  } */
   .slick-prev {
     left: -12px !important;
   }
@@ -521,7 +559,6 @@ tr {
 .skeleton-footer {
   width: 30%;
 }
-
 /*============================= Bulletine preloader start ====================================*/
 
 /*body {*/

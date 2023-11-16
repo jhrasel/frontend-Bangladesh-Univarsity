@@ -70,15 +70,15 @@
 }
 .memberCard {
   background: #ffffff;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   text-align: center;
   margin-top: 30px;
   padding-top: 12px;
   padding-bottom: 30px;
 }
 .memberImg {
-  width: 250px;
-  height: 250px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
@@ -169,6 +169,9 @@
   height: 100%;
 }
 @media screen and (max-width: 991px) {
+  .members {
+    padding: 0px 12px;
+  }
   .innerMainBanner {
     height: 200px;
   }
@@ -194,6 +197,12 @@
     font-weight: 400;
     margin-right: 0;
     margin-bottom: 5px;
+  }
+  .members {
+    padding: 0px 12px;
+  }
+  .mainFacultyMember {
+    margin-bottom: 80px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1500px) {

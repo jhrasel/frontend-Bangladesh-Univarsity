@@ -63,7 +63,7 @@
 }
 
 .noticeDetails {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 .noticeDetails h4 {
   font-family: "Poppins", sans-serif;
@@ -103,10 +103,33 @@
     height: 82px;
     padding: 8px;
   }
-  .noticeDetails {
-    margin-left: 16px;
-  }
+
   .mainNoticeBody h1 {
     margin-bottom: 15px !important;
+  }
+}
+
+@media screen and (max-width: 787px) {
+  .noticeItem {
+    display: block;
+  }
+  .noticeDate {
+    margin-bottom: 15px;
+  }
+  .mblHeading {
+    font-size: 24px;
+    text-align: center;
+  }
+  .noticeDetails p {
+    border: none;
+  }
+  .noticeDetails {
+    margin-left: 0px !important;
+  }
+  .mainNotice {
+    padding: 0px 5px;
+  }
+  .fromSingleNotice {
+    margin-top: 60px;
   }
 }

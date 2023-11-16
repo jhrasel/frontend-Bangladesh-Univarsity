@@ -43,26 +43,26 @@ const Index = () => {
                           <img src={data?.data?.body[0].image} alt='main' width={'100%'} height={'100%'} />
                       </div>
                   </Col>
-                  <Col xs='12' md='6' lg="6">
-                      <Row style={{marginBottom: '20px'}}>
-                          <Col md='6' xs='6'>
+                  <Col xs='12' md='6' lg="6" >
+                      <Row className='sm_pic'>
+                          <Col md='6' xs='6' className='mr-6'>
                               <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>
                           </Col>
-                          <Col md='6' xs='6'>
+                          <Col md='6' xs='6' className='ml-6'>
                                 <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>
                           </Col>
                       </Row>
                       <Row>
-                          <Col md='6' xs='6'>
+                          <Col md='6' xs='6' className='mr-6'>
                                 <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>
                           </Col>
-                          <Col md='6' xs='6'>
+                          <Col md='6' xs='6' className='ml-6'>
                                 <div className="gallery_small_img">
                                     <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
                               </div>

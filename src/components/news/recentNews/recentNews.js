@@ -73,7 +73,7 @@ export const RecentNews = () => {
            
                 <Container className={'sliderss'}>
                     <Row>
-                        <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Most Viewed News</h1>
+                        <h1 className={'sectionHeading'} style={{marginBottom: '40px'}}>Most Viewed News</h1>
                     {
                             newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
                                 return (

@@ -28,7 +28,9 @@ const Index = () => {
           <PageBanner title={''} photo={slider.src}/>
 
           <Container>
-              <AboutBanner history={history[0]} />
+              <div className={styled.padding}>
+                  <AboutBanner history={history[0]} />
+              </div>
           </Container>
   
           <div className={styled.warverMargin}>
@@ -88,11 +90,11 @@ export const AboutDetails = (props) => {
     }
     return (
          <Container >
-            <div>
+            <div className={styled.main_about_page}>
                 <Row>
                     {
                         isVisiableLftImg && (
-                            <Col md={6} style={{padding: 0}}>
+                            <Col md={6} className={styled.mbl_hide}>
                                 <div className={styled.about_img}>
                                     <img src={photo} alt='cardImg' width={'100%'} height={'100%'}/>
                                 </div>
@@ -100,7 +102,13 @@ export const AboutDetails = (props) => {
                         )
                     }
 
-                        <Col md={6} style={{padding: 0}}>
+                        <Col md={6} className={styled.hide}>
+                                <div className={styled.about_img}>
+                                    <img src={photo} alt='cardImg' width={'100%'} height={'100%'}/>
+                                </div>
+                        </Col>
+                    
+                        <Col md={6}>
                             <div className={styled.item_center}>
                                 <div className={ styled.about_details}>
                                     <h4>{title}</h4>
@@ -111,7 +119,7 @@ export const AboutDetails = (props) => {
                 
                     {
                         isVisiableRightImg && (
-                            <Col md={6} style={{padding: 0}}>
+                            <Col md={6} className={styled.mbl_hide}>
                                 <div className={styled.about_img}>
                                     <img src={photo} alt='cardImg' width={'100%'} height={'100%'}/>
                                 </div>

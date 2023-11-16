@@ -14,7 +14,7 @@ export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
 
     return (
         <div className={style ? styles.fromSingleNotice: styles.mainNoticeBody}>
-            <h1 className={style.heading}>
+            <h1 className={[styles.heading, styles.mblHeading].join(' ')}>
                 Recent Notice
             </h1>
             {

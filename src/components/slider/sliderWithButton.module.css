@@ -147,16 +147,24 @@
   border-radius: initial;
 }
 @media screen and (max-width: 991px) {
+  .mainAboutBannerText p {
+    margin-bottom: 0;
+  }
+  .mainAboutBanner {
+    height: 100%;
+  }
   /*.innerSliderWithButton{*/
   /*    width: auto;*/
   /*}*/
   .mainAboutBanner h1 {
     margin-top: 25px;
+    font-size: 25px;
   }
   .mainAboutBanner {
     margin: 30px 0px;
     overflow: hidden;
     padding: 0;
+    margin-bottom: 0;
   }
   .innerSliderWithButton,
   .middleSliderButton {
@@ -183,7 +191,7 @@
   .innerSliderWithButton,
   .middleSliderButton {
     border-radius: 0px;
-    padding: 50px 30px;
+    padding: 25px 30px;
     width: 100%;
   }
   .innerSliderWithButton > p,

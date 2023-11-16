@@ -58,3 +58,43 @@
 .warverMargin {
   margin-top: 90px;
 }
+.hide {
+  display: none;
+}
+.padding {
+  padding: 0px 10px;
+}
+@media screen and (max-width: 787px) {
+  .warverMargin {
+    margin-top: 48px;
+  }
+  .about_img {
+    height: 270px;
+  }
+  .mbl_hide {
+    display: none;
+  }
+  .hide {
+    display: block;
+  }
+  .about_details {
+    padding: 25px;
+  }
+  .item_center {
+    height: auto;
+  }
+  .about_details p {
+    margin-bottom: 0px;
+  }
+  .main_about_page {
+    margin-bottom: 40px;
+    padding: 0px 10px;
+  }
+  .aboutDetails {
+    margin-top: 48px;
+  }
+  .main_about {
+    margin-top: 0px;
+    /* padding: 0px 10px; */
+  }
+}

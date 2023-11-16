@@ -47,7 +47,7 @@ export const Notice = ({singleNotice}) => {
                 <div className={styles.mainNotice}>
                 <LatestSingleNotice latestNotice={latestNotice} style={false} singleRoute={false}/>
                 <div className={styles.mainNoticeBody}>
-                    <h1 className={styles.heading}>
+                    <h1 className={[styles.heading, styles.mblHeading].join(' ')}>
                         ALL Notice
                     </h1>
                     {
