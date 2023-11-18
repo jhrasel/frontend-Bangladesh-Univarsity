@@ -40,7 +40,6 @@ export const Slider = () => {
         })
         return arr;
     }, [galleryItem])
-    console.log('galleryItem', gallery)
 
     return (
        
@@ -50,7 +49,7 @@ export const Slider = () => {
             }
             <Carousel activeIndex={index} onSelect={handleSelect} >
                 {
-                    gallery.length && gallery.map((item, index) => {
+                    gallery.map((item, index) => {
                         return(
                             <Carousel.Item key={index}>
                                 <div className='slider_overylay'>

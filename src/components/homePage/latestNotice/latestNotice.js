@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import React from "react";
+import React, { useMemo } from "react";
 import { Container, Spinner } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -23,13 +23,25 @@ export const LatestNotice = () => {
 
     const { isLoading, data:newsList } = useQuery('news_list', () => ApiRequest.get('news/all'));
 
+    const shortLit = useMemo(() => {
+        const newsItem = [];
+        newsList?.data?.data.map((news) => {
+            if (news) {
+                if (newsItem.length >= 5) return
+                newsItem.push(news);
+            }
+        })
+        return newsItem || []
+    }, [newsList]);
+
+    console.log(shortLit)
   return (
       <Container div className={styles.mainLatestNotice}>
           <Row style={{background: '#fff'}} >
               <Col xl={'6'} md={'12'} xs={'12'}  className='padding_0'>
                   <div className={styles.lftSide}>
                       <div className={styles.lftSideOveryly}>
-                            <h1>Latest  Notice News</h1>
+                            <h1>Latest  Notice And News</h1>
                             <p>
                                 Stay connected with our Notice Board, your central hub for important updates, events, and news. Check it regularly for the latest information.
                             </p>
@@ -48,27 +60,8 @@ export const LatestNotice = () => {
                         isLoading && <div className={styles.preloader}><Spinner animation="grow" /></div>
                     }
                    <div className={styles.latest_details}>
-                        {/* {
-                            newsList?.data?.data?.length && newsList?.data?.data?.map((news, index) => {
-                                return (
-                                    <div className={styles.rightSideNotice} key={index} >
-                                        <Accordion defaultActiveKey={0}>
-                                            <Accordion.Item eventKey={index}>
-                                                <Accordion.Header className='latestNew_Heading' style={{textTransform: 'uppercase'}}>{news.title} </Accordion.Header>
-                                                <Accordion.Body>
-                                                    {
-                                                        news.shortDesc.length > 220 ? news.shortDesc.substring(0, 220) + '...' : news.shortDesc
-                                                    }
-                                                    <a href={`/notice/${news?._id}`} onClick={()=>singleNotice(news?._id)} className={'readMore'} style={{ paddingBottom: '10px', marginTop: '15px !important',  justifyContent: 'flex-start'}}> Read More <span className={'arrow'}>&#8250;</span></a>
-                                                </Accordion.Body>
-                                            </Accordion.Item>
-                                        </Accordion>
-                                    </div>
-                                )
-                            })
-                        }  */}
                       <ul>
-                           { newsList?.data?.data?.length && newsList?.data?.data?.map((news, index) => {
+                           {shortLit.map((news, index) => {
                                return (
                                    <li key={index}>
                                        <a href={`/notice/${news?._id}`}>

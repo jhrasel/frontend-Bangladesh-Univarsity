@@ -54,7 +54,7 @@ export const Notice = ({singleNotice}) => {
                         allNoticeLoading && (<Loader />)
                     }
                     {
-                        allNoticeData?.length && allNoticeData?.map((notice, index)=> {
+                        allNoticeData?.map((notice, index)=> {
                             return <div key={index} className={styles.noticeItem} >
                                 <div className={styles.noticeDate}>
                                     <p>{moment(notice?.date).format("MMM Do YY")}</p>

@@ -4,9 +4,12 @@ import Container from "react-bootstrap/Container";
 import Modal from 'react-bootstrap/Modal';
 import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
+import slider from '../../assets/image/contact-banner.png';
 import closeIcon from '../../assets/image/modal/close.svg';
 import downloadIcon from '../../assets/image/modal/download.svg';
 import zoomInIcon from "../../assets/image/zoomin.svg";
+import { Addmission } from '../../components/admission/index';
+import { PageBanner } from '../../components/pagebanner/index';
 import ApiRequest from "../../services/api-services";
 import styles from './gallery.module.css';
 
@@ -24,7 +27,11 @@ const GalleryContainer = () => {
 
     return(
         <div className={styles.mainGallery}>
-            <Container fluid>
+            <Container fluid style={{padding: 0}} className="mt_60">
+                <PageBanner title={'Gallery'} photo={slider.src} position={'top'}/>
+            </Container>
+
+            <Container className={styles.mt}>
                 <Row>
                     {
                         data?.data?.body?.map((image, i) => {
@@ -83,6 +90,7 @@ const GalleryContainer = () => {
                     </Modal>
                 </div>
             </Container>
+             <Addmission />
         </div>
     )
 }

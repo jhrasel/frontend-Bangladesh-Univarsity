@@ -1,53 +1,52 @@
-.mainGallery{
-    margin-top: 90px;
+.mainGallery {
+  margin-top: 90px;
 }
-.galleryImg{
-    width: 100%;
-    height: 350px;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+.galleryImg {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
-.galleryImg img{
-    width: 100%;
-    height: 100%;
+.galleryImg img {
+  width: 100%;
+  height: 100%;
 }
-.galleryImg:hover .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #AD1F1F;
-    transition: 0.5s ease-in-out;
+.galleryImg:hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ad1f1f;
+  transition: 0.5s ease-in-out;
 }
-.overlay img{
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    cursor: pointer;
+.overlay img {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
 }
-.extraTools{
-    position: absolute;
-    top: -40px;
-    right: 0;
+.extraTools {
+  position: absolute;
+  top: -40px;
+  right: 0;
 }
-.extraTools ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
+.extraTools ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
-.extraTools ul li img{
-    width: 35px;
+.extraTools ul li img {
+  width: 35px;
 }
-.extraTools ul li{
-    list-style: none;
-    margin-right: 5px;
-    cursor: pointer;
+.extraTools ul li {
+  list-style: none;
+  margin-right: 5px;
+  cursor: pointer;
 }
-.modals{
-
-
+.mt {
+  margin-top: 60px;
 }

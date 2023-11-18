@@ -17,3 +17,6 @@
 .buttons:last-child {
   margin-right: 0px !important;
 }
+.buttons:hover {
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
+}

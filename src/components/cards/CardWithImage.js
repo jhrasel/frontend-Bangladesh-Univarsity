@@ -34,7 +34,7 @@ export const CardWithImage = (props) => {
           {
               isVisiableRightImg && (
                   <div className={styles.leftImg} style={{marginLeft: '20px'}}>
-                      <img src={image.src} alt='cardImg'/>
+                      <img src={photo || image.src} alt='cardImg'/>
                   </div>
               )
           }
