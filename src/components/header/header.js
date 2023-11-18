@@ -15,7 +15,7 @@ export const Header = () => {
     return (
       <Row>
          <div className='container'>
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className=' main_header'>
+                <Navbar collapseOnSelect expand="lg" variant="light" fixed="top" className=' main_header' style={{background: '#fff'}}>
                     <Container >
                         <Navbar.Brand href="/home"><Image src={BrandIcon.src} alt={'home image'} width={212} height={32} /></Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -34,13 +34,13 @@ export const Header = () => {
                             }
                         <Nav className="desktop-hide">
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
-                                <Buttons text={'login'} bgColor={'#eb2a2e'}/>{' '}
+                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
                             </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                          <Nav className="mobile-hide">
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
-                                <Buttons text={'login'} bgColor={'#eb2a2e'}/>{' '}
+                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
                             </Nav.Link>
                         </Nav>
                     </Container>
