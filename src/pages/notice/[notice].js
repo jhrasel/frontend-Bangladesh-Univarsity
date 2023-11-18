@@ -5,12 +5,16 @@ import React from "react";
 import { Card, Container } from "react-bootstrap";
 import { useQuery } from "react-query";
 import slider from '../../assets/image/news-banner.png';
+import { Addmission } from '../../components/admission/index';
 import { LatestSingleNotice } from "../../components/notice/LatestNotice";
+// import { PdfReader } from '../../components/pdfReader/index';
+import dynamic from 'next/dynamic';
 import styled from '../../pages/news/styled.module.css';
 import ApiRequest from "../../services/api-services";
-
-import { Addmission } from '../../components/admission/index';
-
+   const Template = dynamic(() => import("../../components/pdfReader/index"), {
+          loading: () => <p>Loading...</p>,
+          ssr: false,
+          });
 const NoticeItem = () => {
     const router = useRouter()
     const {notice} = router.query;
@@ -59,7 +63,11 @@ const NoticeItem = () => {
                     <Card style={{padding: '20px', border: 'none'}} className='notice_card'>
                         <p className={styled.title}>{moment(noticeList?.data?.data?.updatedAt).format("MMM Do YY")} / notice</p>
                         <h4 className={styled.subtitle}>{noticeList?.data?.data?.description}</h4>
+                          {/* <PDFViewer>
+                        <Template date={noticeList?.data?.data?.updatedAt} description={noticeList?.data?.data?.description} />
+                        </PDFViewer> */}
                     </Card>
+                    
                 </div>
                  <div className={styled.padding}>
                     <LatestSingleNotice latestNotice={latestNotice} style={true} singleRoute={true} />

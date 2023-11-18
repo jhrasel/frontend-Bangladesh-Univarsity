@@ -1,113 +1,65 @@
 import { useRouter as UseRouter } from "next/router";
 import React from "react";
+
+import { Card, Container } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Table from "react-bootstrap/Table";
 import { useQuery as UseQuery } from "react-query";
-import emailIcon from '../../assets/image/teacher/emailIcon.svg';
-import phoneIcon from '../../assets/image/teacher/phoneIcon.svg';
-import websiteIcon from '../../assets/image/teacher/website.svg';
-import bannerImg from '../../assets/image/teacherBanner.svg';
+import { Addmission } from '../../components/admission/index';
 import styles from '../../components/facultyMembers/styles.module.css';
 import { Loader } from '../../components/loader';
 import ApiRequest from "../../services/api-services";
+
 const teacherDetails = () => {
     const router = UseRouter()
     const {faculty} = router.query;
 
-    const {isloading, data:FacultyMemberData} = UseQuery(['singleItem', faculty], () => ApiRequest.get(`teacher/find/${faculty}`));
+    const { data:FacultyMemberData, isloading} = UseQuery(['singleItem', faculty], () => ApiRequest.get(`teacher/find/${faculty}`));
     const url = 'https://backend-bangladesh-university.onrender.com'
 
-
-
+    
     return(
         <div className={styles.mainBanner}>
-            <div className={styles.innerMainBanner}>
-                <img className={styles.innerBgImg} src={bannerImg.src} alt={'bannerImg'} width={'100%'}/>
-                <div className={styles.details}>
-                    <div className={styles.positionCenter}>
-                        {
-                            isloading ? <Loader/> : (
-                                <div className={styles.avaterImg}>
-                                    <img src={FacultyMemberData?.data?.data?.photo} alt={'avater'} />
-                                </div>
-                            )
-                        }
 
-                        {
-                            FacultyMemberData?.data?.data?.phone && (
-                                <p>
-                                    <img src={phoneIcon.src} alt={'phone'} />
-                                    {FacultyMemberData?.data?.data?.phone}
-                                </p>
-                            )
-                        }
-
-                        {
-                            FacultyMemberData?.data?.data?.email && (
-                                <p>
-                                    <img src={emailIcon.src} alt={'email'} />
-                                    {FacultyMemberData?.data?.data?.email}
-                                </p>
-                            )
-                        }
-
-                        {
-                            FacultyMemberData?.data?.data?.website && (
-                                <p>
-                                   <a href={FacultyMemberData?.data?.data?.website}  rel="opener" style={{color: '#fff'}}>
-                                       <img src={websiteIcon.src} alt={'email'} /> &nbsp;
-                                       {FacultyMemberData?.data?.data?.website}
-                                   </a>
-                                </p>
-                            )
-                        }
-
-                    </div>
-                </div>
-            </div>
-
-            <div className={styles.bodyDetails}>
-                <Row>
-                    <Col  xs='12' md='12' lg="4">
-                        <Table style={{background: '#fff', borderRadius: '5px'}}>
-                            <tbody>
-                            <tr>
-                                <td style={{width: '20%'}}><b>Name:</b></td>
-                                <td>{FacultyMemberData?.data?.data?.name}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Faculty ID:</b></td>
-                                <td>{FacultyMemberData?.data?.data?.teacherID}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Designation:</b></td>
-                                <td>{FacultyMemberData?.data?.data?.editableRole}</td>
-                            </tr>
-                            </tbody>
-                        </Table>
-                    </Col>
-                    <Col  xs='12' md='12' lg="8" >
-                        <Table style={{background: 'red', borderRadius: '5px'}}>
-                            <tbody>
-                            <tr style={{width: '20%'}}>
-                                <td><b>Academic Qualification:</b></td>
-                                <td>{FacultyMemberData?.data?.data?.academicQualification}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Training Experience:</b></td>
-                                <td>{FacultyMemberData?.data?.data?.trainingExperience}</td>
-                            </tr>
-                            <tr>
-                                <td><b>Teaching Area:</b></td>
-                                <td>{FacultyMemberData?.data?.data?.teachingArea}</td>
-                            </tr>
-                            </tbody>
-                        </Table>
-                    </Col>
-
-                </Row>
-            </div>
+            <Container>
+                <Card className="sing_card">
+                    {
+                        isloading ? <div className={styles.loader}> <Loader /></div> : (
+                            <Row>
+                                <Col xs={12} md={4} xl={4}>
+                                    <div className={styles.single_avaterimg}>
+                                        <img src={FacultyMemberData?.data?.data?.photo} alt={'avater'} />
+                                    </div>
+                                </Col>
+                                <Col xs={12} md={8} xl={8}>
+                                    <div className={styles.card_details}>
+                                        <h4>{FacultyMemberData?.data?.data?.name}</h4>
+                                        <p>{FacultyMemberData?.data?.data?.editableRole}</p>
+                                        <Table style={{background: 'red', borderRadius: '5px'}}>
+                                            <tbody>
+                                                <tr>
+                                                    <td style={{width: '30%'}}><b>Academic Qualification:</b></td>
+                                                    <td>{FacultyMemberData?.data?.data?.academicQualification}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style={{width: '30%'}}><b>Training Experience:</b></td>
+                                                    <td>{FacultyMemberData?.data?.data?.trainingExperience}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style={{width: '30%'}}><b>Teaching Area:</b></td>
+                                                    <td>{FacultyMemberData?.data?.data?.teachingArea}</td>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+                                    </div>
+                                </Col>
+                            </Row>
+                        )
+                    }
+                </Card>
+            </Container>
+          <Addmission />
         </div>
     )
 }

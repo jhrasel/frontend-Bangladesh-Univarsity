@@ -66,8 +66,8 @@ export const Slider = () => {
                                     <div className='slider_lay'></div>
                                 </div>
                                 <Carousel.Caption>
-                                    <p className={'sliderTag'}>CSE Department</p>
-                                    <h1 className={'headingTitle'}>{item?.title} </h1>
+                                    <p className={'sliderTag'}>{item?.title}t</p>
+                                    <h1 className={'headingTitle'}>{item?.description} </h1>
                                     <Buttons
                                         text={'Apply Now'}
                                         bgColor={'#EB2A2E'}

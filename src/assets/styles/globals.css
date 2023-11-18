@@ -212,15 +212,18 @@ a {
   margin-bottom: 0;
   line-height: 33px; /* 206.25% */
 }
-.carousel-control-prev,
-.carousel-control-next {
-  display: none !important;
-}
+
 .accordion-header {
   background: #fcf8f8;
   margin: 20px 0px;
 }
 .accordion-item {
+}
+.sing_card {
+  border: none !important;
+  border-radius: 0px !important ;
+  padding: 25px;
+  margin: 0 !important;
 }
 .accordion-item,
 .accordion-button:focus {
@@ -539,7 +542,7 @@ tr {
 
 @keyframes skeleton-loading {
   0% {
-    background-color: hsl(200, 20%, 80%);
+    background-color: hsl(200, 20%, 99%);
   }
   100% {
     background-color: hsl(200, 20%, 95%);
@@ -637,8 +640,8 @@ tr {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
-    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12); */
 }
 .skeleton .square {
   height: 180px;
@@ -655,8 +658,8 @@ tr {
   background: linear-gradient(
     to right,
     rgba(130, 130, 130, 0.2) 8%,
-    rgba(130, 130, 130, 0.3) 18%,
-    rgba(130, 130, 130, 0.2) 33%
+    rgba(130, 130, 130, 0.3) 8%,
+    rgba(130, 130, 130, 0.2) 3%
   );
   background-size: 800px 100px;
   animation: wave-squares 2s infinite ease-out;

@@ -33,14 +33,14 @@ export const Header = () => {
                                 })
                             }
                         <Nav className="desktop-hide">
-                            <Nav.Link href='/login'>
-                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
+                            <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
+                                <Buttons text={'login'} bgColor={'#eb2a2e'}/>{' '}
                             </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                          <Nav className="mobile-hide">
-                            <Nav.Link href='/login'>
-                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
+                            <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
+                                <Buttons text={'login'} bgColor={'#eb2a2e'}/>{' '}
                             </Nav.Link>
                         </Nav>
                     </Container>

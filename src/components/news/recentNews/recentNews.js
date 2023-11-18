@@ -10,7 +10,10 @@ import slider from "../../../assets/image/news.png";
 import { Addmission } from '../../../components/admission/index';
 import ApiRequest from "../../../services/api-services";
 import { SmallCard } from "../../cards/smallCard";
+import { BulletinePreloader } from "../../homePage/bulletine/bulletineLoader";
 import { PageBanner } from "../../pagebanner";
+
+
 export const RecentNews = () => {
     const [page, setPage] = useState(1)
     const Router = useRouter()
@@ -72,6 +75,24 @@ export const RecentNews = () => {
             <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
            
                 <Container className={'sliderss'}>
+                                    <>
+                    {
+                        newsListisloading && (
+                            <Row>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                        )
+                    }
+
+                </>
                     <Row>
                         <h1 className={'sectionHeading'} style={{marginBottom: '40px'}}>Most Viewed News</h1>
                     {
@@ -87,7 +108,6 @@ export const RecentNews = () => {
                         }
 
                     </Row>
-                    {/* <Button variant="danger" onClick={loadHandler}>Load More +</Button> */}
 
                 </Container>
                  <Addmission />

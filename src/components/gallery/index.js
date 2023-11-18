@@ -11,8 +11,8 @@ import zoomInIcon from "../../assets/image/zoomin.svg";
 import { Addmission } from '../../components/admission/index';
 import { PageBanner } from '../../components/pagebanner/index';
 import ApiRequest from "../../services/api-services";
+import { BulletinePreloader } from '../homePage/bulletine/bulletineLoader';
 import styles from './gallery.module.css';
-
 const GalleryContainer = () => {
     const [show, setShow] = useState(false);
     const [image, setImage] = useState('')
@@ -32,6 +32,30 @@ const GalleryContainer = () => {
             </Container>
 
             <Container className={styles.mt}>
+                {
+                    isLoading && (
+                            <Row>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                            </Col>
+                             <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='4' lg="4">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
                 <Row>
                     {
                         data?.data?.body?.map((image, i) => {
