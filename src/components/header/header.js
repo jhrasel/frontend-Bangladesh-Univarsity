@@ -18,7 +18,6 @@ export const Header = () => {
                 <Navbar collapseOnSelect expand="lg" variant="light" fixed="top" className=' main_header' style={{background: '#fff'}}>
                     <Container >
                         <Navbar.Brand href="/home"><Image src={BrandIcon.src} alt={'home image'} width={212} height={32} /></Navbar.Brand>
-                        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
                         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: 'none'}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                 <path d="M4 26V22.8333H28V26H4ZM9 18.0833V14.9167H28V18.0833H9ZM4 10.1667V7H28V10.1667H4Z" fill="#EB2A2E"/>
@@ -37,13 +36,13 @@ export const Header = () => {
                                     </Nav>
                                 })
                             }
-                        <Nav className="desktop-hide">
+                        <Nav className="desktop-hide" style={{paddingTop: '70px', textAlign: 'center'}}>
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
                                 <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
                             </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
-                         <Nav className="mobile-hide">
+                        <Nav className="mobile-hide" >
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
                                 <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
                             </Nav.Link>

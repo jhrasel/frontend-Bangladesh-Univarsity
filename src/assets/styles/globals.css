@@ -448,7 +448,16 @@ tr {
 .sm_pic {
   margin-bottom: 20px;
 }
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
 @media screen and (max-width: 991px) {
+  div#responsive-navbar-nav {
+    margin-top: 30px;
+  }
+  .me-auto.navbar-nav {
+    padding-top: 10px;
+  }
   .navbar-collapse {
     height: 100vh;
   }
