@@ -449,6 +449,9 @@ tr {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
+  .navbar-collapse {
+    height: 100vh;
+  }
   .notice_card {
     margin: 0px !important;
   }

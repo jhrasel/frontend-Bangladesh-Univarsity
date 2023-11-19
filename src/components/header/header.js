@@ -18,7 +18,12 @@ export const Header = () => {
                 <Navbar collapseOnSelect expand="lg" variant="light" fixed="top" className=' main_header' style={{background: '#fff'}}>
                     <Container >
                         <Navbar.Brand href="/home"><Image src={BrandIcon.src} alt={'home image'} width={212} height={32} /></Navbar.Brand>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{border: 'none'}}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M4 26V22.8333H28V26H4ZM9 18.0833V14.9167H28V18.0833H9ZM4 10.1667V7H28V10.1667H4Z" fill="#EB2A2E"/>
+                            </svg>
+                        </Navbar.Toggle>
                         <Navbar.Collapse id="responsive-navbar-nav">
                             {
                                 menuItem.map((value, index) => {
