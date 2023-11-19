@@ -81,6 +81,22 @@ button {
   letter-spacing: 0.36px;
   text-transform: capitalize;
 }
+.carousel-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0px !important;
+  color: #fff;
+  text-align: center;
+  top: 0;
+  bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  right: 0 !important;
+  width: 100%;
+  justify-content: center;
+}
+
 .sectionSubtitle {
   color: #787e86;
   text-align: center;
@@ -519,6 +535,9 @@ tr {
     font-size: 30px;
     line-height: initial;
     width: auto;
+  }
+  .mblHeading {
+    font-size: 25px !important;
   }
   /* button.accordion-button.collapsed {
     padding: 5px 0px;

@@ -54,4 +54,7 @@
   .overlay {
     height: 175px;
   }
+  .mainPageBanner {
+    height: 175px !important;
+  }
 }

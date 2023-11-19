@@ -38,6 +38,7 @@ export const WhyUs = () =>{
                                     title={item?.title}
                                     description={item?.description}
                                     photo={item?.photo}
+                                    mblIsVisible={true}
                                 />
                             </Tab>
                         )

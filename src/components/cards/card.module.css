@@ -114,7 +114,20 @@
   margin: 0 auto;
   cursor: pointer;
 }
+.mbl_leftImg {
+  display: none;
+}
+.mbl_leftImg {
+  width: 100%;
+}
+.mbl_leftImg img {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 991px) {
+  .mbl_leftImg {
+    display: block;
+  }
   .mainSmallCard {
     margin-bottom: 20px;
   }

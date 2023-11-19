@@ -180,3 +180,17 @@
     margin-top: 110px;
   }
 }
+
+@media screen and (max-width: 440px) {
+  .tablebody p {
+    font-size: 12px !important;
+  }
+  .tableFooter,
+  .tableHead,
+  .tablebody {
+    padding: 0px 6px;
+  }
+  .courseDetails {
+    padding: 10px;
+  }
+}

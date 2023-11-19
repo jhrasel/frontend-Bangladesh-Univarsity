@@ -34,7 +34,6 @@ export const LatestNotice = () => {
         return newsItem || []
     }, [newsList]);
 
-    console.log(shortLit)
   return (
       <Container div className={styles.mainLatestNotice}>
           <Row style={{background: '#fff'}} >
