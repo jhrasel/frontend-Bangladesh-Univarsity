@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 import { useQuery } from "react-query";
 import slider from '../../assets/image/notice.png';
 import { Addmission } from '../../components/admission/index';
-import { Loader } from "../../components/loader";
+import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";
 import { PageBanner } from '../../components/pagebanner/index';
 import ApiRequest from "../../services/api-services";
 import { LatestSingleNotice } from "./LatestNotice";
@@ -51,7 +51,7 @@ export const Notice = ({singleNotice}) => {
                         ALL Notice
                     </h1>
                     {
-                        allNoticeLoading && (<Loader />)
+                        allNoticeLoading && <WhyPreloader />
                     }
                     {
                         allNoticeData?.map((notice, index)=> {

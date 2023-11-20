@@ -1,7 +1,7 @@
 import moment from "moment";
 import { useRouter } from "next/router";
 import React from "react";
-import { Loader } from "../../components/loader";
+import { WhyPreloader } from "../../components/homePage/whyUs/whyPreloader";
 import styles from "./styles.module.css";
 
 export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
@@ -33,7 +33,7 @@ export const LatestSingleNotice = ({latestNotice, style, singleRoute}) => {
                             </a>
                         </div>
                     </div>
-                }): <Loader />
+                }): <WhyPreloader />
             }
         </div>
     )

@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import { useRouter } from "next/router";
 import React, { useMemo, useState } from 'react';
-import { Spinner } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import { useQuery } from "react-query";
 import slider from '../../assets/image/slider.jpg';
 import ApiRequest from "../../services/api-services";
-import { Buttons } from '../buttons/button';
 import styles from './slider.module.css';
 
 export const Slider = () => {
@@ -69,12 +68,15 @@ export const Slider = () => {
                                     <div>
                                         <p className={'sliderTag'}>{item?.title}t</p>
                                         <h1 className={'headingTitle mblHeading'}>{item?.description} </h1>
-                                        <Buttons
+                                        {/* <Buttons
                                             text={'Apply Now'}
                                             bgColor={'#EB2A2E'}
                                             color={'#fff'}
                                             click={gotoContact}
-                                        />
+                                        /> */}
+                                        <a href={'/contact-us'}>
+                                            <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Apply Now</Button>
+                                        </a>
                                     </div>
                                 </Carousel.Caption>
                                 {/* <Carousel.Caption>

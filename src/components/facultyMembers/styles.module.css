@@ -40,6 +40,7 @@
   font-size: 14px;
   font-style: italic;
   font-weight: 500;
+  text-transform: capitalize;
   line-height: 150%; /* 21px */
 }
 .memberCard h4 {
@@ -51,6 +52,7 @@
   font-weight: 600;
   line-height: 150%; /* 27px */
   margin-bottom: 2px;
+  text-transform: capitalize;
 }
 .memberCard h2 {
   font-family: "Poppins", sans-serif;

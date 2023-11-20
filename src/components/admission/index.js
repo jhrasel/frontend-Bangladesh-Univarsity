@@ -1,7 +1,8 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import styles from './admission.module.css';
 
 export const Addmission = () => {
+
   return(
       <div className={styles.mt}>
           <Container>
@@ -18,7 +19,7 @@ export const Addmission = () => {
                           </div>
                             
                        
-                          <img src='https://s3-alpha-sig.figma.com/img/543a/aa6e/5eb66ea93a1ed4a9c438914cf4dd5e5f?Expires=1700438400&Signature=d6~haZ9ahU-kUYqI5NFVP~uP7JytyVOD5OsR3wje134O0BZDaxKhiOUnZ-WMpR~kjFwwk5TpBMXBfb3EVLTHFNPi0-4lpm~YGlU-3eVmnSpjkP~HlyrDcEGvq0bvNy1AEf~3Wn3nhmdVKJP2pWLdDFew8jzWSZPRTT-mV8ObBm7VTcsOPBAlPEFXAoIfaUpn1EvCaSerCr7M2k0UifFUeHgABeeXV0E7xEt3rQEkhxLcc8g1LStnrI1~~j2W~V9c9rW5qMJPlreih345OQ~hK5LXLPMQCvm~oBiAfeYgKuZUk--6WDEV5oOfbYvYJjbmb0xm7uZu6-Vw6QitXTCN0w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
+                          <img src='https://s3-alpha-sig.figma.com/img/543a/aa6e/5eb66ea93a1ed4a9c438914cf4dd5e5f?Expires=1701648000&Signature=ffrWsA6SaRJEvllz3ZAExbNgXu~~wKI1I~3PQ~nOdotP15VYjMnEJYegsOVYyp9f80ldu9kaACubRKwnxkQ1I-VQpjAmehlSVb4921WJ~K47yLgYoNaqTm5x7T4I95U7MtSjXAZrGUc0X99-YnDu6OmwEQJZ~GeEKNjjMYzPx5eh8cQhkni6r0~oORXp8g2owkL-JAgSABgJQ~wPLwa9O00EMPi5SvtqY0wP0DCAv0KP0FLbezglDeq3bMow-Rkc-ZPk3XRwllDOYgbjmXhKNs98fS7aOr-nrLO8qUBD491hxZdYDfPOJiM3fafYmT~y~TpgQggb~uP52LV~Bnt1YQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
                           <div className={styles.quata_img}>
                               <svg className='svg' xmlns="http://www.w3.org/2000/svg" width="124" height="87" viewBox="0 0 124 87" fill="none">
                             <g opacity="0.5">
@@ -33,7 +34,10 @@ export const Addmission = () => {
                       <div className={styles.details}>
                            <h2>Admission is on going</h2>      
                             <p>Join our diverse community and embark on a transformative educational journey. Secure your future with us today.</p>
-                            <h4>Apply Now</h4>
+                           {/* <h4>Apply Now</h4> */}
+                          <a href={"/contact-us"}>
+                                <Button className="galleryButton" variant="danger">View All</Button>
+                          </a>
                      </div>
                 </Col>
           </Row>

@@ -1,13 +1,12 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import BrandIcon from '../../assets/image/brandIcon.png';
-import { Buttons } from "../../components/buttons/button";
-import { menuItem } from './constant';
-
-import Image from "next/image";
 import Row from 'react-bootstrap/Row';
+import BrandIcon from '../../assets/image/brandIcon.png';
+import { menuItem } from './constant';
 
 export const Header = () => {
     const {asPath} = useRouter();
@@ -38,13 +37,13 @@ export const Header = () => {
                             }
                         <Nav className="desktop-hide" style={{paddingTop: '70px', textAlign: 'center'}}>
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
-                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
+                                <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Teacher login</Button>
                             </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                         <Nav className="mobile-hide" >
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
-                                <Buttons text={'Teacher login'} bgColor={'#eb2a2e'}/>{' '}
+                                <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Teacher login</Button>
                             </Nav.Link>
                         </Nav>
                     </Container>
