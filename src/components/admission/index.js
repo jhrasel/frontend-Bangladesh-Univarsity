@@ -36,7 +36,7 @@ export const Addmission = () => {
                             <p>Join our diverse community and embark on a transformative educational journey. Secure your future with us today.</p>
                            {/* <h4>Apply Now</h4> */}
                           <a href={"/contact-us"}>
-                                <Button className="galleryButton" variant="danger">View All</Button>
+                                <Button className="galleryButton" variant="danger">Contact us</Button>
                           </a>
                      </div>
                 </Col>
