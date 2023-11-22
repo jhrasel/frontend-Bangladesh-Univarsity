@@ -452,6 +452,12 @@ tr {
   box-shadow: none !important;
 }
 @media screen and (max-width: 991px) {
+  .modal-dialog.modal-lg.modal-dialog-centered.modal-fullscreen {
+    padding: 10px !important;
+  }
+  .modal-fullscreen {
+    height: auto !important;
+  }
   div#responsive-navbar-nav {
     margin-top: 30px;
   }
@@ -479,8 +485,11 @@ tr {
   }
   .mt_30 {
     margin: 60px 0px;
-    padding: 0px 15px;
+    /* padding: 0px 15px; */
     margin-top: 35px !important;
+  }
+  .sliderss.container {
+    padding: 0px 25px;
   }
   .contact_map {
     padding-right: 0px !important;
@@ -498,7 +507,8 @@ tr {
     padding: 0px 25px !important;
   }
   .bulletine {
-    margin-top: 15px !important;
+    margin-top: 8px !important;
+    padding: 0px 25px !important;
   }
   .gallery_big_img {
     height: 210px;
@@ -559,6 +569,22 @@ tr {
   }
   .slick-next {
     right: -12px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mblHeading {
+    font-size: 20px !important;
+    width: 90%;
+  }
+  .newsCard {
+    margin: 0px !important;
+  }
+  li.nav-item {
+    border: 1px solid #0000001a;
+    border-right: 1px solid #0000001a !important;
+    border-bottom: 1px solid #0000001a !important;
+    margin-bottom: 5px;
   }
 }
 

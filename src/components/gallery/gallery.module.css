@@ -49,3 +49,9 @@
 .mt {
   margin-top: 60px;
 }
+
+@media screen and (max-width: 767px) {
+  .mt {
+    padding: 0px 25px;
+  }
+}

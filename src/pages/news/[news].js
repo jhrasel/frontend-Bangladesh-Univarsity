@@ -63,7 +63,7 @@ const singleItem = () => {
 
             <Container>
                 <div className={styled.topCard}>
-                    <Card style={{padding: '20px', border: 'none'}}>
+                    <Card style={{padding: '20px', border: 'none'}} className="newsCard">
                         <p className={styled.title}>{moment(singleData?.data?.data?.updatedAt).format("MMM Do YY")} / {singleData?.data?.data?.newsCreator?.name} / news</p>
                         <h4 className={styled.subtitle}>{singleData?.data?.data?.description}</h4>
                     </Card>

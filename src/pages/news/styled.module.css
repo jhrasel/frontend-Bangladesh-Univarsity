@@ -104,19 +104,35 @@
   .topCard {
     padding: 0px 5px;
   }
+  .mainPageBanner {
+    height: 175px;
+  }
+  .inner_navigation {
+    margin-top: 0px;
+  }
+  .inner_navigation > p {
+    font-size: 14px;
+    line-height: 4px;
+  }
+  .inner_navigation > svg {
+    width: 14px;
+  }
 }
 
 @media screen and (max-width: 991px) {
-  .banner {
+  .banner,
+  .overlay {
     height: 100%;
   }
   .heading {
     height: 100%;
     margin-bottom: 0;
+    width: 100%;
   }
   .navigation h4 {
     width: auto;
     font-size: 18px;
     line-height: 30px;
+    margin-bottom: 0;
   }
 }

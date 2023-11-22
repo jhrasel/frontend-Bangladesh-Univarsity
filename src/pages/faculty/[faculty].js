@@ -16,8 +16,6 @@ const teacherDetails = () => {
     const {faculty} = router.query;
 
     const { data:FacultyMemberData, isloading} = UseQuery(['singleItem', faculty], () => ApiRequest.get(`teacher/find/${faculty}`));
-    const url = 'https://backend-bangladesh-university.onrender.com'
-
     
     return(
         <div className={styles.mainBanner}>
@@ -36,22 +34,34 @@ const teacherDetails = () => {
                                     <div className={styles.card_details}>
                                         <h4>{FacultyMemberData?.data?.data?.name}</h4>
                                         <p>{FacultyMemberData?.data?.data?.editableRole}</p>
-                                        <Table style={{background: 'red', borderRadius: '5px'}}>
-                                            <tbody>
-                                                <tr>
-                                                    <td style={{width: '30%'}}><b>Academic Qualification:</b></td>
-                                                    <td>{FacultyMemberData?.data?.data?.academicQualification}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style={{width: '30%'}}><b>Training Experience:</b></td>
-                                                    <td>{FacultyMemberData?.data?.data?.trainingExperience}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style={{width: '30%'}}><b>Teaching Area:</b></td>
-                                                    <td>{FacultyMemberData?.data?.data?.teachingArea}</td>
-                                                </tr>
-                                            </tbody>
-                                        </Table>
+                                        <div className="hide">
+                                            <Table style={{background: 'red', borderRadius: '5px'}}>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style={{width: '30%'}}><b>Academic Qualification:</b></td>
+                                                        <td>{FacultyMemberData?.data?.data?.academicQualification}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style={{width: '30%'}}><b>Training Experience:</b></td>
+                                                        <td>{FacultyMemberData?.data?.data?.trainingExperience}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style={{width: '30%'}}><b>Teaching Area:</b></td>
+                                                        <td>{FacultyMemberData?.data?.data?.teachingArea}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </Table>
+                                        </div>
+                                        <div className="mbl_hide">
+                                            <div className={styles.mblDetails}>
+                                                <h2>Academic Qualification</h2>
+                                                <h3>{FacultyMemberData?.data?.data?.academicQualification}</h3>
+                                                <h2>Training Experience</h2>
+                                                <h3>{FacultyMemberData?.data?.data?.trainingExperience}</h3>
+                                                <h2>Teaching Area</h2>
+                                                <h3>{FacultyMemberData?.data?.data?.teachingArea}</h3>
+                                            </div>
+                                        </div>
                                     </div>
                                 </Col>
                             </Row>

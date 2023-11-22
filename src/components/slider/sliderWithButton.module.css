@@ -182,6 +182,7 @@
   .whyUs_tab {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    border-bottom: 1px solid transparent !important;
   }
   .tabz {
     font-size: 14px !important;
@@ -191,12 +192,12 @@
   .innerSliderWithButton,
   .middleSliderButton {
     border-radius: 0px;
-    padding: 45px 30px;
+    padding: 20px 30px;
     width: 100%;
   }
   .innerSliderWithButton > p,
   .middleSliderButton > p {
-    font-size: 15px;
+    font-size: 18px;
     line-height: initial;
   }
   .mainAboutBannerText {
@@ -212,6 +213,11 @@
     width: auto;
     padding: 0;
     padding-top: 30px;
+  }
+  .inner,
+  .middleSliderButton {
+    padding: 35px 30px;
+    height: auto;
   }
 }
 @media screen and (max-width: 575px) {

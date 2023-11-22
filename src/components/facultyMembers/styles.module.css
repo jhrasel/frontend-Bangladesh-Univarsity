@@ -206,6 +206,24 @@
   display: flex;
   align-items: center;
 }
+.mblDetails {
+  margin-top: 30px;
+}
+.mblDetails h2 {
+  color: var(--Black, #323232);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  border-top: 1px solid #f7d4d480;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+.mblDetails h3 {
+  color: #666;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
 @media screen and (max-width: 991px) {
   .members {
     padding: 0px 12px;
@@ -251,5 +269,30 @@
   .avaterImg {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .single_avaterimg {
+    width: auto;
+    height: auto;
+  }
+  .card_details h4,
+  .card_details p {
+    text-align: center;
+  }
+  .card_details h4 {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+  .mainBanner {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .single_avaterimg {
+    width: auto;
+    height: auto;
   }
 }
