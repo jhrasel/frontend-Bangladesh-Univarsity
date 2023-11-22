@@ -576,6 +576,7 @@ tr {
   .mblHeading {
     font-size: 20px !important;
     width: 90%;
+    margin-bottom: 0px;
   }
   .newsCard {
     margin: 0px !important;
