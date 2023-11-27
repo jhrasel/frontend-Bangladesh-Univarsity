@@ -8,6 +8,9 @@ body {
   overflow: hidden;
   overflow-y: scroll;
 }
+img {
+  object-fit: cover;
+}
 button {
   border-radius: 0px !important;
   background: #eb2a2e;

@@ -1,4 +1,8 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import '../assets/styles/globals.css';
 
 class MyDocument extends Document {
     render() {
