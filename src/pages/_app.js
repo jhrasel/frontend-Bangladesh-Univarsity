@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import '../assets/styles/globals.css';
+import { Footer } from "../components/Footer/footer";
 import { Header } from "../components/header/header";
 const queryClient = new QueryClient()
 
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
                 <Container fluid style={{padding: '0px'}}>
                     <Component {...pageProps} />
                 </Container>
+                <Footer />
             </ThemeProvider>
         </QueryClientProvider>
     )
