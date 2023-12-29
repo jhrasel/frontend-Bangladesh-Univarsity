@@ -9,6 +9,7 @@ import reserch from '../../assets/image/reserach_img.png';
 import { Addmission } from '../../components/admission/index';
 import styled from '../../pages/news/styled.module.css';
 import ApiRequest from "../../services/api-services";
+
    const Template = dynamic(() => import("../../components/pdfReader/index"), {
           loading: () => <p>Loading...</p>,
           ssr: false,
@@ -38,7 +39,7 @@ const ResearchPage = () => {
                                     </svg> &nbsp;
                                     <p className='hide'>
                                         <span onClick={() => { router.push('/') }}>Home</span>&nbsp;
-                                        / <span onClick={() => { router.push('/reserach') }}>Research</span>
+                                        / <span onClick={() => { router.push('/research') }}>Research</span>
                                         {noticeList?.data?.body?.title && ` / ${noticeList?.data?.body?.title.length > 30 ? noticeList?.data?.body?.title.slice(0, 30) + '...' : noticeList?.data?.body?.title}`}
                                     </p>
                                     <p className='mbl_hide'>

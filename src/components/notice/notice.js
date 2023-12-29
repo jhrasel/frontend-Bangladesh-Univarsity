@@ -12,7 +12,7 @@ import { LatestSingleNotice } from "./LatestNotice";
 import styles from './styles.module.css';
 
 
-export const Notice = ({singleNotice}) => {
+export const Notice = () => {
     const Router = useRouter();
     const [id, setId] = useState(2);
 
