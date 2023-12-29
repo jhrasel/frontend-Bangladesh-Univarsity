@@ -4,6 +4,18 @@ export const menuItem = [
         path: '/home'
     },
     {
+        name: 'Members',
+        path: '/faculty'
+    },
+    {
+        name: 'Research',
+        path: '/research'
+    },
+        {
+        name: 'Activities',
+        path: '/gallery'
+    },
+    {
         name: 'About',
         path: '/about'
     },
@@ -11,32 +23,24 @@ export const menuItem = [
         name: 'News',
         path: '/news'
     },
-    {
-        name: 'Faculty Members',
-        path: '/faculty'
-    },
+
     {
         name: 'Curriculum',
         path: '/curriculum'
     },
-    // {
-    //     name: 'Research',
-    //     path: '/research'
-    // },
+
     {
         name: 'Notice',
         path: '/notice'
     },
     {
-        name: 'Gallery',
-        path: '/gallery'
-    },
-    {
-        name: 'Alumni',
-        path: '/Alumni'
-    },
-    {
-        name: 'Contact-us',
+        name: 'Contact',
         path: '/contact-us'
     },
+
+    {
+        name: 'Alumni',
+        path: 'https://bu-alumni.vercel.app/'
+    },
+
 ]

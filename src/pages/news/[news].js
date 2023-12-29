@@ -20,7 +20,7 @@ const singleItem = () => {
 
     const routerHandler = (_id) => {
         router.push({
-            pathname:`${_id}`,
+            pathname:`/${_id}`,
         })
     }
 

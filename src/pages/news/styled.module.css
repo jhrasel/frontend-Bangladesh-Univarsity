@@ -97,6 +97,12 @@
   text-align: justify;
 }
 
+.body {
+  background: #fff;
+  padding: 35px;
+  margin-top: 54px;
+}
+
 @media screen and (max-width: 767px) {
   .padding {
     padding: 0px 5px;

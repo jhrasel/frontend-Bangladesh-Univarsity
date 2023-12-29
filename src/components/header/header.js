@@ -27,9 +27,11 @@ export const Header = () => {
                                 menuItem.map((value, index) => {
                                     return <Nav className="me-auto" key={index}>
                                         <Nav.Link
+                                            target={value?.name === 'Alumni' && '_blank'}
                                             href={value?.path}
                                             style={asPath === value?.path ? {color:'#EB2A2E',fontWeight: 500,  borderBottom: '2px solid #EB2A2E'}: {color: '#2B4476'}}>
                                             {value?.name}
+                                            
                                         </Nav.Link>
                                         
                                     </Nav>
@@ -37,13 +39,13 @@ export const Header = () => {
                             }
                         <Nav className="desktop-hide" style={{paddingTop: '70px', textAlign: 'center'}}>
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
-                                <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Teacher login</Button>
+                                <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Login</Button>
                             </Nav.Link>
                         </Nav>
                         </Navbar.Collapse>
                         <Nav className="mobile-hide" >
                             <Nav.Link href='https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner' target="_blank">
-                                <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Teacher login</Button>
+                                <Button className="galleryButton" variant="danger" style={{marginTop: '0px !important'}}>Login</Button>
                             </Nav.Link>
                         </Nav>
                     </Container>

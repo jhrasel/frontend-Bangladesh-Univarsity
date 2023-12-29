@@ -1,6 +1,6 @@
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import addBanner from '../../assets/image/addmission_img.png';
 import styles from './admission.module.css';
-
 export const Addmission = () => {
 
   return(
@@ -19,7 +19,7 @@ export const Addmission = () => {
                           </div>
                             
                        
-                          <img src='https://s3-alpha-sig.figma.com/img/543a/aa6e/5eb66ea93a1ed4a9c438914cf4dd5e5f?Expires=1701648000&Signature=ffrWsA6SaRJEvllz3ZAExbNgXu~~wKI1I~3PQ~nOdotP15VYjMnEJYegsOVYyp9f80ldu9kaACubRKwnxkQ1I-VQpjAmehlSVb4921WJ~K47yLgYoNaqTm5x7T4I95U7MtSjXAZrGUc0X99-YnDu6OmwEQJZ~GeEKNjjMYzPx5eh8cQhkni6r0~oORXp8g2owkL-JAgSABgJQ~wPLwa9O00EMPi5SvtqY0wP0DCAv0KP0FLbezglDeq3bMow-Rkc-ZPk3XRwllDOYgbjmXhKNs98fS7aOr-nrLO8qUBD491hxZdYDfPOJiM3fafYmT~y~TpgQggb~uP52LV~Bnt1YQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
+                          <img src={addBanner.src} alt='banner' />
                           <div className={styles.quata_img}>
                               <svg className='svg' xmlns="http://www.w3.org/2000/svg" width="124" height="87" viewBox="0 0 124 87" fill="none">
                             <g opacity="0.5">
