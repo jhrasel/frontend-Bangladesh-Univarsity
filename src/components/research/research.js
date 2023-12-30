@@ -10,14 +10,14 @@ import styles from './styles.module.css';
 export const Research = () => {
         const Router = useRouter();
 
-    const { isLoading: allNoticeLoading, data: allNotice } = useQuery(['allNotice',], () => ApiRequest.get(`research/approved/all?page=0&perPage=10`))
+    const { isLoading: allNoticeLoading, data: allResearch } = useQuery(['allNotice',], () => ApiRequest.get(`research/approved/all?page=0&perPage=10`))
 
     const singleHandler = (_id) => {
         Router.push({
             pathname: `research/${_id}`
         })
     }
-
+console.log(allResearch)
 return (
       <div className={styles.mainResearch}>
             <Container fluid style={{padding: 0}} className="mt_60">
@@ -29,7 +29,7 @@ return (
                   <p>All Available Research In Bangladesh University</p>
               </div>
                     {
-                        allNotice?.data?.body?.map((data, i) => {
+                        allResearch?.data?.data?.map((data, i) => {
                             return (
                             <div key={i} className={styles.researchTableBody} onClick={()=>singleHandler(data?._id)}>
                                 <p> &nbsp;&nbsp; { data?.title}</p>

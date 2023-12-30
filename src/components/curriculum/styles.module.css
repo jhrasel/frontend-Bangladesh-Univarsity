@@ -33,6 +33,9 @@
   background: #fff;
   margin-bottom: 20px;
 }
+.courseDetails > div:last-child {
+  border-bottom: 1px solid transparent;
+}
 .courseDetails h4 {
   font-family: "Poppins", sans-serif;
   color: #343434;

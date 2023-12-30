@@ -19,7 +19,7 @@ const ResearchPage = () => {
     const {research} = router.query;
 
     const {data: noticeList, isLoading: noticeListLoading} = useQuery(['research_page', research],()=> ApiRequest.get(`research/find/${research}`))
-
+    console.log(noticeList)
     return(
         <div>
             <Container fluid style={{padding: 0}} className="mt_60">
@@ -59,10 +59,9 @@ const ResearchPage = () => {
                 <div className={styled.topCard}>
                     <Card style={{padding: '20px', border: 'none', margin: '0'}} className='notice_card'>
                         <p className={styled.title}>{moment(noticeList?.data?.body?.updatedAt).format("MMM Do YY")} / Research</p>
-                        <h4 className={styled.subtitle}>{noticeList?.data?.body?.description}</h4>
-                          {/* <PDFViewer>
-                        <Template date={noticeList?.data?.data?.updatedAt} description={noticeList?.data?.data?.description} />
-                        </PDFViewer> */}
+                        {/* <h4 className={styled.subtitle}>{noticeList?.data?.body?.description}</h4> */}
+                        <img src={noticeList?.data?.body?.image} alt='img' height={'250px'} style={{ objectFit: 'cover', marginBottom: '10px'}} />
+                        <div  dangerouslySetInnerHTML={{__html: noticeList?.data?.body?.description}} ></div>
                     </Card>
                     
                 </div>
