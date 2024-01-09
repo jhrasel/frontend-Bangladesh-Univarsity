@@ -12,38 +12,37 @@ import { CourseDetails } from './courseDetails';
 import styles from './styles.module.css';
 
 export const CurriculumPage = () => {
+     // eslint-disable-next-line react-hooks/exhaustive-deps
      const arr = [
         {
-             year: 'first',
+            year: 'first',
             label: 'First',
-            children: []
+            children: [],
         },
         {
             year: 'second',
             label: 'Second',
-            children: []
+            children: [],
         },
         {
             year: 'third',
-                        label: 'Third',
-
-            children: []
+            label: 'Third',
+            children: [],
         },
         {
             year: 'fourth',
-                        label: 'Fourth',
-
-            children: []
+            label: 'Fourth',
+            children: [],
         }
     ]
     
-    const { data, isLoading } = useQuery(['curriculumList'], () => ApiRequest.get('curriculum/all'))
+    const { data } = useQuery(['curriculumList'], () => ApiRequest.get('curriculum/all'))
 
     const semesterCalculation = useCallback((yearArr, year) => { 
         const item = yearArr?.map((value) => {
                 arr.map((data) => { 
                     if (data?.year === year) { 
-                        data.children.push( value)
+                        data.children.push(value)                       
                     }
                 })
           
@@ -73,7 +72,7 @@ export const CurriculumPage = () => {
 
     }, [data?.data?.allCourses, semesterCalculation]);
 
-    console.log(data?.data?.creditDistribution)
+    
     return (
         <>
             <Container fluid style={{padding: 0}} className="mt_60">
@@ -119,7 +118,8 @@ export const CurriculumPage = () => {
                                 </h1>
                                 <Accordion defaultActiveKey={arr[0]}>
                                                                           {
-                                           arr?.map((value, i) => { 
+                                        arr?.map((value, i) => { 
+                                            //    console.log(arr)
                                                 return (
                                                     <Accordion.Item eventKey={i === 0 ? 0 : i} key={i} className={styles.accordianSection}>
                                                         <Accordion.Header className={styles.header} id='accordion'>{value?.label} Year</Accordion.Header>
