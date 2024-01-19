@@ -18,7 +18,7 @@ export const Notice = () => {
 
     const { isLoading: allNoticeLoading, data:allNotice } = useQuery(['allNotice',], () => ApiRequest.get(`notice/all?page=0&perPage=10`))
 
-    const { isLoading: allPaginationNoticeLoading, data:allPaginationNotice } = useQuery(['allNotice', id], () => ApiRequest.get(`notice/all?page=${id}&perPage=5`))
+    const { isLoading: allPaginationNoticeLoading, data:allPaginationNotice } = useQuery(['all_Notice', id], () => ApiRequest.get(`notice/all?page=${id}&perPage=5`))
 
     const { isLoading: latestNoticeLoading, data:latestNotice } = useQuery('latestNotice', () => ApiRequest.get('notice/all?page=1&perPage=5'))
 
@@ -74,7 +74,7 @@ export const Notice = () => {
 
 
                     {
-                        (allNoticeData?.length < allNotice?.data?.totalItems) && (
+                        (allNotice?.data?.totalItems >= id) && (
                             <a className={'readMore'} style={{ paddingBottom: '10px'}} onClick={loadHandler}>
                                 Load More
                             </a>

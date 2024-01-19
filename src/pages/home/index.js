@@ -19,7 +19,8 @@ const Index = () => {
     const routerHandler = () => {
         router.push('/gallery')
     }
-    const {data, isLoading} = useQuery(['gallery-item'],()=> ApiRequest.get('gallery/all'))
+    const { data, isLoading } = useQuery(['gallery-item'], () => ApiRequest.get('gallery/all'))
+    
   return(
       <>
           <Slider />
@@ -47,30 +48,43 @@ const Index = () => {
                       <Row className='sm_pic'>
                           <Col md='6' xs='6' className='mr-6'>
                               <div className="gallery_small_img">
-                                    <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
+                                    <img src={data?.data?.body[1]?.image} alt='main' width={'100%'} height={'100%'}/>
                               </div>
                           </Col>
-                          <Col md='6' xs='6' className='ml-6'>
-                                <div className="gallery_small_img">
-                                    <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
-                              </div>
-                          </Col>
+                          {
+                              data?.data?.body[2]?.image && (
+                                <Col md='6' xs='6' className='ml-6'>
+                                    <div className="gallery_small_img">
+                                        <img src={data?.data?.body[2]?.image} alt='main' width={'100%'} height={'100%'}/>
+                                    </div>
+                                </Col>
+                            )
+                          }
                       </Row>
                       <Row>
-                          <Col md='6' xs='6' className='mr-6'>
-                                <div className="gallery_small_img">
-                                    <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
-                              </div>
-                          </Col>
-                          <Col md='6' xs='6' className='ml-6'>
-                                <div className="gallery_small_img">
-                                    <img src={data?.data?.body[1].image} alt='main' width={'100%'} height={'100%'}/>
-                              </div>
-                          </Col>
+                          {
+                              data?.data?.body[3]?.image && (
+                                <Col md='6' xs='6' className='mr-6'>
+                                        <div className="gallery_small_img">
+                                            <img src={data?.data?.body[3]?.image} alt='main' width={'100%'} height={'100%'}/>
+                                    </div>
+                                </Col>
+                            )
+                          }
+
+                          {
+                              data?.data?.body[4]?.image && (
+                                <Col md='6' xs='6' className='ml-6'>
+                                        <div className="gallery_small_img">
+                                            <img src={data?.data?.body[4]?.image} alt='main' width={'100%'} height={'100%'}/>
+                                    </div>
+                                </Col> 
+                            )
+                          }
+
                       </Row>
                   </Col>
                     <Button className="galleryButton" variant="danger" onClick={routerHandler}>View All</Button>
-
               </Row>
 
           </Container>

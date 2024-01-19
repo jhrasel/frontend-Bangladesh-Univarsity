@@ -22,7 +22,6 @@ const GalleryContainer = () => {
         setImage(image)
     }
 
-    const url = 'https://backend-bangladesh-university.onrender.com'
     const {data, isLoading} = useQuery(['gallery-item'],()=> ApiRequest.get('gallery/all'))
 
     return(

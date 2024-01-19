@@ -51,7 +51,7 @@ export const RecentNews = () => {
         ]
     };
 
-    const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList', page],()=> ApiRequest.get(`news/all?page=${page}&perPage=10`))
+    const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList', page],()=> ApiRequest.get(`news/all?page=${page}&perPage=6`))
 
     const routerHandler = (_id) => {
         Router.push({
