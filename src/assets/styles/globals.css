@@ -821,3 +821,7 @@ tr {
     background-position: 468px 0;
   }
 }
+
+button.galleryButton.btn.btn-danger {
+  /* margin-top: 0 !important; */
+}
