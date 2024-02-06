@@ -26,11 +26,11 @@ export const LatestNotice = () => {
 
     const shortLit = useMemo(() => {
         const newsItem = [];
-        const merge = newsList?.data?.data.concat(noticeList?.data?.data);
+        const merge = newsList?.data?.data?.concat(noticeList?.data?.data);
    
         merge?.map((news) => {
             if (news) {
-                if (newsItem.length >= 5) return
+                if (newsItem?.length >= 5) return
                 newsItem.push(news);
             }
         })
