@@ -21,19 +21,27 @@ export const LatestNotice = () => {
         })
     }
 
-    const { isLoading, data:newsList } = useQuery('news_list', () => ApiRequest.get('news/all'));
+    const { isLoading, data:newsList } = useQuery('news_list', () => ApiRequest.get('news/all?page=1&perPage=3'));
+    const { data:noticeList } = useQuery('notice_list_home', () => ApiRequest.get('notice/all?page=1&perPage=3'));
 
     const shortLit = useMemo(() => {
         const newsItem = [];
-        newsList?.data?.data.map((news) => {
+        const merge = newsList?.data?.data.concat(noticeList?.data?.data);
+   
+        merge?.map((news) => {
             if (news) {
                 if (newsItem.length >= 5) return
                 newsItem.push(news);
             }
         })
         return newsItem || []
-    }, [newsList]);
+    }, [newsList?.data?.data, noticeList?.data?.data]);
 
+    const noticeAndNewsHandler = (data) => { 
+        if (data?.newsCreator?.role === 'SUPER-ADMIN') { 
+            
+        }
+    }
   return (
       <Container div className={styles.mainLatestNotice}>
           <Row style={{background: '#fff'}} >
@@ -63,7 +71,8 @@ export const LatestNotice = () => {
                            {shortLit.map((news, index) => {
                                return (
                                    <li key={index}>
-                                       <a href={`/notice/${news?._id}`}>
+                                      
+                                       <a  href={news?.newsCreator?.role !== 'SUPER-ADMIN' ? `/notice/${news?._id}` :`/news/${news?._id}`}>
                                             <h4>{news.title}</h4>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M15.4204 12C15.4204 12.2151 15.3383 12.4301 15.1744 12.5941L10.0146 17.7538C9.68641 18.0821 9.15424 18.0821 8.82615 17.7538C8.49805 17.4257 8.49805 16.8937 8.82615 16.5654L13.3918 12L8.82631 7.43459C8.49821 7.10636 8.49821 6.57436 8.82631 6.24629C9.1544 5.9179 9.68657 5.9179 10.0148 6.24629L15.1746 11.4059C15.3385 11.57 15.4204 11.785 15.4204 12Z" fill="#323232"/>

@@ -36,7 +36,7 @@ const Index = () => {
       {/*<Events/>*/}
 
       <Container className=" mbl_10">
-        <h1 className={"sectionHeading"}>Gallery</h1>
+        <h1 className={"sectionHeading"}>Activities</h1>
         <p className="sectionSubtitle">
           Dive into our gallery, where photos tell <br />
           stories of our campus life, preserving cherished memories.

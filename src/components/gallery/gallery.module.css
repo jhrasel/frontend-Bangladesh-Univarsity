@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #ad1f1f;
+  background: #ad1f1f42;
   transition: 0.5s ease-in-out;
 }
 .overlay img {

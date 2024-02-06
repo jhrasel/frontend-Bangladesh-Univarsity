@@ -27,7 +27,7 @@ const GalleryContainer = () => {
     return(
         <div className={styles.mainGallery}>
             <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={'Gallery'} photo={slider.src} position={'top'}/>
+                <PageBanner title={'Activities'} photo={slider.src} position={'top'}/>
             </Container>
 
             <Container className={styles.mt}>
