@@ -65,7 +65,8 @@ const singleItem = () => {
                 <div className={styled.topCard}>
                     <Card style={{padding: '20px', border: 'none'}} className="newsCard">
                         <p className={styled.title}>{moment(singleData?.data?.data?.updatedAt).format("MMM Do YY")} / {singleData?.data?.data?.newsCreator?.name} / news</p>
-                        <h4 className={styled.subtitle}>{singleData?.data?.data?.description}</h4>
+                        {/* <h4 className={styled.subtitle}>{singleData?.data?.data?.description}</h4> */}
+                        <div className={styled.subtitle} dangerouslySetInnerHTML={{__html:singleData?.data?.data?.description}}></div>
                     </Card>
                 </div>
                  <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>

@@ -62,7 +62,9 @@ const NoticeItem = () => {
                 <div className={styled.topCard}>
                     <Card style={{padding: '20px', border: 'none'}} className='notice_card'>
                         <p className={styled.title}>{moment(noticeList?.data?.data?.updatedAt).format("MMM Do YY")} / notice</p>
-                        <h4 className={styled.subtitle}>{noticeList?.data?.data?.description}</h4>
+                        {/* <h4 className={styled.subtitle}>{noticeList?.data?.data?.description}</h4> */}
+                        <div className={styled.subtitle} dangerouslySetInnerHTML={{__html:noticeList?.data?.data?.description}}></div>
+
                           {/* <PDFViewer>
                         <Template date={noticeList?.data?.data?.updatedAt} description={noticeList?.data?.data?.description} />
                         </PDFViewer> */}
