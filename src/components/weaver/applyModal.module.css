@@ -1,0 +1,17 @@
+.modal__header {
+  position: unset;
+}
+
+.apply__modal input {
+  border-radius: 0 !important;
+}
+
+.apply__modal .button {
+  background: #eb2a2e !important;
+  border: 0;
+  padding: 8px 30px;
+}
+
+.apply__modal .button:hover {
+  background: #e0181b !important;
+}

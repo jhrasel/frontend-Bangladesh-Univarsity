@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import { useQuery } from "react-query";
 import { Addmission } from "../../components/admission/index";
 import { Bulletine } from "../../components/homePage/bulletine/bulletine";
+import Highlights from "../../components/homePage/highlights/Highlights";
 import { LatestNotice } from "../../components/homePage/latestNotice/latestNotice";
 import { WhyUs } from "../../components/homePage/whyUs/whyUs";
 import { Slider } from "../../components/slider/slider";
@@ -28,6 +29,7 @@ const Index = () => {
       <Slider />
       <SliderWithButton />
       <LatestNotice />
+      <Highlights />
       {/*<Messages />*/}
       <WhyUs />
 

@@ -7,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
 import BrandIcon from "../../assets/image/logo.svg";
 import { menuItem } from "./constant";
+import styles from "./header.module.css";
 
 export const Header = () => {
   const { asPath } = useRouter();
@@ -96,6 +97,7 @@ export const Header = () => {
               >
                 <Button
                   className="galleryButton"
+                  id={styles.galleryButton}
                   variant="danger"
                   style={{ marginTop: "0px !important" }}
                 >

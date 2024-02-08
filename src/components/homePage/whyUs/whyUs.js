@@ -9,7 +9,7 @@ import styles from "../../slider/sliderWithButton.module.css";
 import { WhyPreloader } from "../whyUs/whyPreloader";
 
 export const WhyUs = () => {
-  const [key, setKey] = useState("Self Development");
+  const [key, setKey] = useState("Facilities");
 
   const { isLoading, data: tabData } = useQuery("tab_list", () =>
     ApiRequest.get("need_tab/all")

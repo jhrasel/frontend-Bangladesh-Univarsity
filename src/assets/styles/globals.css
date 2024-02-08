@@ -8,6 +8,11 @@ body {
   overflow: hidden;
   overflow-y: scroll;
 }
+
+body .container {
+  max-width: 1440px;
+}
+
 img {
   object-fit: cover;
 }
@@ -147,10 +152,10 @@ a.nav-link {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
-  padding-right: 0px !important;
+  /* padding-right: 0px; */
 }
 .me-auto.navbar-nav {
-  margin-right: 12px !important;
+  margin-right: 0 !important;
 }
 a.navbar-brand {
   /* margin-right: 76px; */
@@ -824,4 +829,73 @@ tr {
 
 button.galleryButton.btn.btn-danger {
   /* margin-top: 0 !important; */
+}
+
+/* back to top */
+.scroll-to-top {
+  right: 10px !important;
+  bottom: 10px !important;
+  background: rgb(253, 174, 174) !important;
+  color: #eb2a2e !important;
+}
+
+.scroll-to-top svg {
+  font-size: 20px;
+}
+
+/* highlights__swiper */
+
+.highlights__swiper {
+  position: unset !important;
+}
+
+.highlights__swiper .swiper-button-next,
+.highlights__swiper .swiper-button-prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eb2a2e;
+  color: #fff;
+}
+
+.highlights__swiper .swiper-button-next {
+  right: 100px;
+}
+
+.highlights__swiper .swiper-button-prev {
+  left: 100px;
+}
+
+.highlights__swiper .swiper-button-prev:after,
+.highlights__swiper .swiper-button-next:after {
+  font-size: 20px;
+}
+
+/* @media (max-width: 1399.98px) { ... } */
+@media (max-width: 1440px) {
+  body .container {
+    max-width: 90% !important;
+  }
+
+  .highlights__swiper .swiper-button-next {
+    right: 15px;
+  }
+
+  .highlights__swiper .swiper-button-prev {
+    left: 15px;
+  }
+
+  .highlights__swiper .swiper-button-next,
+  .highlights__swiper .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .scroll-to-top {
+    width: 30px !important;
+    height: 30px !important;
+  }
 }

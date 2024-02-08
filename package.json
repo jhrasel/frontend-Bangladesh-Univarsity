@@ -22,9 +22,12 @@
     "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-player": "^2.14.1",
     "react-query": "^3.39.3",
+    "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/node": "18.14.0",

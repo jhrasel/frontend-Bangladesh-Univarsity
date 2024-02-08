@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import BrandIcon from "../../assets/image/logo.svg";
+import BrandIcon from "../../assets/image/white-logo.svg";
+import { ImportantLinkData, PageData } from "./FooterData";
 import styles from "./style.module.css";
 
 export const Footer = () => {
@@ -23,7 +25,82 @@ export const Footer = () => {
               Organise a lots of events of the betterment of present and ex
               students of the university.
             </p>
-            <ul className={styles.footerText}>
+          </Col>
+          <Col md={3} xs={12}>
+            <div className={styles.pages}>
+              <h4>Pages</h4>
+              <ul>
+                {PageData.map((data, i) => (
+                  <li key={i}>
+                    <Link href={data.url}>{data.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Col>
+          <Col md={3} xs={12}>
+            <div className={styles.important}>
+              <h4>Important Link</h4>
+              <ul>
+                {ImportantLinkData.map((data, i) => (
+                  <li key={i}>
+                    <Link href={data.url}>{data.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Col>
+          <Col md={3} xs={12}>
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 20 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20 2C20 0.9 19.1 0 18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2ZM18 2L10 7L2 2H18ZM18 14H2V4L10 9L18 4V14Z"
+                    fill="white"
+                  />
+                </svg>
+                &nbsp;&nbsp; cse.bu.com.bd
+              </li>
+              <li>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 12.5C15.8 12.5 14.5 12.3 13.4 11.9C13.3 11.9 13.2 11.9 13.1 11.9C12.8 11.9 12.6 12 12.4 12.2L10.2 14.4C7.4 12.9 5 10.6 3.6 7.8L5.8 5.6C6.1 5.3 6.2 4.9 6 4.6C5.7 3.5 5.5 2.2 5.5 1C5.5 0.5 5 0 4.5 0H1C0.5 0 0 0.5 0 1C0 10.4 7.6 18 17 18C17.5 18 18 17.5 18 17V13.5C18 13 17.5 12.5 17 12.5ZM2 2H3.5C3.6 2.9 3.8 3.8 4 4.6L2.8 5.8C2.4 4.6 2.1 3.3 2 2ZM16 16C14.7 15.9 13.4 15.6 12.2 15.2L13.4 14C14.2 14.2 15.1 14.4 16 14.4V16Z"
+                    fill="white"
+                  />
+                </svg>
+                &nbsp;&nbsp; +88 01304-350205, +88 01986-634186
+              </li>
+              <li>
+                <svg
+                  width="14"
+                  height="20"
+                  viewBox="0 0 14 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5ZM7 0C8.85652 0 10.637 0.737498 11.9497 2.05025C13.2625 3.36301 14 5.14348 14 7C14 12.25 7 20 7 20C7 20 0 12.25 0 7C0 5.14348 0.737498 3.36301 2.05025 2.05025C3.36301 0.737498 5.14348 0 7 0ZM7 2C5.67392 2 4.40215 2.52678 3.46447 3.46447C2.52678 4.40215 2 5.67392 2 7C2 8 2 10 7 16.71C12 10 12 8 12 7C12 5.67392 11.4732 4.40215 10.5355 3.46447C9.59785 2.52678 8.32608 2 7 2Z"
+                    fill="white"
+                  />
+                </svg>
+                &nbsp;&nbsp; 5/B, Beribandh Main Road, Adabar, Mohammadpur,
+                Dhaka – 1207
+              </li>
+            </ul>
+            <ul className={styles.footerText} style={{ marginTop: "10px" }}>
               <li>
                 <a>
                   <svg
@@ -74,79 +151,6 @@ export const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col md={3} xs={12}>
-            <div className={styles.pages}>
-              <h4>Pages</h4>
-              <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Blog</li>
-                <li>Gallery</li>
-              </ul>
-            </div>
-          </Col>
-          <Col md={3} xs={12}>
-            <div className={styles.important}>
-              <h4>Important Link</h4>
-              <ul>
-                <li>Apply Process</li>
-                <li>Blogs</li>
-                <li>Sports</li>
-                <li>Latest Notice</li>
-                <li>Campus</li>
-              </ul>
-            </div>
-          </Col>
-          <Col md={3} xs={12}>
-            <h4>Contact Us</h4>
-            <ul>
-              <li>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 20 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M20 2C20 0.9 19.1 0 18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2ZM18 2L10 7L2 2H18ZM18 14H2V4L10 9L18 4V14Z"
-                    fill="white"
-                  />
-                </svg>
-                &nbsp;&nbsp; cse.bu.com.bd
-              </li>
-              <li>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 12.5C15.8 12.5 14.5 12.3 13.4 11.9C13.3 11.9 13.2 11.9 13.1 11.9C12.8 11.9 12.6 12 12.4 12.2L10.2 14.4C7.4 12.9 5 10.6 3.6 7.8L5.8 5.6C6.1 5.3 6.2 4.9 6 4.6C5.7 3.5 5.5 2.2 5.5 1C5.5 0.5 5 0 4.5 0H1C0.5 0 0 0.5 0 1C0 10.4 7.6 18 17 18C17.5 18 18 17.5 18 17V13.5C18 13 17.5 12.5 17 12.5ZM2 2H3.5C3.6 2.9 3.8 3.8 4 4.6L2.8 5.8C2.4 4.6 2.1 3.3 2 2ZM16 16C14.7 15.9 13.4 15.6 12.2 15.2L13.4 14C14.2 14.2 15.1 14.4 16 14.4V16Z"
-                    fill="white"
-                  />
-                </svg>
-                &nbsp;&nbsp; +88 01304-350205, +88 01986-634186
-              </li>
-              <li>
-                <svg
-                  width="14"
-                  height="20"
-                  viewBox="0 0 14 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 4.5C7.66304 4.5 8.29893 4.76339 8.76777 5.23223C9.23661 5.70107 9.5 6.33696 9.5 7C9.5 7.3283 9.43534 7.65339 9.3097 7.95671C9.18406 8.26002 8.99991 8.53562 8.76777 8.76777C8.53562 8.99991 8.26002 9.18406 7.95671 9.3097C7.65339 9.43534 7.3283 9.5 7 9.5C6.33696 9.5 5.70107 9.23661 5.23223 8.76777C4.76339 8.29893 4.5 7.66304 4.5 7C4.5 6.33696 4.76339 5.70107 5.23223 5.23223C5.70107 4.76339 6.33696 4.5 7 4.5ZM7 0C8.85652 0 10.637 0.737498 11.9497 2.05025C13.2625 3.36301 14 5.14348 14 7C14 12.25 7 20 7 20C7 20 0 12.25 0 7C0 5.14348 0.737498 3.36301 2.05025 2.05025C3.36301 0.737498 5.14348 0 7 0ZM7 2C5.67392 2 4.40215 2.52678 3.46447 3.46447C2.52678 4.40215 2 5.67392 2 7C2 8 2 10 7 16.71C12 10 12 8 12 7C12 5.67392 11.4732 4.40215 10.5355 3.46447C9.59785 2.52678 8.32608 2 7 2Z"
-                    fill="white"
-                  />
-                </svg>
-                &nbsp;&nbsp; Iqbal Road, Mohammadpur, Dhaka-1207.
-              </li>
-            </ul>
-          </Col>
         </Row>
         <p
           style={{
@@ -158,7 +162,10 @@ export const Footer = () => {
 
         <Row className={styles.footerBottom}>
           <Col>
-            <p>@2023 All rights reserved by Bangladesh University</p>
+            <p>
+              @2024 All rights reserved by Department of CSE, Bangladesh
+              University
+            </p>
           </Col>
         </Row>
       </Container>
