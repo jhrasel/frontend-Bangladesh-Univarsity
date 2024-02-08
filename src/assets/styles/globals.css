@@ -859,6 +859,7 @@ button.galleryButton.btn.btn-danger {
   justify-content: center;
   background: #eb2a2e;
   color: #fff;
+  top: 60%;
 }
 
 .highlights__swiper .swiper-button-next {

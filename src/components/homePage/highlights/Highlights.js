@@ -23,9 +23,6 @@ export default function Highlights() {
             {/* item */}
             <Col lg={12}>
               <Swiper
-                pagination={{
-                  type: "progressbar",
-                }}
                 breakpoints={{
                   320: {
                     slidesPerView: 1.1,
