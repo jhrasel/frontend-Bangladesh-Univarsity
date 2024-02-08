@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Head>
-        <title> Bu</title>
+        <title>BU CSE Dep</title>
       </Head>
       <ThemeProvider>
         <Header />
