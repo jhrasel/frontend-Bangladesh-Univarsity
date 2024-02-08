@@ -65,7 +65,7 @@ export default function Highlights() {
                     <ReactPlayer
                       width="100%"
                       controls={true}
-                      url="https://youtu.be/tTI1eZLwUXI?si=C_Vuybcpxgc9KIlu"
+                      url="https://youtu.be/3ZpjMhXI4Ak?si=AqxRpykJV5rFrjOH"
                     />
                   </div>
                 </SwiperSlide>
@@ -75,18 +75,7 @@ export default function Highlights() {
                     <ReactPlayer
                       width="100%"
                       controls={true}
-                      url="https://youtu.be/tTI1eZLwUXI?si=C_Vuybcpxgc9KIlu"
-                    />
-                  </div>
-                </SwiperSlide>
-
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/tTI1eZLwUXI?si=C_Vuybcpxgc9KIlu"
+                      url="https://youtu.be/kk0hJJKXl_I?si=uyuVeev5F59OhbRj"
                     />
                   </div>
                 </SwiperSlide>
@@ -97,7 +86,29 @@ export default function Highlights() {
                     <ReactPlayer
                       width="100%"
                       controls={true}
-                      url="https://youtu.be/tTI1eZLwUXI?si=C_Vuybcpxgc9KIlu"
+                      url="https://youtu.be/VrJsi0X0OlM?si=ngdwl0zHr_VHtlhV"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                {/* item */}
+                <SwiperSlide>
+                  <div className={styles.video}>
+                    <ReactPlayer
+                      width="100%"
+                      controls={true}
+                      url="https://youtu.be/_U0f__ekqTQ?si=cLI2VyFVRpB3wSLJ"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                {/* item */}
+                <SwiperSlide>
+                  <div className={styles.video}>
+                    <ReactPlayer
+                      width="100%"
+                      controls={true}
+                      url="https://youtu.be/Ldp-TL25QA8?si=5Gu2w_UqUTsMKr2b"
                     />
                   </div>
                 </SwiperSlide>
