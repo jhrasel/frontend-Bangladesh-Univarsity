@@ -11,6 +11,12 @@
   border-radius: 0 !important;
 }
 
+.apply__modal input::placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
 .apply__modal .button {
   background: #eb2a2e !important;
   border: 0;
