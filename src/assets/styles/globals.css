@@ -875,6 +875,18 @@ button.galleryButton.btn.btn-danger {
   font-size: 20px;
 }
 
+.news__see__more {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.news__see__more a {
+  background: #eb2a2e;
+  color: #fff;
+  padding: 8px 30px;
+  display: inline-block;
+}
+
 /* @media (max-width: 1399.98px) { ... } */
 @media (max-width: 1440px) {
   body .container {
