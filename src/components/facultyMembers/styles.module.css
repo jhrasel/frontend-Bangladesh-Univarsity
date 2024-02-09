@@ -197,10 +197,11 @@
 .card_details p {
   color: var(--black-30, #4d4d4d);
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   font-weight: 500;
   line-height: 150%; /* 27px */
+  margin-bottom: 5px;
 }
 .itemCenter {
   display: flex;
