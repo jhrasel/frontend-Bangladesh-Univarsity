@@ -19,14 +19,20 @@ const ResearchPage = () => {
     const {research} = router.query;
 
     const {data: noticeList, isLoading: noticeListLoading} = useQuery(['research_page', research],()=> ApiRequest.get(`research/find/${research}`))
-    console.log(noticeList)
     return(
         <div>
             <Container fluid style={{padding: 0}} className="mt_60">
                 <div className={styled.mainPageBanner}>
                     <div className={styled.banner}>
-                        <div className={styled.heading} style={{width: "100%"}}>
-                            <img src={reserch.src} alt='reserch' />
+                        <div className={styled.heading} style={{ width: "100%" }}>
+                            {
+                                noticeList?.data?.body?.image ? (
+                                                        <img src={noticeList?.data?.body?.image} style={{ objectFit: 'cover', marginBottom: '10px'}} />
+
+                            ) : (<img src={reserch.src} alt='reserch' />)
+                            }
+
+                            
                         </div>
                         <div className={styled.overlay}>
                             <div className={styled.navigation}>
@@ -60,7 +66,6 @@ const ResearchPage = () => {
                     <Card style={{padding: '20px', border: 'none', margin: '0'}} className='notice_card'>
                         <p className={styled.title}>{moment(noticeList?.data?.body?.updatedAt).format("MMM Do YY")} / Research</p>
                         {/* <h4 className={styled.subtitle}>{noticeList?.data?.body?.description}</h4> */}
-                        <img src={noticeList?.data?.body?.image} alt='img' height={'250px'} style={{ objectFit: 'cover', marginBottom: '10px'}} />
                         <div  dangerouslySetInnerHTML={{__html: noticeList?.data?.body?.description}} ></div>
                     </Card>
                     
