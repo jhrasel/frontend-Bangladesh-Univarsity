@@ -33,12 +33,11 @@ export const Weaver = () => {
     setLoader(true);
     ApiRequest.post("contact", contactValue)
       .then((data) => {
-
         if (data?.data?.success) {
           setShow(true);
           setLoader(false);
           setContactValue({});
-          setMessage('Message Sent Successfully.')
+          setMessage("Message Sent Successfully.");
         }
       })
       .catch((err) => console.log(err))
@@ -127,9 +126,9 @@ export const Weaver = () => {
         className={style.apply__modal}
       >
         <Modal.Header closeButton className={style.modal__header}>
-          <Modal.Title>Apply Now</Modal.Title>
+          <Modal.Title>Contact Us</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className={style.modalBody}>
           <div className={styles.mainForm}>
             <Form noValidate onSubmit={handleSubmit}>
               <Row>
@@ -206,18 +205,18 @@ export const Weaver = () => {
                     className="rounded me-2"
                     alt=""
                   />
-                  <strong className="me-auto">
-                    { message }
-                  </strong>
+                  <strong className="me-auto">{message}</strong>
                 </Toast.Header>
               </Toast>
-              <Button
-                variant="primary"
-                type={loader ? "reset" : "Submit"}
-                className={style.button}
-              >
-                {loader ? "Loading..." : "Submit"}
-              </Button>
+              <div className={style.submitButton}>
+                <Button
+                  variant="primary"
+                  type={loader ? "reset" : "Submit"}
+                  className={style.button}
+                >
+                  {loader ? "Loading..." : "Submit"}
+                </Button>
+              </div>
             </Form>
           </div>
         </Modal.Body>

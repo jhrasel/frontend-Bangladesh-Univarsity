@@ -1,5 +1,10 @@
 .modal__header {
   position: unset;
+  text-align: center;
+}
+
+.modalBody {
+  padding: 20px 30px;
 }
 
 .apply__modal input {
@@ -14,4 +19,8 @@
 
 .apply__modal .button:hover {
   background: #e0181b !important;
+}
+
+.submitButton {
+  text-align: center;
 }
