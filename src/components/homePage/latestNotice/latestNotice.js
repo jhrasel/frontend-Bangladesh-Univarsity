@@ -24,7 +24,7 @@ export const LatestNotice = () => {
     ApiRequest.get("news/all?page=1&perPage=3")
   );
   const { data: noticeList } = useQuery("notice_list_home", () =>
-    ApiRequest.get("notice/all?page=1&perPage=3")
+    ApiRequest.get("notice/all?page=1&perPage=5")
   );
 
   const shortLit = useMemo(() => {
@@ -82,7 +82,7 @@ export const LatestNotice = () => {
           )}
           <div className={styles.latest_details}>
             <ul>
-              {shortLit.map((news, index) => {
+              {noticeList?.data?.data.map((news, index) => {
                 return (
                   <li key={index}>
                     <a

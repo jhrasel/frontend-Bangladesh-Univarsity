@@ -96,7 +96,9 @@ export const FacultyMembers = () => {
                     )
                   }
 
-                  <div className={styles.members}>
+                  {
+                      filterData?.chairman?.length && (
+                                            <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Chairman</h2>
                   </div>
@@ -121,34 +123,43 @@ export const FacultyMembers = () => {
                       }
                   </Row>
                   </div>
-                  
-                                    <div className={styles.members}>
-                  <div className={styles.memberTitles}>
-                      <h2>Associate Professor & Chairman</h2>
-                  </div>
-                  <Row>
-                      {
-                          filterData?.associateProfessorAndChairman?.map((role, i) => {
-                              return (
-                                <Col xs={12} md={4} lg={3} key={i}>
-                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
-                                            <div className={styles.memberImg}>
-                                                <img src={role.photo} alt={'memberImg'} />
-                                            </div>
-                                            <h4>{role?.name}</h4>
-                                            <p>{role?.editableRole}</p>
-                                          <span>Phone: {role?.phone}</span> <br/>
-                                          <span>Email: { role?.email}</span>
-                                        </div>
-                                </Col>
+                    )
+                  }
 
-                              )
-                          })
-                      }
-                  </Row>
-              </div>
+                  {
+                      filterData?.associateProfessorAndChairman?.length && (
+                        <div className={styles.members}>
+                        <div className={styles.memberTitles}>
+                            <h2>Associate Professor & Chairman</h2>
+                        </div>
+                        <Row>
+                            {
+                                filterData?.associateProfessorAndChairman?.map((role, i) => {
+                                    return (
+                                        <Col xs={12} md={4} lg={3} key={i}>
+                                                <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                                    <div className={styles.memberImg}>
+                                                        <img src={role.photo} alt={'memberImg'} />
+                                                    </div>
+                                                    <h4>{role?.name}</h4>
+                                                    <p>{role?.editableRole}</p>
+                                                <span>Phone: {role?.phone}</span> <br/>
+                                                <span>Email: { role?.email}</span>
+                                                </div>
+                                        </Col>
 
-              <div className={styles.members}>
+                                    )
+                                })
+                            }
+                        </Row>
+                    </div>
+                    )
+                  }
+
+
+                  {
+                      filterData?.assistantProfessor?.length && (
+                                        <div className={styles.members}>
                     <div className={styles.memberTitles}>
                         <h2>Assistant Professor</h2>
                     </div>
@@ -190,9 +201,14 @@ export const FacultyMembers = () => {
                       }
                   </Row>
               </div>
+                    )
+                  }
 
 
-              <div className={styles.members}>
+
+                  {
+                      filterData?.professor?.length && (
+                                        <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Professor</h2>
                     </div>
@@ -237,8 +253,13 @@ export const FacultyMembers = () => {
                       }
                   </Row>
                   </div>
+                    )
+                  }
+
                   
-              <div className={styles.members}>
+                  {
+                      filterData?.lecture?.length && (
+                                        <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Lecturer</h2>
                     </div>
@@ -283,8 +304,13 @@ export const FacultyMembers = () => {
                       }
                   </Row>
                   </div>
+                     )
+                  }
+
                   
-                <div className={styles.members}>
+                  {
+                      filterData?.CoOrdinator?.length && (
+                                        <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Co-Ordinator</h2>
                     </div>
@@ -328,9 +354,14 @@ export const FacultyMembers = () => {
                           })
                       }
                   </Row>
-                  </div>
+                  </div>  
+                    )
+                  }
+
                   
-                                  <div className={styles.members}>
+                  {
+                      filterData?.officeStuff?.length && (
+                                                         <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Office Stuff</h2>
                     </div>
@@ -374,7 +405,10 @@ export const FacultyMembers = () => {
                           })
                       }
                   </Row>
-              </div>
+              </div> 
+                    )
+                  }
+   
               </Container>
                
           </div>

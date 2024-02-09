@@ -115,22 +115,6 @@ export const Research = () => {
           >
             Previous
           </a>
-          {/* {
-                        (allResearch?.data?.totalItems >= id) && (
-                            <a className={'readMore'} style={{ paddingBottom: '10px'}} onClick={loadHandler}>
-                                Next
-                            </a>
-                        )
-                    }
-            
-                    {
-                        (allResearch?.data?.totalItems <= id) && (
-                            <a className={'readMore'} style={{ paddingBottom: '10px'}} onClick={previousLoadHandler} disabled>
-                                Previous
-                            </a>
-                        )
-                        
-                    } */}
         </div>
       </div>
 

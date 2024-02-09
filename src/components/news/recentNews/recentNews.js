@@ -14,7 +14,8 @@ import { BulletinePreloader } from "../../homePage/bulletine/bulletineLoader";
 import { PageBanner } from "../../pagebanner";
 
 export const RecentNews = () => {
-  const [page, setPage] = useState(1);
+    const [id, setId] = useState(1);
+
   const Router = useRouter();
   const settings = {
     dots: false,
@@ -51,8 +52,8 @@ export const RecentNews = () => {
   };
 
   const { data: newsList, isLoading: newsListisloading } = useQuery(
-    ["newsAllList", page],
-    () => ApiRequest.get(`news/all?page=${page}&perPage=6`)
+    ["newsAllList", id],
+    () => ApiRequest.get(`news/all?page=${id}&perPage=6`)
   );
 
   const routerHandler = (_id) => {
@@ -62,10 +63,17 @@ export const RecentNews = () => {
     });
   };
 
-  const loadHandler = () => {
-    const page = newsList?.data?.currentPage;
-    setPage(page + 1);
+  // const loadHandler = () => {
+  //   const page = newsList?.data?.currentPage;
+  //   setPage(page + 1);
+  // };
+
+      const loadHandler = () => {
+    setId(id + 1);
   };
+  const previousLoadHandler = () => {
+    setId(id - 1);
+  }
 
   return (
     <>
@@ -117,6 +125,54 @@ export const RecentNews = () => {
                 );
               })}
           </Row>
+
+                      {newsList?.data?.data?.length === 0 && (
+              <p style={{color: 'red'}}> &nbsp;&nbsp; No Data Found!</p>
+            )}
+            
+      <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0px 3px",
+            flexDirection: "row-reverse",
+          }}
+        >
+          <a
+            className={"readMore"}
+            onClick={loadHandler}
+            style={
+              newsList?.data?.totalItems >= id
+                ? { paddingBottom: "10px" }
+                : {
+                    opacity: "0.4",
+                    pointerEvents: "none",
+                    paddingBottom: "10px",
+                  }
+            }
+          >
+            Next
+          </a>
+
+          <a
+            className={"readMore"}
+            style={
+              newsList?.data?.currentPage > 1
+                ? { paddingBottom: "10px" }
+                : {
+                    opacity: "0.4",
+                    pointerEvents: "none",
+                    paddingBottom: "10px",
+                  }
+            }
+            onClick={previousLoadHandler}
+            disabled
+          >
+            Previous
+          </a>
+          </div>
+          
         </Container>
         <Addmission />
       </div>

@@ -13,7 +13,7 @@ import styles from "./styles.module.css";
 
 export const Notice = () => {
   const Router = useRouter();
-  const [id, setId] = useState(2);
+  const [id, setId] = useState(1);
 
   const { isLoading: allNoticeLoading, data: allNotice } = useQuery(
     ["allNotice"],
@@ -22,17 +22,13 @@ export const Notice = () => {
 
   const { isLoading: allPaginationNoticeLoading, data: allPaginationNotice } =
     useQuery(["all_Notice", id], () =>
-      ApiRequest.get(`notice/all?page=${id}&perPage=5`)
+      ApiRequest.get(`notice/all?page=${id}&perPage=10`)
     );
 
   const { isLoading: latestNoticeLoading, data: latestNotice } = useQuery(
     "latestNotice",
     () => ApiRequest.get("notice/all?page=1&perPage=5")
   );
-
-  const loadHandler = () => {
-    setId(id + 1);
-  };
 
   const allNoticeData = useMemo(() => {
     return allNotice?.data?.data.concat(allPaginationNotice?.data?.data || []);
@@ -43,6 +39,13 @@ export const Notice = () => {
       pathname: `notice/${_id}`,
     });
   };
+
+    const loadHandler = () => {
+    setId(id + 1);
+  };
+  const previousLoadHandler = () => {
+    setId(id - 1);
+  }
 
   return (
     <>
@@ -61,8 +64,8 @@ export const Notice = () => {
             <h1 className={[styles.heading, styles.mblHeading].join(" ")}>
               ALL Notice
             </h1>
-            {allNoticeLoading && <WhyPreloader />}
-            {allNoticeData?.map((notice, index) => {
+            {allPaginationNoticeLoading && <WhyPreloader />}
+            {allPaginationNotice?.data?.data?.map((notice, index) => {
               return (
                 <div key={index} className={styles.noticeItem}>
                   <div className={styles.noticeDate}>
@@ -87,16 +90,55 @@ export const Notice = () => {
               );
             })}
 
-            {allNotice?.data?.totalItems >= id && (
-              <a
-                className={"readMore"}
-                style={{ paddingBottom: "10px" }}
-                onClick={loadHandler}
-              >
-                See More
-              </a>
+            {allPaginationNotice?.data?.data?.length === 0 && (
+              <p className={styles.noData} style={{color: 'red'}}> &nbsp;&nbsp; No Data Found!</p>
             )}
+            
+      <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "0px 3px",
+            flexDirection: "row-reverse",
+          }}
+        >
+          <a
+            className={"readMore"}
+            onClick={loadHandler}
+            style={
+              allPaginationNotice?.data?.totalItems >= id
+                ? { paddingBottom: "10px" }
+                : {
+                    opacity: "0.4",
+                    pointerEvents: "none",
+                    paddingBottom: "10px",
+                  }
+            }
+          >
+            Next
+          </a>
+
+          <a
+            className={"readMore"}
+            style={
+              allPaginationNotice?.data?.currentPage > 1
+                ? { paddingBottom: "10px" }
+                : {
+                    opacity: "0.4",
+                    pointerEvents: "none",
+                    paddingBottom: "10px",
+                  }
+            }
+            onClick={previousLoadHandler}
+            disabled
+          >
+            Previous
+          </a>
+        </div>
+  
           </div>
+          
         </div>
       </Container>
 

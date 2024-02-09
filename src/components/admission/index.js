@@ -33,7 +33,7 @@ export const Addmission = () => {
                 <Col md='6' className={styles.item_center}>
                       <div className={styles.details}>
                            <h2>Admission is on going</h2>      
-                            <p>Join our diverse community and embark on a transformative educational journey. Secure your future with us today.</p>
+                            <p  style={{marginBottom: 0}}>Join our diverse community and embark on a transformative educational journey. Secure your future with us today.</p>
                            {/* <h4>Apply Now</h4> */}
                           <a href={"/contact-us"}>
                                 <Button className="galleryButton" variant="danger">Contact us</Button>
