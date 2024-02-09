@@ -11,10 +11,18 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
 
-export default function Highlights() {
+import { useEffect, useState } from 'react';
+export const Highlights = () => {
+    const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
   return (
     <section className={styles.highlights}>
-      <div className="container">
+      {
+        domLoaded && (
+           <div className="container">
         <h2>Highlights</h2>
 
         {/* video Content */}
@@ -114,6 +122,8 @@ export default function Highlights() {
           </Row>
         </div>
       </div>
+        )
+      }
     </section>
   );
 }

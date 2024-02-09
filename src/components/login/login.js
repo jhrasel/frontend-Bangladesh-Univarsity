@@ -9,7 +9,7 @@ export const Login = () => {
     const [formVisiable, setFormVisiable] = useState(false);
     const router = useRouter()
     const signInTeacherForm = () => {
-        router.push('https://653cd52a210f0d6b23dfc403--mellow-choux-10e2e6.netlify.app/')
+        router.push('https://bangladesh-university.vercel.app/')
     }
     const signInStudentForm = () => {
         setFormVisiable(true)
