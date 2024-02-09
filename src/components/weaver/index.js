@@ -25,6 +25,7 @@ export const Weaver = () => {
   const [contactValue, setContactValue] = useState({});
   const [show, setShow] = useState(false);
   const [loader, setLoader] = useState(false);
+  const [message, setMessage] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,9 +33,13 @@ export const Weaver = () => {
     setLoader(true);
     ApiRequest.post("contact", contactValue)
       .then((data) => {
-        setShow(true);
-        setLoader(false);
-        setContactValue({});
+
+        if (data?.data?.success) {
+          setShow(true);
+          setLoader(false);
+          setContactValue({});
+          setMessage('Message Sent Successfully.')
+        }
       })
       .catch((err) => console.log(err))
       .finally(() => {
@@ -202,7 +207,7 @@ export const Weaver = () => {
                     alt=""
                   />
                   <strong className="me-auto">
-                    Message sent successfully.
+                    { message }
                   </strong>
                 </Toast.Header>
               </Toast>
