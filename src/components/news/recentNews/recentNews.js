@@ -7,112 +7,120 @@ import { useQuery } from "react-query";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import slider from "../../../assets/image/news.png";
-import { Addmission } from '../../../components/admission/index';
+import { Addmission } from "../../../components/admission/index";
 import ApiRequest from "../../../services/api-services";
 import { SmallCard } from "../../cards/smallCard";
 import { BulletinePreloader } from "../../homePage/bulletine/bulletineLoader";
 import { PageBanner } from "../../pagebanner";
 
-
 export const RecentNews = () => {
-    const [page, setPage] = useState(1)
-    const Router = useRouter()
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+  const [page, setPage] = useState(1);
+  const Router = useRouter();
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
-    const {data: newsList, isLoading: newsListisloading} = useQuery(['newsAllList', page],()=> ApiRequest.get(`news/all?page=${page}&perPage=6`))
+  const { data: newsList, isLoading: newsListisloading } = useQuery(
+    ["newsAllList", page],
+    () => ApiRequest.get(`news/all?page=${page}&perPage=6`)
+  );
 
-    const routerHandler = (_id) => {
-        Router.push({
-            pathname:`news/${_id}`,
-            query: {_id },
-        })
-    }
+  const routerHandler = (_id) => {
+    Router.push({
+      pathname: `news/${_id}`,
+      query: { _id },
+    });
+  };
 
-    
+  const loadHandler = () => {
+    const page = newsList?.data?.currentPage;
+    setPage(page + 1);
+  };
 
-    const loadHandler = () => {
-        const page = newsList?.data?.currentPage;
-        setPage(page + 1)
-    }
-
-    return(
-        <>
-            <Container fluid style={{padding: 0}} className="mt_60">
-                <PageBanner title={'News'} photo={slider.src} position={'center'} />
-            </Container>
-            <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
-           
-                <Container className={'sliderss'}>
-                                    <>
-                    {
-                        newsListisloading && (
-                            <Row>
-                                <Col  xs='12' md='4' lg="4">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='4' lg="4">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='4' lg="4">
-                                    <BulletinePreloader />
-                                </Col>
-                            </Row>
-                        )
-                    }
-
-                </>
-                    <Row>
-                        <h1 className={'sectionHeading'} style={{marginBottom: '40px'}}>Most Viewed News</h1>
-                    {
-                            newsList?.data?.data.length && newsList?.data?.data.map((value, index) => {
-                                return (
-                                    <Col  xs='12' md='12' lg="4" style={{cursor: "pointer"}} key={index}>
-                                        <a href={`/news/${value?._id}`}>
-                                            <SmallCard {...value}  showDate={false} clickHandler={routerHandler}/>
-                                        </a>
-                                    </Col>
-                                )
-                            })
-                        }
-
-                    </Row>
-
-                </Container>
-                 <Addmission />
-            </div>
-            {/* <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
+  return (
+    <>
+      <Container fluid style={{ padding: 0 }} className="mt_60">
+        <PageBanner title={"News"} photo={slider.src} position={"center"} />
+      </Container>
+      <div
+        className={"mt_30"}
+        style={{ marginTop: "80px", marginBottom: "80px", textAlign: "center" }}
+      >
+        <Container className={"sliderss"}>
+          <>
+            {newsListisloading && (
+              <Row>
+                <Col xs="12" md="4" lg="4">
+                  <BulletinePreloader />
+                </Col>
+                <Col xs="12" md="4" lg="4">
+                  <BulletinePreloader />
+                </Col>
+                <Col xs="12" md="4" lg="4">
+                  <BulletinePreloader />
+                </Col>
+              </Row>
+            )}
+          </>
+          <Row>
+            {/* <h1 className={"sectionHeading"} style={{ marginBottom: "40px" }}>
+              Most Viewed News
+            </h1> */}
+            {newsList?.data?.data.length &&
+              newsList?.data?.data.map((value, index) => {
+                return (
+                  <Col
+                    xs="12"
+                    md="12"
+                    lg="4"
+                    style={{ cursor: "pointer" }}
+                    key={index}
+                  >
+                    <a href={`/news/${value?._id}`}>
+                      <SmallCard
+                        {...value}
+                        showDate={false}
+                        clickHandler={routerHandler}
+                      />
+                    </a>
+                  </Col>
+                );
+              })}
+          </Row>
+        </Container>
+        <Addmission />
+      </div>
+      {/* <div className={'mt_30'} style={{marginTop: '80px', marginBottom: '80px', textAlign: 'center'}}>
                 <h1 className={'headingTitle'} style={{marginBottom: '50px', marginLeft: '25px'}}>
                     Recent News
                 </h1>
@@ -163,6 +171,6 @@ export const RecentNews = () => {
                     </ReactSlider>
                 </div>
             </div> */}
-        </>
-    )
-}
+    </>
+  );
+};

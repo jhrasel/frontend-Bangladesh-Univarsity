@@ -105,7 +105,7 @@ export const Slider = () => {
             </Carousel.Item>
           );
         })}
-      </Carousel>
+      </Carousel>      
     </div>
   );
 };

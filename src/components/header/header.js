@@ -77,7 +77,7 @@ export const Header = () => {
                 style={{ paddingTop: "35px", textAlign: "center" }}
               >
                 <Nav.Link
-                  href="https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner"
+                  href="https://bangladesh-university.vercel.app/"
                   target="_blank"
                 >
                   <Button
@@ -92,7 +92,7 @@ export const Header = () => {
             </Navbar.Collapse>
             <Nav className="mobile-hide">
               <Nav.Link
-                href="https://65576501eb3f481e3b36037a--mellow-choux-10e2e6.netlify.app/dashboard/banner"
+                href="https://bangladesh-university.vercel.app/"
                 target="_blank"
               >
                 <Button
