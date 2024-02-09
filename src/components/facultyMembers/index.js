@@ -24,12 +24,13 @@ export const FacultyMembers = () => {
         let designationProfessor = [];
         let designationOfficeStuff = [];
         let designationCoOrdinator = [];
+        let designationAssociateChairman = [];
 
         data?.data?.data.length > 0 ? data?.data?.data.map((role) => {
-            // if (role?.editableRole.toLowerCase() === "associate_professor_chairman"){
-            //     designationChairman.push(role);
-            //     teacher.chairman = designationChairman
-            // }
+            if (role?.editableRole.toLowerCase() === "associate professor & chairman"){
+                designationAssociateChairman.push(role);
+                teacher.associateProfessorAndChairman = designationAssociateChairman
+            }
             if (role?.editableRole.toLowerCase() === "chairman"){
                 designationChairman.push(role);
                 teacher.chairman = designationChairman
@@ -94,13 +95,40 @@ export const FacultyMembers = () => {
                             </Row>
                     )
                   }
+
                   <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Chairman</h2>
+                  </div>
+                  <Row>
+                      {
+                          filterData?.chairman?.map((role, i) => {
+                              return (
+                                <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                            <p>{role?.editableRole}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>
+                  
+                                    <div className={styles.members}>
                   <div className={styles.memberTitles}>
                       <h2>Associate Professor & Chairman</h2>
                   </div>
                   <Row>
                       {
-                          filterData?.chairman?.map((role, i) => {
+                          filterData?.associateProfessorAndChairman?.map((role, i) => {
                               return (
                                 <Col xs={12} md={4} lg={3} key={i}>
                                         <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>

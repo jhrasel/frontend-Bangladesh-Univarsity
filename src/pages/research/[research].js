@@ -22,14 +22,23 @@ const ResearchPage = () => {
     ["research_page", research],
     () => ApiRequest.get(`research/find/${research}`)
   );
-  console.log(noticeList);
+
   return (
     <div>
       <Container fluid style={{ padding: 0 }} className="mt_60">
         <div className={styled.mainPageBanner}>
           <div className={styled.banner}>
             <div className={styled.heading} style={{ width: "100%" }}>
-              <img src={reserch.src} alt="reserch" />
+              {
+                noticeList?.data?.body?.image ? 
+                            <img
+              src={noticeList?.data?.body?.image}
+              alt="img"
+              height={"250px"}
+              style={{ objectFit: "cover", marginBottom: "10px" }}
+            /> :               <img src={reserch.src} alt="reserch" />
+
+              }
             </div>
             <div className={styled.overlay}>
               <div className={styled.navigation}>
@@ -119,12 +128,6 @@ const ResearchPage = () => {
               Research
             </p>
             {/* <h4 className={styled.subtitle}>{noticeList?.data?.body?.description}</h4> */}
-            <img
-              src={noticeList?.data?.body?.image}
-              alt="img"
-              height={"250px"}
-              style={{ objectFit: "cover", marginBottom: "10px" }}
-            />
             <div
               dangerouslySetInnerHTML={{
                 __html: noticeList?.data?.body?.description,

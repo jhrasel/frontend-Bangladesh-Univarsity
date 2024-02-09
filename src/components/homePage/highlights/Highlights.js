@@ -4,9 +4,11 @@ import styles from "./Highlights.module.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
+import { useQuery } from "react-query";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import ApiRequest from "../../../services/api-services";
 
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
@@ -15,9 +17,15 @@ import { useEffect, useState } from 'react';
 export const Highlights = () => {
     const [domLoaded, setDomLoaded] = useState(false);
 
+  
+    const { data, isLoading } = useQuery(["highlights-item"], () =>
+    ApiRequest.get("url/dashboard?page=1&perPage=10")
+  );
   useEffect(() => {
     setDomLoaded(true);
   }, []);
+
+  console.log('data', data)
   return (
     <section className={styles.highlights}>
       {
@@ -53,70 +61,23 @@ export const Highlights = () => {
                 modules={[Pagination, Navigation]}
                 className="mySwiper highlights__swiper"
                 id={styles.swiper__id}
-              >
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/tTI1eZLwUXI?si=C_Vuybcpxgc9KIlu"
-                    />
-                  </div>
-                </SwiperSlide>
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/3ZpjMhXI4Ak?si=AqxRpykJV5rFrjOH"
-                    />
-                  </div>
-                </SwiperSlide>
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/kk0hJJKXl_I?si=uyuVeev5F59OhbRj"
-                    />
-                  </div>
-                </SwiperSlide>
-
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/VrJsi0X0OlM?si=ngdwl0zHr_VHtlhV"
-                    />
-                  </div>
-                </SwiperSlide>
-
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/_U0f__ekqTQ?si=cLI2VyFVRpB3wSLJ"
-                    />
-                  </div>
-                </SwiperSlide>
-
-                {/* item */}
-                <SwiperSlide>
-                  <div className={styles.video}>
-                    <ReactPlayer
-                      width="100%"
-                      controls={true}
-                      url="https://youtu.be/Ldp-TL25QA8?si=5Gu2w_UqUTsMKr2b"
-                    />
-                  </div>
-                </SwiperSlide>
+                  >
+                    {
+                      data?.data?.data?.map((value, i) => { 
+                        return (
+                            <SwiperSlide key={i}>
+                              <div className={styles.video}>
+                                <ReactPlayer
+                                            width="100%"
+                                            controls={true}
+                                            url={value?.url}
+                                />
+                              </div>
+                          </SwiperSlide>
+                          )
+                      })
+                    }
+            
               </Swiper>
             </Col>
           </Row>
