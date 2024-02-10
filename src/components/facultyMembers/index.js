@@ -126,11 +126,61 @@ export const FacultyMembers = () => {
                     )
                   }
 
+                                    {
+                      filterData?.professor?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Professor</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.professor?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                            <p>{role?.editableRole}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>
+                    )
+                  }
+
                   {
                       filterData?.associateProfessorAndChairman?.length && (
                         <div className={styles.members}>
                         <div className={styles.memberTitles}>
-                            <h2>Associate Professor & Chairman</h2>
+                            <h2>Associate Professor</h2>
                         </div>
                         <Row>
                             {
@@ -206,55 +256,7 @@ export const FacultyMembers = () => {
 
 
 
-                  {
-                      filterData?.professor?.length && (
-                                        <div className={styles.members}>
-                  <div className={styles.memberTitles}>
-                      <h2>Professor</h2>
-                    </div>
-                      
 
-                    {
-                      isLoading && (
-                            <Row>
-                                <Col  xs='12' md='3' lg="3">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='3' lg="3">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='3' lg="3">
-                                    <BulletinePreloader />
-                                </Col>
-                                <Col  xs='12' md='3' lg="3">
-                                    <BulletinePreloader />
-                                </Col>
-                            </Row>
-                    )
-                  }
-                  <Row>
-                      {
-                         filterData?.professor?.map((role, i) => {
-                              return (
-                                  <Col xs={12} md={4} lg={3} key={i}>
-                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
-                                            <div className={styles.memberImg}>
-                                                <img src={role.photo} alt={'memberImg'} />
-                                            </div>
-                                            <h4>{role?.name}</h4>
-                                            <p>{role?.editableRole}</p>
-                                          <span>Phone: {role?.phone}</span> <br/>
-                                          <span>Email: { role?.email}</span>
-                                        </div>
-                                    </Col>
-
-                              )
-                          })
-                      }
-                  </Row>
-                  </div>
-                    )
-                  }
 
                   
                   {
