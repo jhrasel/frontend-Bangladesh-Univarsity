@@ -1,6 +1,7 @@
 .highlights {
   padding: 80px 0;
   position: relative;
+  padding-bottom: 0;
 }
 
 .highlights h2 {

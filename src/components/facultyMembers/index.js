@@ -67,7 +67,6 @@ export const FacultyMembers = () => {
         })
     }
 
-    console.log('filterData', filterData)
   return(
       <>
             <Container fluid style={{padding: 0}} className="mt_60">
