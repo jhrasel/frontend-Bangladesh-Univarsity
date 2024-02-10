@@ -83,7 +83,7 @@ export const CurriculumPage = () => {
 
                     <div>
                         <h1 className={[styles.heading, styles.hide].join(' ')} style={{ textAlign: 'center'}}>
-                            CSE (COMPUTER SCIENCE & ENGINEERING ) TOTAL COURSE REQUIRED 161 CR. HRS.
+                            CSE TOTAL COURSE REQUIRED 161 CR. HRS.
                         </h1>
                         <Row>
                             <Col md={4} className={styles.hide}>
@@ -114,7 +114,7 @@ export const CurriculumPage = () => {
                             </Col>
                             <Col md={8}>
                                 <h1 className={[styles.heading, styles.mbl_hide].join(' ')}>
-                                    CSE (COMPUTER SCIENCE & ENGINEERING ) TOTAL COURSE REQUIRED 161 CR. HRS.
+                                    CSE TOTAL COURSE REQUIRED 161 CR. HRS.
                                 </h1>
                                 <Accordion defaultActiveKey={arr[0]}>
                                                                           {

@@ -143,7 +143,7 @@ export const ContactUs = () => {
               <div className={styles.mainForm}>
                 <Form noValidate onSubmit={handleSubmit}>
                   <Row>
-                    <Col md={"6"} lg={6} xs={"12"}>
+                    <Col md={"4"} lg={4} xs={"12"}>
                       <Form.Group
                         className="mb-3"
                         controlId="full_name"
@@ -157,7 +157,21 @@ export const ContactUs = () => {
                         />
                       </Form.Group>
                     </Col>
-                    <Col md={"6"} lg={6} xs={"12"}>
+                    <Col md={"4"} lg={4} xs={"12"}>
+                      <Form.Group
+                        className="mb-3"
+                        controlId="email"
+                        onChange={changeHandler}
+                      >
+                        <Form.Label>Phone</Form.Label>
+                        <Form.Control
+                          type="phone"
+                          name="phone"
+                          placeholder="Enter Phone"
+                        />
+                      </Form.Group>
+                    </Col>
+                    <Col md={"4"} lg={4} xs={"12"}>
                       <Form.Group
                         className="mb-3"
                         controlId="email"
@@ -249,7 +263,7 @@ export const ContactUs = () => {
                     fill="white"
                   />
                 </svg>
-                <p>+88 01304-350205, +88 01986-634186</p>
+                <p>+88 01755-559301, +88 01755-559312</p>
               </li>
               <li>
                 <svg
@@ -265,7 +279,7 @@ export const ContactUs = () => {
                     fill="white"
                   />
                 </svg>
-                <p>cse.bu.com.bd</p>
+                <p>cse@bu.edu.bd</p>
               </li>
             </ul>
           </div>

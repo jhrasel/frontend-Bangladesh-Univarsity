@@ -32,6 +32,10 @@ button {
   padding: 90px 0px;
   background: #0000006e;
 }
+input#full_name,
+input#email {
+  font-size: 14px !important;
+}
 .main__ .overlay_main__ {
   position: absolute;
   top: 0;

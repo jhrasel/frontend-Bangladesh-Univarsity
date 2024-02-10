@@ -83,7 +83,7 @@ export const Footer = () => {
                 </svg>
                 &nbsp;&nbsp; +88 01755-559301, +88 01755-559312
               </li>
-              <li>
+              <li style={{display: 'flex'}}>
                 <svg
                   width="14"
                   height="20"
@@ -96,8 +96,8 @@ export const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                &nbsp;&nbsp; 5/B, Beribandh Main Road, Adabar, Mohammadpur,
-                Dhaka – 1207
+                <span style={{paddingLeft: '16px'}}>5/B, Beribandh Main Road, Adabar, Mohammadpur,
+                Dhaka – 1207</span>
               </li>
             </ul>
             <ul className={styles.footerText} style={{ marginTop: "10px" }}>
