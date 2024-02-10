@@ -81,7 +81,7 @@ export const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                &nbsp;&nbsp; +88 01304-350205, +88 01986-634186
+                &nbsp;&nbsp; +88 01755-559301, +88 01755-559312
               </li>
               <li>
                 <svg
