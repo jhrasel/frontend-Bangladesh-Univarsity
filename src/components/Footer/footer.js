@@ -102,7 +102,7 @@ export const Footer = () => {
             </ul>
             <ul className={styles.footerText} style={{ marginTop: "10px" }}>
               <li>
-                <a>
+                <a href="https://www.facebook.com/BangladeshUniversityBd" target="_blank" rel="noreferrer">
                   <svg
                     width="24"
                     height="24"
@@ -118,7 +118,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a>
+                <a href="https://www.facebook.com/BangladeshUniversityBd" target="_blank" rel="noreferrer">
                   <svg
                     width="24"
                     height="24"
@@ -134,7 +134,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a>
+                <a href="https://twitter.com/bu_officialpage?lang=en" target="_blank" rel="noreferrer">
                   <svg
                     width="24"
                     height="24"
