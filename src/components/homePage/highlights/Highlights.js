@@ -3,6 +3,7 @@ import styles from "./Highlights.module.css";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
+import { useEffect, useState } from 'react';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,14 +14,14 @@ import { Navigation, Pagination } from "swiper/modules";
 import { VideoLink } from "./VideoLink";
 
 export const Highlights = () => {
-  // const [domLoaded, setDomLoaded] = useState(false);
+  const [domLoaded, setDomLoaded] = useState(false);
 
   // const { data, isLoading } = useQuery(["highlights-item"], () =>
   //   ApiRequest.get("url/dashboard?page=1&perPage=10")
   // );
-  // useEffect(() => {
-  //   setDomLoaded(true);
-  // }, []);
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
 
   return (
     <section className={styles.highlights}>
@@ -69,7 +70,7 @@ export const Highlights = () => {
                       </SwiperSlide>
                     );
                   })} */}
-                {VideoLink.map((value, i) => {
+                { domLoaded && VideoLink.map((value, i) => {
                   return (
                     <SwiperSlide key={i}>
                       <div className={styles.video}>
