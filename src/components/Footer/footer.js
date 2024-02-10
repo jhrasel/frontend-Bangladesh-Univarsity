@@ -66,7 +66,7 @@ export const Footer = () => {
                     fill="white"
                   />
                 </svg>
-                &nbsp;&nbsp; cse.bu.com.bd
+                &nbsp;&nbsp; cse@bu.edu.bd
               </li>
               <li>
                 <svg
