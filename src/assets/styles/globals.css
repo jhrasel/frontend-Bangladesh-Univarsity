@@ -30,6 +30,7 @@ button {
 .main__ {
   position: relative;
   padding: 90px 0px;
+  background: #0000006e;
 }
 .main__ .overlay_main__ {
   position: absolute;
