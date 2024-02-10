@@ -40,7 +40,7 @@ export const Research = () => {
       <div className={styles.researchBody}>
         <div className={styles.researchHeader}>
           <p>
-            All Available Research In Department of CSE, Bangladesh University
+            Research In Department of CSE, Bangladesh University
           </p>
         </div>
         {allResearch?.data?.data?.map((data, i) => {
