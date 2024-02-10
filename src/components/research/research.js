@@ -50,7 +50,7 @@ export const Research = () => {
               className={styles.researchTableBody}
               onClick={() => singleHandler(data?._id)}
             >
-              <p> &nbsp;&nbsp; {data?.title}</p>
+              <p style={{textTransform: 'capitalize'}}> &nbsp;&nbsp; {data?.title}</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
