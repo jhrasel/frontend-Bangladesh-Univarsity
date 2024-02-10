@@ -153,7 +153,7 @@ export const ContactUs = () => {
                         <Form.Control
                           type="text"
                           name="fullname"
-                          placeholder="name"
+                          placeholder="Enter Name"
                         />
                       </Form.Group>
                     </Col>
