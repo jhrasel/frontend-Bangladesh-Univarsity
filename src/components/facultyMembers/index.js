@@ -74,7 +74,7 @@ export const FacultyMembers = () => {
                 <PageBanner title={'People'} photo={slider.src} position={'center'}/>
             </Container>
             <div className={styles.mainFacultyMember}>
-              <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px'}}>Dignified Teachers of Computer <br /> Science & Engineering.</h1>
+              <h1 className={'sectionHeading'} style={{marginBottom: '40px', marginLeft: '25px', display: 'none'}}>Dignified Teachers of Computer <br /> Science & Engineering.</h1>
 
               <Container>
                   {
