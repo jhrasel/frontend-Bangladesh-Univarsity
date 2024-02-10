@@ -22,3 +22,8 @@
 .video__content .row {
   gap: 20px;
 }
+
+.video {
+  padding: 10px;
+  background: #f5c4c8;
+}
