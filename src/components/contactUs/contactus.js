@@ -130,7 +130,7 @@ export const ContactUs = () => {
                     width="100%"
                     height="100%"
                     id="gmap_canvas"
-                    src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d29213.473560689912!2d90.32380822795238!3d23.758638534515587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d23.750246399999998!2d90.3479296!4m5!1s0x3755c083149585f5%3A0xeb28ac94751626ca!2s5%2FB%2C%20Beribandh%20Main%20Road%2C%20Adabar%2C%20Mohammadpur%2C%20Dhaka%20%E2%80%93%201207!3m2!1d23.767065!2d90.34495539999999!5e0!3m2!1sen!2sbd!4v1707382705850!5m2!1sen!2sbd"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.447613391786!2d90.34238047602331!3d23.767069888134856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c083149585f5%3A0xeb28ac94751626ca!2sBangladesh%20University!5e0!3m2!1sen!2sbd!4v1707564371261!5m2!1sen!2sbd"
                     frameBorder="0"
                     scrolling="no"
                     marginHeight="0"
