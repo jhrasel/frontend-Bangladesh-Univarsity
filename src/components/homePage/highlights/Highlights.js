@@ -10,15 +10,16 @@ import "swiper/css/pagination";
 
 // import required modules
 import ReactPlayer from "react-player";
+import { useQuery } from "react-query";
 import { Navigation, Pagination } from "swiper/modules";
-import { VideoLink } from "./VideoLink";
+import ApiRequest from "../../../services/api-services";
 
 export const Highlights = () => {
   const [domLoaded, setDomLoaded] = useState(false);
 
-  // const { data, isLoading } = useQuery(["highlights-item"], () =>
-  //   ApiRequest.get("url/dashboard?page=1&perPage=10")
-  // );
+  const { data, isLoading } = useQuery(["highlights-item"], () =>
+    ApiRequest.get("url/dashboard?page=1&perPage=10")
+  );
   useEffect(() => {
     setDomLoaded(true);
   }, []);
@@ -70,13 +71,13 @@ export const Highlights = () => {
                       </SwiperSlide>
                     );
                   })} */}
-                { domLoaded && VideoLink.map((value, i) => {
+                { domLoaded && data?.data?.data?.map((value, i) => {
                   return (
                     <SwiperSlide key={i}>
-                      <div className={styles.video}>
+                      <div className={styles.url}>
                         <ReactPlayer
                           width="100%"
-                          controls={true}
+                          controls={false}
                           url={value?.url}
                         />
                       </div>
