@@ -77,6 +77,7 @@ export const Highlights = () => {
                       <div className={styles.url}>
                         <ReactPlayer
                           width="100%"
+                          height={'300px'}
                           controls={false}
                           url={value?.url}
                         />

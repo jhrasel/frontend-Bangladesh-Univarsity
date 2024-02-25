@@ -73,7 +73,7 @@
   text-align: justify;
   padding-right: 10px;
   font-size: 16px;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 400;
   line-height: normal;
 }
