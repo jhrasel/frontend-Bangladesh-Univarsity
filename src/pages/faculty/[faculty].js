@@ -73,10 +73,30 @@ const teacherDetails = () => {
 
                 <div class="card">
                         <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                        Research: 
+                        </div>
+                        <div class="card-body">
+                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Research}}></div>
+
+                        </div>
+                    </div>
+                    
+                <div class="card">
+                        <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
                         Journal Publication: 
                         </div>
                         <div class="card-body">
                         <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.JournalPublication}}></div>
+
+                        </div>
+                    </div>
+                    
+                <div class="card">
+                        <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                        Conference: 
+                        </div>
+                        <div class="card-body">
+                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Conference}}></div>
 
                         </div>
                 </div>
