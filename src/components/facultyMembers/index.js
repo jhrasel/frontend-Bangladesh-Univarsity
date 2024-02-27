@@ -424,7 +424,7 @@ export const FacultyMembers = () => {
                       filterData?.exFaculty?.length && (
                                         <div className={styles.members}>
                   <div className={styles.memberTitles}>
-                      <h2>Ex faculty</h2>
+                      <h2>Ex Faculty</h2>
                     </div>
                       
 
