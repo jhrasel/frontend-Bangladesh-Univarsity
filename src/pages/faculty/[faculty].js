@@ -71,91 +71,141 @@ const teacherDetails = () => {
                     }
 
 
-                <div class="card">
-                        <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Research: 
-                        </div>
-                        <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Research}}></div>
+                    {
+                        FacultyMemberData?.data?.data?.Research && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                            Research: 
+                            </div>
+                            <div class="card-body">
+                            <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Research}}></div>
 
+                            </div>
                         </div>
-                    </div>
+                        )
+                    }
+
+                    {
                     
-                <div class="card">
-                        <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Journal Publication: 
-                        </div>
-                        <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.JournalPublication}}></div>
+                        FacultyMemberData?.data?.data?.JournalPublication && (
+                            <div class="card">
+                                <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Journal Publication: 
+                                </div>
+                                <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.JournalPublication}}></div>
 
-                        </div>
-                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.Conference && (
+                            <div class="card">
+                                <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Conference: 
+                                </div>
+                                <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Conference}}></div>
+
+                                </div>
+                            </div>
+                        )
+                    }
                     
-                <div class="card">
-                        <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Conference: 
-                        </div>
-                        <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Conference}}></div>
 
+                    {
+                        FacultyMemberData?.data?.data?.ProjectAndThesisSupervision && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Project And Thèsis Supervision:
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.ProjectAndThesisSupervision}}></div>
+                            </div>
                         </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Project And Thèsis Supervision:
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.ProjectAndThesisSupervision}}></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Book Reviewer:
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.BookReviewer}}></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Seminar And Workshops:
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.SeminarAndWorkshops}}></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Professional Certification:
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.ProfessionalCertification}}></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Award & Scholarship:
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.AwardAndScholarship}}></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Membership: 
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Membership}}></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
-                        Previous Employment:
-                    </div>
-                    <div class="card-body">
-                        <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.PreviousEmployment}}></div>
-                    </div>
-                </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.BookReviewer && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Book Reviewer:
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.BookReviewer}}></div>
+                            </div>
+                        </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.SeminarAndWorkshops && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Seminar And Workshops:
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.SeminarAndWorkshops}}></div>
+                            </div>
+                        </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.ProfessionalCertification && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Professional Certification:
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.ProfessionalCertification}}></div>
+                            </div>
+                        </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.AwardAndScholarship && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Award & Scholarship:
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.AwardAndScholarship}}></div>
+                            </div>
+                        </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.Membership && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Membership: 
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.Membership}}></div>
+                            </div>
+                        </div>
+                        )
+                    }
+
+                    {
+                        FacultyMemberData?.data?.data?.PreviousEmployment && (
+                        <div class="card">
+                            <div class="card-header" style={{background: '#c1c7cf66', borderBottom: 'none', color: '#000',fontWeight: '600'}}>
+                                Previous Employment:
+                            </div>
+                            <div class="card-body">
+                                <div dangerouslySetInnerHTML={{__html: FacultyMemberData?.data?.data?.PreviousEmployment}}></div>
+                            </div>
+                        </div>
+                        )
+                    }
+
                 </Card>
             </Container>
           <Addmission />
