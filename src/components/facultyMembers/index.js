@@ -16,6 +16,8 @@ export const FacultyMembers = () => {
     const Router = useRouter()
     const {data, isLoading} = useQuery(['teacherList'], ()=>ApiRequest.get('teacher/all-for-landing-page'))
 
+
+    
     const filterData = useMemo(()=> {
         let teacher = {};
         let designationLecture = [];
@@ -25,8 +27,18 @@ export const FacultyMembers = () => {
         let designationOfficeStuff = [];
         let designationCoOrdinator = [];
         let designationAssociateChairman = [];
+        let onStudyLeave = [];
+        let exFaculty = [];
 
         data?.data?.data.length > 0 ? data?.data?.data.map((role) => {
+            if (role?.editableRole.toLowerCase() === "on study leave"){
+                onStudyLeave.push(role);
+                teacher.onStudyLeave = onStudyLeave
+            }
+            if (role?.editableRole.toLowerCase() === "ex faculty") {
+                exFaculty.push(role);
+                teacher.exFaculty = exFaculty
+            }
             if (role?.editableRole.toLowerCase() === "associate professor & chairman"){
                 designationAssociateChairman.push(role);
                 teacher.associateProfessorAndChairman = designationAssociateChairman
@@ -338,6 +350,105 @@ export const FacultyMembers = () => {
                   <Row>
                       {
                          filterData?.CoOrdinator?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                            <p>{role?.editableRole}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>  
+                    )
+                  }
+
+                                    {
+                      filterData?.onStudyLeave?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>On Study Leave</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.onStudyLeave?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                            <p>{role?.editableRole}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>  
+                    )
+                  }
+                                    {
+                      filterData?.exFaculty?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Ex faculty</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.exFaculty?.map((role, i) => {
                               return (
                                   <Col xs={12} md={4} lg={3} key={i}>
                                         <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
