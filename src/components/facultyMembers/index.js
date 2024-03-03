@@ -47,7 +47,7 @@ export const FacultyMembers = () => {
                 designationChairman.push(role);
                 teacher.chairman = designationChairman
             }
-            if (role?.editableRole.toLowerCase() === "lecture"){
+            if (role?.editableRole.toLowerCase() === "lecturer"){
                 designationLecture.push(role)
                 teacher.lecture = designationLecture
             }

@@ -16,7 +16,6 @@ const teacherDetails = () => {
     const {faculty} = router.query;
 
     const { data:FacultyMemberData, isloading} = UseQuery(['singleItem', faculty], () => ApiRequest.get(`teacher/find/${faculty}`));
-    console.log(FacultyMemberData)
     return(
         <div className={styles.mainBanner}>
 
