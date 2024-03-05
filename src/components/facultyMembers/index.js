@@ -571,7 +571,7 @@ export const FacultyMembers = () => {
                       filterData?.exFaculty?.length && (
                                         <div className={styles.members}>
                   <div className={styles.memberTitles}>
-                      <h2>Ex Faculty</h2>
+                      <h2>Ex Faculty</h2>
                     </div>
                       
 
@@ -603,7 +603,7 @@ export const FacultyMembers = () => {
                                                 <img src={role.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
-                                            <p>{role?.editableRole}</p>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
                                           <span>Phone: {role?.phone}</span> <br/>
                                           <span>Email: { role?.email}</span>
                                         </div>
