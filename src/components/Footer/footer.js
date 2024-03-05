@@ -20,10 +20,10 @@ export const Footer = () => {
               height={32}
               style={{ height: "auto" }}
             />
-            <p className={styles.text}>
-              Alumni Org is an alumni organisation of the student of University.
-              Organise a lots of events of the betterment of present and ex
-              students of the university.
+            <p className={styles.text} style={{textAlign: 'justify'}}>
+Explore the endless possibilities and embark on an adventure of knowledge and innovation. Discover a vibrant community committed to academic success and transform your goals into reality with us.
+Join our renowned university, a center of excellence for higher education.  
+
             </p>
           </Col>
           <Col md={3} xs={12}>

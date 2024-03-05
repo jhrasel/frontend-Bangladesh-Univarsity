@@ -20,7 +20,9 @@ export const FacultyMembers = () => {
     
     const filterData = useMemo(()=> {
         let teacher = {};
+        let headOfDepartment = [];
         let designationLecture = [];
+        let designationSRLecture = [];
         let designationChairman = [];
         let designationAssistantProfessor = [];
         let designationProfessor = [];
@@ -29,17 +31,35 @@ export const FacultyMembers = () => {
         let designationAssociateChairman = [];
         let onStudyLeave = [];
         let exFaculty = [];
+        let advisor = [];
+        let partTime = [];
 
         data?.data?.data.length > 0 ? data?.data?.data.map((role) => {
-            if (role?.editableRole.toLowerCase() === "on study leave"){
+            if (role?.editableRole.toLowerCase() === "senior_lecturer"){
+                designationSRLecture.push(role);
+                teacher.designationSRLecture = designationSRLecture
+            }
+            if (role?.editableRole.toLowerCase() === "part_time"){
+                partTime.push(role);
+                teacher.partTime = partTime
+            }
+            if (role?.editableRole.toLowerCase() === "head_of_department"){
+                headOfDepartment.push(role);
+                teacher.headOfDepartment = headOfDepartment
+            }
+            if (role?.editableRole.toLowerCase() === "advisor"){
+                advisor.push(role);
+                teacher.advisor = advisor
+            }
+            if (role?.editableRole.toLowerCase() === "on_study_leave"){
                 onStudyLeave.push(role);
                 teacher.onStudyLeave = onStudyLeave
             }
-            if (role?.editableRole.toLowerCase() === "ex faculty") {
+            if (role?.editableRole.toLowerCase() === "ex_faculty") {
                 exFaculty.push(role);
                 teacher.exFaculty = exFaculty
             }
-            if (role?.editableRole.toLowerCase() === "associate professor & chairman"){
+            if (role?.editableRole.toLowerCase() === "associate_professor"){
                 designationAssociateChairman.push(role);
                 teacher.associateProfessorAndChairman = designationAssociateChairman
             }
@@ -49,9 +69,9 @@ export const FacultyMembers = () => {
             }
             if (role?.editableRole.toLowerCase() === "lecturer"){
                 designationLecture.push(role)
-                teacher.lecture = designationLecture
+                teacher.lecture = designationLecture.reverse()
             }
-            if (role?.editableRole.toLowerCase() === "assistant professor"){
+            if (role?.editableRole.toLowerCase() === "assistant_professor"){
                 designationAssistantProfessor.push(role)
                 teacher.assistantProfessor = designationAssistantProfessor
             }
@@ -63,7 +83,7 @@ export const FacultyMembers = () => {
                 designationCoOrdinator.push(role)
                 teacher.CoOrdinator = designationCoOrdinator
             }
-            if (role?.editableRole.toLowerCase() === "office stuff"){
+            if (role?.editableRole.toLowerCase() === "office_stuff"){
                 designationOfficeStuff.push(role)
                 teacher.officeStuff = designationOfficeStuff
             }
@@ -108,14 +128,14 @@ export const FacultyMembers = () => {
                   }
 
                   {
-                      filterData?.chairman?.length && (
+                      filterData?.advisor?.length && (
                                             <div className={styles.members}>
                   <div className={styles.memberTitles}>
-                      <h2>Chairman</h2>
+                      <h2>Advisor</h2>
                   </div>
                   <Row>
                       {
-                          filterData?.chairman?.map((role, i) => {
+                          filterData?.advisor?.map((role, i) => {
                               return (
                                 <Col xs={12} md={4} lg={3} key={i}>
                                         <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
@@ -123,7 +143,36 @@ export const FacultyMembers = () => {
                                                 <img src={role.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
-                                            <p>{role?.editableRole}</p>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replace("_", " ")}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>
+                    )
+                  }
+                  {
+                      filterData?.headOfDepartment?.length && (
+                                            <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Head Of Department</h2>
+                  </div>
+                  <Row>
+                      {
+                          filterData?.headOfDepartment?.map((role, i) => {
+                              return (
+                                <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
                                           <span>Phone: {role?.phone}</span> <br/>
                                           <span>Email: { role?.email}</span>
                                         </div>
@@ -203,7 +252,7 @@ export const FacultyMembers = () => {
                                                         <img src={role.photo} alt={'memberImg'} />
                                                     </div>
                                                     <h4>{role?.name}</h4>
-                                                    <p>{role?.editableRole}</p>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
                                                 <span>Phone: {role?.phone}</span> <br/>
                                                 <span>Email: { role?.email}</span>
                                                 </div>
@@ -252,7 +301,7 @@ export const FacultyMembers = () => {
                                                 <img src={role.photo} alt={'memberImg'} />
                                             </div>
                                             <h4>{role?.name}</h4>
-                                            <p>{role?.editableRole}</p>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
                                           <span>Phone: {role?.phone}</span> <br/>
                                           <span>Email: { role?.email}</span>
                                         </div>
@@ -270,6 +319,55 @@ export const FacultyMembers = () => {
 
 
                   
+                  {
+                      filterData?.designationSRLecture?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Senior Lecturer</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.designationSRLecture?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>
+                     )
+                  }
                   {
                       filterData?.lecture?.length && (
                                         <div className={styles.members}>
@@ -307,6 +405,55 @@ export const FacultyMembers = () => {
                                             </div>
                                             <h4>{role?.name}</h4>
                                             <p>{role?.editableRole}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>
+                     )
+                  }
+                  {
+                      filterData?.partTime?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Part Time</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.partTime?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
                                           <span>Phone: {role?.phone}</span> <br/>
                                           <span>Email: { role?.email}</span>
                                         </div>

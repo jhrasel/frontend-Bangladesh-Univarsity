@@ -32,7 +32,7 @@ const teacherDetails = () => {
                                 <Col xs={12} md={8} xl={8}>
                                     <div className={styles.card_details}>
                                         <h4>{FacultyMemberData?.data?.data?.name}</h4>
-                                        <p style={{textTransform: 'capitalize'}}><b>Role :</b> {FacultyMemberData?.data?.data?.editableRole}</p>
+                                        <p style={{textTransform: 'capitalize'}}><b>Role :</b> {FacultyMemberData?.data?.data?.editableRole.replaceAll("_", " ")}</p>
                                         <p style={{textTransform: 'capitalize'}}><b>Phone :</b> {FacultyMemberData?.data?.data?.phone}</p>
                                         <p style={{textTransform: 'capitalize'}}><b>Email Address :</b> {FacultyMemberData?.data?.data?.email}</p>
                                         <div className="hide">
