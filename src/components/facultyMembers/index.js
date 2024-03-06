@@ -69,7 +69,7 @@ export const FacultyMembers = () => {
             }
             if (role?.editableRole.toLowerCase() === "lecturer"){
                 designationLecture.push(role)
-                teacher.lecture = designationLecture.reverse()
+                teacher.lecture = designationLecture
             }
             if (role?.editableRole.toLowerCase() === "assistant_professor"){
                 designationAssistantProfessor.push(role)
