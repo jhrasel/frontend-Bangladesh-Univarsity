@@ -33,8 +33,23 @@ export const FacultyMembers = () => {
         let exFaculty = [];
         let advisor = [];
         let partTime = [];
+        let professor_head_of_the_department = [];
+        let associate_professor_head_of_the_department = [];
+        let assistant_professor_head_of_the_department = [];
 
         data?.data?.data.length > 0 ? data?.data?.data.map((role) => {
+            if (role?.editableRole.toLowerCase() === "professor_head_of_the_department"){
+                professor_head_of_the_department.push(role);
+                teacher.professor_head_of_the_department = professor_head_of_the_department
+            }
+            if (role?.editableRole.toLowerCase() === "associate_professor_head_of_the_department"){
+                associate_professor_head_of_the_department.push(role);
+                teacher.associate_professor_head_of_the_department = associate_professor_head_of_the_department
+            }
+            if (role?.editableRole.toLowerCase() === "assistant_professor_head_of_the_department"){
+                assistant_professor_head_of_the_department.push(role);
+                teacher.assistant_professor_head_of_the_department = assistant_professor_head_of_the_department
+            }
             if (role?.editableRole.toLowerCase() === "senior_lecturer"){
                 designationSRLecture.push(role);
                 teacher.designationSRLecture = designationSRLecture
@@ -186,6 +201,150 @@ export const FacultyMembers = () => {
                     )
                   }
 
+                {
+                      filterData?.professor_head_of_the_department?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Professor Head Of The Department</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.professor_head_of_the_department?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>)
+                  }
+                {
+                      filterData?.associate_professor_head_of_the_department?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Associate Professor Head Of The Department</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.associate_professor_head_of_the_department?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>)
+                  }
+                {
+                      filterData?.assistant_professor_head_of_the_department?.length && (
+                                        <div className={styles.members}>
+                  <div className={styles.memberTitles}>
+                      <h2>Assistant Professor Head Of The Department</h2>
+                    </div>
+                      
+
+                    {
+                      isLoading && (
+                            <Row>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                                <Col  xs='12' md='3' lg="3">
+                                    <BulletinePreloader />
+                                </Col>
+                            </Row>
+                    )
+                  }
+                  <Row>
+                      {
+                         filterData?.assistant_professor_head_of_the_department?.map((role, i) => {
+                              return (
+                                  <Col xs={12} md={4} lg={3} key={i}>
+                                        <div className={styles.memberCard} onClick={()=> routerHandler(role?._id)}>
+                                            <div className={styles.memberImg}>
+                                                <img src={role.photo} alt={'memberImg'} />
+                                            </div>
+                                            <h4>{role?.name}</h4>
+                                          <p style={{textTransform: 'capitalize'}}>{role?.editableRole.replaceAll("_", " ")}</p>
+                                          <span>Phone: {role?.phone}</span> <br/>
+                                          <span>Email: { role?.email}</span>
+                                        </div>
+                                    </Col>
+
+                              )
+                          })
+                      }
+                  </Row>
+                  </div>)
+                  }
                                     {
                       filterData?.professor?.length && (
                                         <div className={styles.members}>
