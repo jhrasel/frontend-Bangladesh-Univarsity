@@ -34,7 +34,7 @@ const teacherDetails = () => {
                                         <h4>{FacultyMemberData?.data?.data?.name}</h4>
                                         <p style={{textTransform: 'capitalize'}}><b>Role :</b> {FacultyMemberData?.data?.data?.editableRole.replaceAll("_", " ")}</p>
                                         <p style={{textTransform: 'capitalize'}}><b>Phone :</b> {FacultyMemberData?.data?.data?.phone}</p>
-                                        <p style={{textTransform: 'capitalize'}}><b>Email Address :</b> {FacultyMemberData?.data?.data?.email}</p>
+                                        <p ><b>Email Address :</b> {FacultyMemberData?.data?.data?.email}</p>
                                         <div className="hide">
                                             <Table style={{background: 'red', borderRadius: '5px'}}>
                                                 <tbody>
