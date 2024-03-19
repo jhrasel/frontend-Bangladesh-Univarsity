@@ -205,7 +205,7 @@ export const FacultyMembers = () => {
                       filterData?.professor_head_of_the_department?.length && (
                                         <div className={styles.members}>
                   <div className={styles.memberTitles}>
-                      <h2>Professor Head Of The Department</h2>
+                      <h2>Professor & Head Of The Department</h2>
                     </div>
                       
 
@@ -253,7 +253,7 @@ export const FacultyMembers = () => {
                       filterData?.associate_professor_head_of_the_department?.length && (
                                         <div className={styles.members}>
                   <div className={styles.memberTitles}>
-                      <h2>Associate Professor Head Of The Department</h2>
+                      <h2>Associate Professor & Head Of The Department</h2>
                     </div>
                       
 
@@ -301,7 +301,7 @@ export const FacultyMembers = () => {
                       filterData?.assistant_professor_head_of_the_department?.length && (
                                         <div className={styles.members}>
                   <div className={styles.memberTitles}>
-                      <h2>Assistant Professor Head Of The Department</h2>
+                      <h2>Assistant Professor & Head Of The Department</h2>
                     </div>
                       
 
