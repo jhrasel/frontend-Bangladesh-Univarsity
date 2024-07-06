@@ -39,9 +39,7 @@ export const Research = () => {
       </Container>
       <div className={styles.researchBody}>
         <div className={styles.researchHeader}>
-          <p>
-            Research In Department of CSE, Bangladesh University
-          </p>
+          <p>Research In Department of CSE, Bangladesh University</p>
         </div>
         {allResearch?.data?.data?.map((data, i) => {
           return (
@@ -50,7 +48,10 @@ export const Research = () => {
               className={styles.researchTableBody}
               onClick={() => singleHandler(data?._id)}
             >
-              <p style={{textTransform: 'capitalize'}}> &nbsp;&nbsp; {data?.title}</p>
+              <p style={{ textTransform: "capitalize" }}>
+                {/* &nbsp;&nbsp;  */}
+                {data?.title}
+              </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
